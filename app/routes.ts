@@ -10,4 +10,7 @@ export default [
   route("under-construction", "routes/under-construction.tsx"),
 
   layout("layouts/ProtectedRoute.tsx", []),
+
+  // API
+  route("api/verify-konami", "api/verify-konami.ts"),
 ] satisfies RouteConfig;
