@@ -1,5 +1,5 @@
+import { redirect } from "react-router";
 import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -8,6 +8,14 @@ export function meta({}: Route.MetaArgs) {
   ];
 }
 
+export async function loader({}: Route.LoaderArgs) {
+  return redirect("/under-construction");
+}
+
 export default function Home() {
-  return <Welcome />;
+  return (
+    <div>
+      <h2 className="text-5xl">Home</h2>
+    </div>
+  );
 }
