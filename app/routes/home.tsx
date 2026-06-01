@@ -8,13 +8,11 @@ export function meta({}: Route.MetaArgs) {
   ];
 }
 
-export async function loader({}: Route.LoaderArgs) {
-  return redirect("/under-construction");
-}
+export async function loader({}: Route.LoaderArgs) {}
 
 export default function Home() {
   return (
-    <div>
+    <div className="bg-zinc-300 min-h-screen">
       <h2 className="text-5xl">Home</h2>
     </div>
   );
