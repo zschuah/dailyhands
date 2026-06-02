@@ -1,9 +1,8 @@
 import { twMerge } from "tailwind-merge";
-import type { Route } from "./+types/home";
 import CardTrio from "~/components/CardTrio";
-import { SIGN_LIST } from "~/utils/signList";
-import type { SignProps } from "~/utils/types";
 import { getUniqueIntegers } from "~/utils/helpers";
+import { SIGN_LIST } from "~/utils/signList";
+import type { Route } from "./+types/home";
 
 export function meta({}: Route.MetaArgs) {
   return [

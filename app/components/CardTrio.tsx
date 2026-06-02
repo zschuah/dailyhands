@@ -27,10 +27,14 @@ const CardTrio = ({ data, answer }: Props) => {
     }
   };
 
+  const handleReset = () => {
+    setSelectedId("");
+    setIsReveal(false);
+  };
+
   useEffect(() => {
     if (!entry?.isIntersecting) {
-      setSelectedId("");
-      setIsReveal(false);
+      handleReset();
     }
   }, [entry?.isIntersecting]);
 
@@ -38,16 +42,17 @@ const CardTrio = ({ data, answer }: Props) => {
     <section
       ref={ref}
       className={twMerge(
-        "h-screen flex flex-col justify-center items-center opacity-0",
-        entry?.isIntersecting &&
-          "opacity-100 transition duration-500 delay-300",
+        "h-screen w-full flex flex-col justify-center items-center duration-500",
+        entry?.isIntersecting ? "opacity-100 delay-200" : "opacity-0 delay-0",
       )}
+      onClick={() => handleReset()}
     >
       <h2 className="text-5xl mb-5 text-shadow-lg text-center">{answer}</h2>
       <div
         className={twMerge(
           "flex flex-col gap-4 w-9/10 md:flex-row md:h-2/5 md:w-auto",
         )}
+        onClick={(e) => e.stopPropagation()}
       >
         {CARD_LIST.map((card) => {
           return (
