@@ -1,23 +1,21 @@
-import axios from "axios";
 import { Form, redirect } from "react-router";
+import { apiRequest } from "~/utils/apiRequest";
+import { safeJsonStringify } from "~/utils/helpers";
 import type { Route } from "./+types/under-construction";
 
 export async function clientAction({ request }: Route.ClientActionArgs) {
   const formData = await request.formData();
   const userKonami = formData.get("konami");
 
-  try {
-    const response = await axios.post<{ isKonamiValid: boolean }>(
-      "/api/verify-konami",
-      { userKonami },
-    );
+  const { data } = await apiRequest<{ isKonamiValid: boolean }>({
+    url: "/api/verify-konami",
+    method: "POST",
+    data: { userKonami },
+  });
 
-    if (response.data.isKonamiValid) {
-      localStorage.setItem("konami", JSON.stringify(userKonami));
-      return redirect("/");
-    }
-  } catch (error) {
-    console.error("Network or server error occurred:", error);
+  if (data?.isKonamiValid) {
+    localStorage.setItem("konami", safeJsonStringify(userKonami));
+    return redirect("/");
   }
 }
 

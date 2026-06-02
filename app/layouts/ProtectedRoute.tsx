@@ -1,17 +1,13 @@
 import axios from "axios";
 import { Outlet, redirect } from "react-router";
+import { safeJsonParse } from "~/utils/helpers";
 import type { Route } from "./+types/ProtectedRoute";
 
 export async function clientLoader({}: Route.ClientLoaderArgs) {
   const konamiString = localStorage.getItem("konami");
   if (!konamiString) return redirect("/under-construction");
 
-  let userKonami: string;
-  try {
-    userKonami = JSON.parse(konamiString);
-  } catch {
-    userKonami = konamiString;
-  }
+  const userKonami = safeJsonParse(konamiString);
 
   try {
     const response = await axios.post<{ isKonamiValid: boolean }>(
