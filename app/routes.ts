@@ -6,11 +6,11 @@ import {
 } from "@react-router/dev/routes";
 
 export default [
-  index("routes/home.tsx"),
   route("under-construction", "routes/under-construction.tsx"),
 
-  layout("layouts/ProtectedRoute.tsx", []),
+  // Protected routes
+  layout("layouts/ProtectedRoute.tsx", [index("routes/home.tsx")]),
 
-  // API
+  // User functions
   route("api/verify-konami", "api/verify-konami.ts"),
 ] satisfies RouteConfig;
