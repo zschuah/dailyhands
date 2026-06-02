@@ -24,7 +24,7 @@ const Card = ({
       className={twMerge(
         "relative overflow-hidden flex justify-center items-end",
         "h-20 md:w-20 md:h-auto",
-        "bg-zinc-800 rounded-3xl shadow-2xl cursor-pointer",
+        "bg-zinc-800 rounded-3xl shadow-lg cursor-pointer",
         "transition-all duration-700",
         isSelected && "h-80 md:w-150",
       )}
@@ -48,9 +48,12 @@ const Card = ({
 
         <h2
           className={twMerge(
-            "p-4 text-center text-3xl font-bold text-slate-100 drop-shadow truncate",
+            "p-4 text-center text-xl md:text-3xl font-bold text-slate-100 drop-shadow truncate",
             "opacity-0 translate-y-2 transition duration-500",
-            isReveal && isSelected && "opacity-100 translate-0",
+            // Mobile condition: Reveals whenever isReveal is true
+            isReveal && "opacity-100 translate-y-0",
+            // Desktop override: If isReveal is true but NOT selected, hide it again on desktop
+            isReveal && !isSelected && "md:opacity-0 md:translate-y-2",
           )}
         >
           {name}

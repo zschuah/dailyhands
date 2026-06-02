@@ -24,7 +24,7 @@ const CardTrio = ({ data, answer, handleNextRound }: Props) => {
 
   const handleCardClick = (cardId: string) => {
     if (selectedId === cardId) {
-      setIsReveal(!isReveal);
+      setIsReveal(true);
     } else {
       setSelectedId(cardId);
     }
@@ -61,13 +61,14 @@ const CardTrio = ({ data, answer, handleNextRound }: Props) => {
     <div
       ref={ref}
       className={twMerge(
-        "h-screen w-full flex flex-col justify-center items-center gap-5 transition-opacity duration-500",
+        "h-full w-full flex flex-col justify-center items-center gap-5",
+        "transition duration-500",
         isVisible ? "opacity-100 delay-200" : "opacity-0 delay-0",
       )}
       onClick={() => handleReset()}
     >
       <div className="text-center">
-        <h2 className="text-5xl text-shadow-lg mb-2">{answer}</h2>
+        <h2 className="text-3xl md:text-5xl text-shadow-lg mb-2">{answer}</h2>
         <p>Which is correct?</p>
       </div>
 
@@ -94,7 +95,7 @@ const CardTrio = ({ data, answer, handleNextRound }: Props) => {
       <button
         className="btn btn-primary"
         onClick={handleNextClick}
-        disabled={isFadingOut}
+        disabled={isFadingOut || !isReveal}
       >
         Next
       </button>

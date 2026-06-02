@@ -40,7 +40,7 @@ export default function Home() {
     <div className="h-screen overflow-y-auto snap-y scroll-smooth">
       <section
         className={twMerge(
-          "min-h-screen grid place-items-center",
+          "min-h-screen grid place-items-center relative",
           "bg-zinc-300 snap-start",
         )}
       >
@@ -58,6 +58,11 @@ export default function Home() {
             src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f44b/512.gif"
             alt="👋"
           />
+        </div>
+
+        <div className="absolute bottom-4 flex flex-col items-center animate-bounce">
+          <p>Scroll down for more!</p>
+          <span className="text-5xl">&#8609;</span>
         </div>
       </section>
 
