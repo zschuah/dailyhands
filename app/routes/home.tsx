@@ -47,11 +47,10 @@ export default function Home() {
 
       <section
         className={twMerge(
-          "h-screen flex flex-col justify-center items-center",
+          "min-h-screen grid place-items-center",
           "bg-linear-to-b from-zinc-300 to-orange-300 snap-start",
         )}
       >
-        <h2 className="text-5xl mb-5 text-shadow-lg">{answer}</h2>
         <CardTrio data={randomSigns} answer={answer} />
       </section>
     </div>
