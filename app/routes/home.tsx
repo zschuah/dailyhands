@@ -2,6 +2,8 @@ import { twMerge } from "tailwind-merge";
 import type { Route } from "./+types/home";
 import CardTrio from "~/components/CardTrio";
 import { SIGN_LIST } from "~/utils/signList";
+import type { SignProps } from "~/utils/types";
+import { getUniqueIntegers } from "~/utils/helpers";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -13,14 +15,13 @@ export function meta({}: Route.MetaArgs) {
 export async function loader({}: Route.LoaderArgs) {}
 
 export default function Home() {
-  const randomSigns = Array.from({ length: 3 }, () => {
-    const randomIndex = Math.floor(Math.random() * SIGN_LIST.length);
-    return SIGN_LIST[randomIndex];
-  });
+  const randomSigns = getUniqueIntegers({ size: SIGN_LIST.length }).map(
+    (integer) => SIGN_LIST[integer],
+  );
   const answer = randomSigns[0].name;
 
   return (
-    <div className="h-screen overflow-y-auto snap-y snap-mandatory scroll-smooth">
+    <div className="h-screen overflow-y-auto snap-y scroll-smooth">
       <section
         className={twMerge(
           "min-h-screen grid place-items-center",
@@ -50,7 +51,7 @@ export default function Home() {
           "bg-linear-to-b from-zinc-300 to-orange-300 snap-start",
         )}
       >
-        <h2 className="text-5xl">{answer}</h2>
+        <h2 className="text-5xl mb-5 text-shadow-lg">{answer}</h2>
         <CardTrio data={randomSigns} answer={answer} />
       </section>
     </div>

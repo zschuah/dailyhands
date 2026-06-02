@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import type { SignProps } from "~/utils/types";
 import Card from "./Card";
+import { useIntersectionObserver } from "@uidotdev/usehooks";
 
 type Props = {
   data: SignProps[];
@@ -9,6 +10,8 @@ type Props = {
 
 const CardTrio = ({ data, answer }: Props) => {
   const CARD_LIST = data;
+
+  const [ref, entry] = useIntersectionObserver();
 
   const [isReveal, setIsReveal] = useState(false);
   const [selectedId, setSelectedId] = useState("");
@@ -23,8 +26,18 @@ const CardTrio = ({ data, answer }: Props) => {
     }
   };
 
+  useEffect(() => {
+    if (!entry?.isIntersecting) {
+      setSelectedId("");
+      setIsReveal(false);
+    }
+  }, [entry?.isIntersecting]);
+
   return (
-    <section className="flex flex-col gap-4 w-9/10 md:flex-row md:h-2/5 md:w-auto">
+    <section
+      ref={ref}
+      className="flex flex-col gap-4 w-9/10 md:flex-row md:h-2/5 md:w-auto"
+    >
       {CARD_LIST.map((card) => {
         return (
           <Card

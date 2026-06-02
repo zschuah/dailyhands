@@ -48,6 +48,25 @@ export const getImages = (
   };
 };
 
+export const getUniqueIntegers = ({
+  size,
+  count = 3,
+}: {
+  size: number;
+  count?: number;
+}): number[] => {
+  const randomSet = new Set<number>();
+
+  // Guard against lists smaller than the requested count
+  const targetSize = Math.min(size, count);
+  while (randomSet.size < targetSize) {
+    const randomIndex = Math.floor(Math.random() * size);
+    randomSet.add(randomIndex);
+  }
+
+  return Array.from(randomSet);
+};
+
 export function safeJsonParse(value: string): string {
   try {
     return JSON.parse(value);
