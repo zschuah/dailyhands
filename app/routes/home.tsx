@@ -1,3 +1,4 @@
+import { useCallback, useState } from "react";
 import { twMerge } from "tailwind-merge";
 import CardTrio from "~/components/CardTrio";
 import { getUniqueIntegers } from "~/utils/helpers";
@@ -14,10 +15,24 @@ export function meta({}: Route.MetaArgs) {
 export async function loader({}: Route.LoaderArgs) {}
 
 export default function Home() {
-  const randomSigns = getUniqueIntegers({ size: SIGN_LIST.length }).map(
-    (integer) => SIGN_LIST[integer],
-  );
-  const answer = randomSigns[0].name;
+  // 1. Create a function to generate a fresh set of signs
+  const generateNewRound = () => {
+    const randomSigns = getUniqueIntegers({ size: SIGN_LIST.length }).map(
+      (integer) => SIGN_LIST[integer],
+    );
+    return {
+      signs: randomSigns,
+      answer: randomSigns[0].name,
+    };
+  };
+
+  // 2. Store the current signs in state, initializing it on the first render
+  const [currentRound, setCurrentRound] = useState(generateNewRound);
+
+  // 3. Create a callback to trigger the next round
+  const handleNextRound = useCallback(() => {
+    setCurrentRound(generateNewRound());
+  }, []);
 
   return (
     <div className="h-screen overflow-y-auto snap-y scroll-smooth">
@@ -50,7 +65,11 @@ export default function Home() {
           "bg-linear-to-b from-zinc-300 to-orange-300 snap-start",
         )}
       >
-        <CardTrio data={randomSigns} answer={answer} />
+        <CardTrio
+          data={currentRound.signs}
+          answer={currentRound.answer}
+          handleNextRound={handleNextRound}
+        />
       </section>
     </div>
   );

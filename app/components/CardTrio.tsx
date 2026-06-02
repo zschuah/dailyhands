@@ -1,28 +1,29 @@
+import { useIntersectionObserver } from "@uidotdev/usehooks";
 import { useEffect, useState } from "react";
+import { twMerge } from "tailwind-merge";
 import type { SignProps } from "~/utils/types";
 import Card from "./Card";
-import { useIntersectionObserver } from "@uidotdev/usehooks";
-import { twMerge } from "tailwind-merge";
 
 type Props = {
   data: SignProps[];
   answer: string;
+  handleNextRound: () => void; // Add this to your types
 };
 
-const CardTrio = ({ data, answer }: Props) => {
+const CardTrio = ({ data, answer, handleNextRound }: Props) => {
   const CARD_LIST = data;
 
   const [ref, entry] = useIntersectionObserver({ threshold: 0.5 });
 
   const [isReveal, setIsReveal] = useState(false);
   const [selectedId, setSelectedId] = useState("");
+  // Track if we are currently animating between rounds
+  const [isFadingOut, setIsFadingOut] = useState(false);
 
   const handleCardClick = (cardId: string) => {
     if (selectedId === cardId) {
-      // If clicking selected card, toggle reveal
       setIsReveal(!isReveal);
     } else {
-      // If clicking new card, expand it
       setSelectedId(cardId);
     }
   };
@@ -32,22 +33,42 @@ const CardTrio = ({ data, answer }: Props) => {
     setIsReveal(false);
   };
 
+  // Handle the Next button click with animations
+  const handleNextClick = (e: React.MouseEvent) => {
+    e.stopPropagation(); // Prevent handleReset from the parent container from firing immediately
+
+    setIsFadingOut(true); // 1. Start fade out
+
+    // 2. Wait for the CSS duration (500ms) to finish
+    setTimeout(() => {
+      handleReset(); // Close any open cards
+      handleNextRound(); // Tell parent to give us new signs
+      setIsFadingOut(false); // Fade back in with new signs
+    }, 500);
+  };
+
   useEffect(() => {
     if (!entry?.isIntersecting) {
       handleReset();
     }
   }, [entry?.isIntersecting]);
 
+  // The section is visible if it's intersecting AND we aren't actively fading out
+  const isVisible = entry?.isIntersecting && !isFadingOut;
+
   return (
     <div
       ref={ref}
       className={twMerge(
-        "h-screen w-full flex flex-col justify-center items-center gap-5 duration-500",
-        entry?.isIntersecting ? "opacity-100 delay-200" : "opacity-0 delay-0",
+        "h-screen w-full flex flex-col justify-center items-center gap-5 transition-opacity duration-500",
+        isVisible ? "opacity-100 delay-200" : "opacity-0 delay-0",
       )}
       onClick={() => handleReset()}
     >
-      <h2 className="text-5xl text-shadow-lg text-center">{answer}</h2>
+      <div className="text-center">
+        <h2 className="text-5xl text-shadow-lg mb-2">{answer}</h2>
+        <p>Which is correct?</p>
+      </div>
 
       <section
         className={twMerge(
@@ -69,7 +90,14 @@ const CardTrio = ({ data, answer }: Props) => {
         })}
       </section>
 
-      <button className="btn btn-primary">Next</button>
+      {/* Attach the new click handler here */}
+      <button
+        className="btn btn-primary"
+        onClick={handleNextClick}
+        disabled={isFadingOut} // Optional: Prevent spam clicking during animation
+      >
+        Next
+      </button>
     </div>
   );
 };
