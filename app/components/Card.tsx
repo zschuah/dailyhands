@@ -1,12 +1,12 @@
 import { twMerge } from "tailwind-merge";
-import type { CardProps } from "~/utils/types";
+import type { SignProps } from "~/utils/types";
 
 type Props = {
-  data: CardProps;
+  data: SignProps;
   answer: string;
   isReveal: boolean;
   isSelected: boolean;
-  handleCardClick: (card: CardProps) => void;
+  handleCardClick: (cardId: string) => void;
 };
 
 const Card = ({
@@ -16,7 +16,8 @@ const Card = ({
   isSelected,
   handleCardClick,
 }: Props) => {
-  const { title } = data || {};
+  const { name, images } = data;
+  const { imageAnimated, imageStatic } = images;
 
   return (
     <div
@@ -27,12 +28,12 @@ const Card = ({
         "transition-all duration-700",
         isSelected && "h-80 md:w-150",
       )}
-      onClick={() => handleCardClick(data)}
+      onClick={() => handleCardClick(data.id)}
     >
       <img
         className="w-full h-full object-cover"
-        src={`https://picsum.photos/seed/${data.id}/1600/900`}
-        alt="lorem_picsum_image"
+        src={isSelected ? imageAnimated : imageStatic}
+        alt={name}
       />
 
       <div className="absolute bottom-0 left-0 right-0 min-h-10">
@@ -41,7 +42,7 @@ const Card = ({
             "absolute inset-0 transition duration-500 opacity-0",
             "blur-xl scale-150",
             isReveal && "opacity-100",
-            title === answer ? "bg-green-500/50" : "bg-red-500/50",
+            name === answer ? "bg-green-500/50" : "bg-red-500/50",
           )}
         ></div>
 
@@ -52,7 +53,7 @@ const Card = ({
             isReveal && isSelected && "opacity-100 translate-0",
           )}
         >
-          {title}
+          {name}
         </h2>
       </div>
     </div>

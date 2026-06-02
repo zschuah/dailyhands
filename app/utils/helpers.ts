@@ -43,8 +43,8 @@ export const getImages = (
   format: "jpg" | "png",
 ): SignProps["images"] => {
   return {
-    imageStatic: `${STORAGE_URL}/${name}.gif`,
-    imageAnimated: `${STORAGE_URL}/${name}_1.${format}`,
+    imageAnimated: `${STORAGE_URL}/${name}.gif`,
+    imageStatic: `${STORAGE_URL}/${name}_1.${format}`,
   };
 };
 

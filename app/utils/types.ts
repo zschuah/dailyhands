@@ -1,8 +1,3 @@
-export type CardProps = {
-  id: string;
-  title?: string;
-};
-
 export type SignProps = {
   id: string;
   name: string;
