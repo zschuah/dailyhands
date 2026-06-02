@@ -1,8 +1,9 @@
-import { useFetcher } from "react-router";
+import { useFetcher, useNavigate } from "react-router";
 import { twMerge } from "tailwind-merge";
 import { apiRequest } from "~/utils/apiRequest";
 import { safeJsonStringify } from "~/utils/helpers";
 import type { Route } from "./+types/under-construction";
+import { useEffect } from "react";
 
 export async function clientAction({ request }: Route.ClientActionArgs) {
   const formData = await request.formData();
@@ -23,8 +24,19 @@ export async function clientAction({ request }: Route.ClientActionArgs) {
 }
 
 export default function UnderConstruction() {
+  const navigate = useNavigate();
+
   const fetcher = useFetcher<{ isSuccess: boolean }>();
   const isSuccess = fetcher.data?.isSuccess;
+
+  useEffect(() => {
+    if (isSuccess) {
+      const navTimeout = setTimeout(() => {
+        navigate("/");
+      }, 500);
+      return () => clearTimeout(navTimeout);
+    }
+  }, [isSuccess]);
 
   return (
     <div className="bg-zinc-300 min-h-screen grid place-items-center">

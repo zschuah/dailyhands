@@ -1,10 +1,10 @@
-import { redirect } from "react-router";
+import { twMerge } from "tailwind-merge";
 import type { Route } from "./+types/home";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
+    { title: "DailyHands" },
+    { name: "description", content: "Welcome to DailyHands!" },
   ];
 }
 
@@ -13,7 +13,12 @@ export async function loader({}: Route.LoaderArgs) {}
 export default function Home() {
   return (
     <div className="bg-zinc-300 min-h-screen grid place-items-center">
-      <div className="text-center flex flex-col items-center bg-zinc-200 p-8 rounded-3xl">
+      <div
+        className={twMerge(
+          "text-center flex flex-col items-center bg-zinc-200 p-8 rounded-3xl",
+          "animate-[fadeIn_0.5s_ease-in]",
+        )}
+      >
         <h2 className="text-5xl">Hello there</h2>
         <p>Welcome! Welcome!</p>
 
