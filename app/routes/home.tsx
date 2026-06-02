@@ -20,9 +20,11 @@ export default function Home() {
     const randomSigns = getUniqueIntegers({ size: SIGN_LIST.length }).map(
       (integer) => SIGN_LIST[integer],
     );
+    const answerIndex = Math.floor(Math.random() * randomSigns.length);
+
     return {
       signs: randomSigns,
-      answer: randomSigns[0].name,
+      answer: randomSigns[answerIndex].name,
     };
   };
 

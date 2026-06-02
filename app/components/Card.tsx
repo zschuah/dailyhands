@@ -48,7 +48,7 @@ const Card = ({
 
         <h2
           className={twMerge(
-            "p-4 text-center text-3xl font-bold text-slate-100 drop-shadow",
+            "p-4 text-center text-3xl font-bold text-slate-100 drop-shadow truncate",
             "opacity-0 translate-y-2 transition duration-500",
             isReveal && isSelected && "opacity-100 translate-0",
           )}
