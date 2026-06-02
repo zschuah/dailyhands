@@ -24,7 +24,7 @@ const Card = ({
       className={twMerge(
         "relative overflow-hidden flex justify-center items-end",
         "h-20 md:w-20 md:h-auto",
-        "bg-zinc-800 rounded-3xl shadow-2xl",
+        "bg-zinc-800 rounded-3xl shadow-2xl cursor-pointer",
         "transition-all duration-700",
         isSelected && "h-80 md:w-150",
       )}
