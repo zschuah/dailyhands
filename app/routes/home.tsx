@@ -4,6 +4,7 @@ import CardTrio from "~/components/CardTrio";
 import { getUniqueIntegers } from "~/utils/helpers";
 import { SIGN_LIST } from "~/utils/signList";
 import type { Route } from "./+types/home";
+import { Link } from "react-router";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -44,6 +45,12 @@ export default function Home() {
           "bg-zinc-300 snap-start",
         )}
       >
+        <div className="absolute top-5 right-10">
+          <Link to="/bank" className="btn btn-primary">
+            Bank
+          </Link>
+        </div>
+
         <div
           className={twMerge(
             "text-center flex flex-col items-center bg-zinc-200 p-8 rounded-3xl",

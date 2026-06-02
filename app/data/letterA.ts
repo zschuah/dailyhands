@@ -3,6 +3,11 @@ import type { SignProps } from "~/utils/types";
 
 export const letterA: SignProps[] = [
   {
+    id: generateId("Able"),
+    name: "Able",
+    images: getImages("can", "jpg"),
+  },
+  {
     id: generateId("Abuse"),
     name: "Abuse",
     images: getImages("abuse", "png"),
