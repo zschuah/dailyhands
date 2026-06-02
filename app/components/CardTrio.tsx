@@ -7,7 +7,7 @@ import Card from "./Card";
 type Props = {
   data: SignProps[];
   answer: string;
-  handleNextRound: () => void; // Add this to your types
+  handleNextRound: () => void;
 };
 
 const CardTrio = ({ data, answer, handleNextRound }: Props) => {
