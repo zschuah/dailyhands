@@ -9,7 +9,11 @@ export default [
   route("under-construction", "routes/under-construction.tsx"),
 
   // Protected routes
-  layout("layouts/ProtectedRoute.tsx", [index("routes/home.tsx")]),
+  layout("layouts/ProtectedRoute.tsx", [
+    index("routes/home.tsx"),
+    route("bank", "routes/bank.tsx"),
+    route("api/verify-konami", "api/verify-konami.ts"),
+  ]),
 
   // User functions
   route("api/verify-konami", "api/verify-konami.ts"),

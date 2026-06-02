@@ -15,3 +15,7 @@ export const AVAILABLE_LETTERS = Array.from(
     ),
   ),
 ).sort();
+
+export const AVAILABLE_TAGS = Array.from(
+  new Set(SIGN_LIST.flatMap((sign) => sign.tags).filter(Boolean)),
+).sort();
