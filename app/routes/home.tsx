@@ -1,5 +1,6 @@
 import { twMerge } from "tailwind-merge";
 import type { Route } from "./+types/home";
+import CardTrio from "~/components/CardTrio";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -42,7 +43,7 @@ export default function Home() {
           "bg-linear-to-b from-zinc-300 to-orange-300 snap-start",
         )}
       >
-        <h2 className="text-5xl">Welcome!</h2>
+        <CardTrio />
       </section>
     </div>
   );
