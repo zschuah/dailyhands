@@ -1,6 +1,6 @@
 import { hash } from "hash-it";
-import type { SignImages } from "./types";
 import { STORAGE_URL } from "./constants";
+import type { SignProps } from "./types";
 
 /**
  * Gives a hashed sequence of alpha characters based on rootWord.
@@ -38,7 +38,10 @@ export const generateId = (rootWord?: string) => {
   return [firstBlock, secondBlock].join("").toUpperCase();
 };
 
-export const getImages = (name: string, format: "jpg" | "png"): SignImages => {
+export const getImages = (
+  name: string,
+  format: "jpg" | "png",
+): SignProps["images"] => {
   return {
     imageStatic: `${STORAGE_URL}/${name}.gif`,
     imageAnimated: `${STORAGE_URL}/${name}_1.${format}`,

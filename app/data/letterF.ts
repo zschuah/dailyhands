@@ -5,7 +5,8 @@ export const letterF: SignProps[] = [
   {
     id: generateId("Facebook (Brand)"),
     name: "Facebook (Brand)",
-    images: getImages("facebook_brand", "png"),
+    images: getImages("facebook", "png"),
+    tags: ["brand"],
   },
   {
     id: generateId("Fall (Season)"),
@@ -15,22 +16,22 @@ export const letterF: SignProps[] = [
   {
     id: generateId("Fall (Verb)"),
     name: "Fall (Verb)",
-    images: getImages("fall_verb", "png"),
+    images: getImages("fall_verb", "jpg"),
   },
   {
     id: generateId("Family"),
     name: "Family",
-    images: getImages("family", "png"),
+    images: getImages("family", "jpg"),
   },
   {
     id: generateId("Fan"),
     name: "Fan",
-    images: getImages("fan", "png"),
+    images: getImages("fan", "jpg"),
   },
   {
     id: generateId("Far"),
     name: "Far",
-    images: getImages("far", "png"),
+    images: getImages("far", "jpg"),
   },
   {
     id: generateId("Fashion"),
@@ -40,37 +41,38 @@ export const letterF: SignProps[] = [
   {
     id: generateId("Fast"),
     name: "Fast",
-    images: getImages("fast", "png"),
+    images: getImages("fast", "jpg"),
   },
   {
     id: generateId("Fat"),
     name: "Fat",
-    images: getImages("fat", "png"),
+    images: getImages("fat", "jpg"),
   },
   {
     id: generateId("Fat (Adjective)"),
     name: "Fat (Adjective)",
-    images: getImages("fat_adjective", "png"),
+    images: getImages("fat_adj", "png"),
   },
   {
     id: generateId("Father"),
     name: "Father",
-    images: getImages("father", "png"),
+    images: getImages("father", "jpg"),
   },
   {
     id: generateId("Favourite"),
     name: "Favourite",
-    images: getImages("favourite", "png"),
+    images: getImages("favourite", "jpg"),
   },
   {
     id: generateId("Fax"),
     name: "Fax",
-    images: getImages("fax", "png"),
+    images: getImages("fax", "jpg"),
   },
   {
     id: generateId("February (Month)"),
     name: "February (Month)",
-    images: getImages("february_month", "png"),
+    images: getImages("february", "png"),
+    tags: ["month"],
   },
   {
     id: generateId("Fee"),
@@ -85,7 +87,7 @@ export const letterF: SignProps[] = [
   {
     id: generateId("Feel"),
     name: "Feel",
-    images: getImages("feel", "png"),
+    images: getImages("feel", "jpg"),
   },
   {
     id: generateId("Fever"),
@@ -95,12 +97,13 @@ export const letterF: SignProps[] = [
   {
     id: generateId("Few"),
     name: "Few",
-    images: getImages("few", "png"),
+    images: getImages("few", "jpg"),
   },
   {
     id: generateId("Fifteen (Numeral)"),
     name: "Fifteen (Numeral)",
-    images: getImages("fifteen_numeral", "png"),
+    images: getImages("fifteen", "png"),
+    tags: ["numeral"],
   },
   {
     id: generateId("File"),
@@ -110,7 +113,7 @@ export const letterF: SignProps[] = [
   {
     id: generateId("Fill"),
     name: "Fill",
-    images: getImages("fill", "png"),
+    images: getImages("fill", "jpg"),
   },
   {
     id: generateId("Finance"),
@@ -120,32 +123,32 @@ export const letterF: SignProps[] = [
   {
     id: generateId("Financial"),
     name: "Financial",
-    images: getImages("financial", "png"),
+    images: getImages("financial", "jpg"),
   },
   {
     id: generateId("Find"),
     name: "Find",
-    images: getImages("find", "png"),
+    images: getImages("find", "jpg"),
   },
   {
     id: generateId("Fine (Adjective)"),
     name: "Fine (Adjective)",
-    images: getImages("fine_adjective", "png"),
+    images: getImages("fine_adj", "png"),
   },
   {
     id: generateId("Finish"),
     name: "Finish",
-    images: getImages("finish", "png"),
+    images: getImages("finish", "jpg"),
   },
   {
     id: generateId("Fire"),
     name: "Fire",
-    images: getImages("fire", "png"),
+    images: getImages("fire", "jpg"),
   },
   {
     id: generateId("Fire (Noun)"),
     name: "Fire (Noun)",
-    images: getImages("fire_noun", "png"),
+    images: getImages("fire", "jpg"),
   },
   {
     id: generateId("Fireman"),
@@ -155,17 +158,18 @@ export const letterF: SignProps[] = [
   {
     id: generateId("Fish"),
     name: "Fish",
-    images: getImages("fish", "png"),
+    images: getImages("fish", "jpg"),
   },
   {
     id: generateId("Five"),
     name: "Five",
     images: getImages("five", "png"),
+    tags: ["numeral"],
   },
   {
     id: generateId("Fix"),
     name: "Fix",
-    images: getImages("fix", "png"),
+    images: getImages("fix", "jpg"),
   },
   {
     id: generateId("Flag"),
@@ -185,27 +189,27 @@ export const letterF: SignProps[] = [
   {
     id: generateId("Float"),
     name: "Float",
-    images: getImages("float", "png"),
+    images: getImages("float", "jpg"),
   },
   {
     id: generateId("Floor (Level of building)"),
     name: "Floor (Level of building)",
-    images: getImages("floor_level_of_building", "png"),
+    images: getImages("floor", "jpg"),
   },
   {
     id: generateId("Floor (Room)"),
     name: "Floor (Room)",
-    images: getImages("floor_room", "png"),
+    images: getImages("floor", "jpg"),
   },
   {
     id: generateId("Flower"),
     name: "Flower",
-    images: getImages("flower", "png"),
+    images: getImages("flower", "jpg"),
   },
   {
     id: generateId("Flu"),
     name: "Flu",
-    images: getImages("flu", "png"),
+    images: getImages("flu", "jpg"),
   },
   {
     id: generateId("Fly"),
@@ -220,12 +224,12 @@ export const letterF: SignProps[] = [
   {
     id: generateId("Food"),
     name: "Food",
-    images: getImages("food", "png"),
+    images: getImages("food", "jpg"),
   },
   {
     id: generateId("Foot"),
     name: "Foot",
-    images: getImages("foot", "png"),
+    images: getImages("foot", "jpg"),
   },
   {
     id: generateId("Forget"),
@@ -246,26 +250,28 @@ export const letterF: SignProps[] = [
     id: generateId("Four"),
     name: "Four",
     images: getImages("four", "png"),
+    tags: ["numeral"],
   },
   {
     id: generateId("Fourteen"),
     name: "Fourteen",
     images: getImages("fourteen", "png"),
+    tags: ["numeral"],
   },
   {
     id: generateId("Free (Adj)"),
     name: "Free (Adj)",
-    images: getImages("free_adj", "png"),
+    images: getImages("free", "png"),
   },
   {
     id: generateId("Free (Verb)"),
     name: "Free (Verb)",
-    images: getImages("free_verb", "png"),
+    images: getImages("free", "png"),
   },
   {
     id: generateId("Freeze"),
     name: "Freeze",
-    images: getImages("freeze", "png"),
+    images: getImages("freeze", "jpg"),
   },
   {
     id: generateId("Frequently"),
@@ -285,22 +291,23 @@ export const letterF: SignProps[] = [
   {
     id: generateId("Friend"),
     name: "Friend",
-    images: getImages("friend", "png"),
+    images: getImages("friend", "jpg"),
   },
   {
     id: generateId("Fruit"),
     name: "Fruit",
-    images: getImages("fruit", "png"),
+    images: getImages("fruit", "jpg"),
   },
   {
     id: generateId("Full"),
     name: "Full",
-    images: getImages("full", "png"),
+    images: getImages("full", "jpg"),
   },
   {
     id: generateId("Full Stop (Symbol)"),
     name: "Full Stop (Symbol)",
-    images: getImages("full_stop_symbol", "png"),
+    images: getImages("full_stop", "png"),
+    tags: ["symbol"],
   },
   {
     id: generateId("Fund"),
@@ -315,6 +322,6 @@ export const letterF: SignProps[] = [
   {
     id: generateId("Future"),
     name: "Future",
-    images: getImages("future", "png"),
+    images: getImages("future", "jpg"),
   },
 ];

@@ -10,7 +10,7 @@ export const letterE: SignProps[] = [
   {
     id: generateId("Ear"),
     name: "Ear",
-    images: getImages("ear", "png"),
+    images: getImages("ear", "jpg"),
   },
   {
     id: generateId("Early"),
@@ -20,7 +20,7 @@ export const letterE: SignProps[] = [
   {
     id: generateId("Earth"),
     name: "Earth",
-    images: getImages("earth", "png"),
+    images: getImages("earth", "jpg"),
   },
   {
     id: generateId("East"),
@@ -30,12 +30,12 @@ export const letterE: SignProps[] = [
   {
     id: generateId("Easy"),
     name: "Easy",
-    images: getImages("easy", "png"),
+    images: getImages("easy", "jpg"),
   },
   {
     id: generateId("Eat"),
     name: "Eat",
-    images: getImages("eat", "png"),
+    images: getImages("eat", "jpg"),
   },
   {
     id: generateId("Economy"),
@@ -45,17 +45,19 @@ export const letterE: SignProps[] = [
   {
     id: generateId("Egg"),
     name: "Egg",
-    images: getImages("egg", "png"),
+    images: getImages("egg", "jpg"),
   },
   {
     id: generateId("Eight (Numeral)"),
     name: "Eight (Numeral)",
-    images: getImages("eight_numeral", "png"),
+    images: getImages("eight", "png"),
+    tags: ["numeral"],
   },
   {
     id: generateId("Eighteen (Numeral)"),
     name: "Eighteen (Numeral)",
-    images: getImages("eighteen_numeral", "png"),
+    images: getImages("eighteen", "png"),
+    tags: ["numeral"],
   },
   {
     id: generateId("Eldest"),
@@ -65,12 +67,13 @@ export const letterE: SignProps[] = [
   {
     id: generateId("Eleven (Numeral)"),
     name: "Eleven (Numeral)",
-    images: getImages("eleven_numeral", "png"),
+    images: getImages("eleven", "png"),
+    tags: ["numeral"],
   },
   {
     id: generateId("Email"),
     name: "Email",
-    images: getImages("email", "png"),
+    images: getImages("email", "jpg"),
   },
   {
     id: generateId("Emergency"),
@@ -80,7 +83,7 @@ export const letterE: SignProps[] = [
   {
     id: generateId("Empty"),
     name: "Empty",
-    images: getImages("empty", "png"),
+    images: getImages("empty", "jpg"),
   },
   {
     id: generateId("Engaged"),
@@ -95,17 +98,20 @@ export const letterE: SignProps[] = [
   {
     id: generateId("Equal (Mathematics)"),
     name: "Equal (Mathematics)",
-    images: getImages("equal_mathematics", "png"),
+    images: getImages("equal", "png"),
+    tags: ["mathematics"],
   },
   {
     id: generateId("Esplanade (Place)"),
     name: "Esplanade (Place)",
-    images: getImages("esplanade_place", "png"),
+    images: getImages("esplanade", "png"),
+    tags: ["place"],
   },
   {
     id: generateId("Eunos (Place)"),
     name: "Eunos (Place)",
-    images: getImages("eunos_place", "png"),
+    images: getImages("eunos", "jpg"),
+    tags: ["place"],
   },
   {
     id: generateId("Eurasian"),
@@ -115,12 +121,13 @@ export const letterE: SignProps[] = [
   {
     id: generateId("Europe (Place)"),
     name: "Europe (Place)",
-    images: getImages("europe_place", "png"),
+    images: getImages("europe", "png"),
+    tags: ["place"],
   },
   {
     id: generateId("Evening"),
     name: "Evening",
-    images: getImages("evening", "png"),
+    images: getImages("evening", "jpg"),
   },
   {
     id: generateId("Every"),
@@ -130,7 +137,8 @@ export const letterE: SignProps[] = [
   {
     id: generateId("Executive (Job)"),
     name: "Executive (Job)",
-    images: getImages("executive_job", "png"),
+    images: getImages("executive", "png"),
+    tags: ["job"],
   },
   {
     id: generateId("Exit"),

@@ -10,12 +10,12 @@ export const letterD: SignProps[] = [
   {
     id: generateId("Dance"),
     name: "Dance",
-    images: getImages("dance", "png"),
+    images: getImages("dance", "jpg"),
   },
   {
     id: generateId("Dark"),
     name: "Dark",
-    images: getImages("dark", "png"),
+    images: getImages("dark", "jpg"),
   },
   {
     id: generateId("Date (Love)"),
@@ -30,37 +30,38 @@ export const letterD: SignProps[] = [
   {
     id: generateId("Date (Time)"),
     name: "Date (Time)",
-    images: getImages("date_time", "png"),
+    images: getImages("date_time", "jpg"),
   },
   {
     id: generateId("Date (Verb)"),
     name: "Date (Verb)",
-    images: getImages("date_verb", "png"),
+    images: getImages("date_love", "png"),
   },
   {
     id: generateId("Daughter"),
     name: "Daughter",
-    images: getImages("daughter", "png"),
+    images: getImages("daughter", "jpg"),
   },
   {
     id: generateId("Day"),
     name: "Day",
-    images: getImages("day", "png"),
+    images: getImages("day", "jpg"),
   },
   {
     id: generateId("Deaf"),
     name: "Deaf",
-    images: getImages("deaf", "png"),
+    images: getImages("deaf", "jpg"),
   },
   {
     id: generateId("Deafblind"),
     name: "Deafblind",
-    images: getImages("deafblind", "png"),
+    images: getImages("deafblind", "jpg"),
   },
   {
     id: generateId("December (Month)"),
     name: "December (Month)",
-    images: getImages("december_month", "png"),
+    images: getImages("december", "png"),
+    tags: ["month"],
   },
   {
     id: generateId("Decide"),
@@ -80,7 +81,7 @@ export const letterD: SignProps[] = [
   {
     id: generateId("Deer"),
     name: "Deer",
-    images: getImages("deer", "png"),
+    images: getImages("deer", "jpg"),
   },
   {
     id: generateId("Defecate"),
@@ -120,7 +121,8 @@ export const letterD: SignProps[] = [
   {
     id: generateId("Dhoby Ghaut (Place)"),
     name: "Dhoby Ghaut (Place)",
-    images: getImages("dhoby_ghaut_place", "png"),
+    images: getImages("dhoby_ghaut", "jpg"),
+    tags: ["place"],
   },
   {
     id: generateId("Diabetes"),
@@ -130,7 +132,7 @@ export const letterD: SignProps[] = [
   {
     id: generateId("Die"),
     name: "Die",
-    images: getImages("die", "png"),
+    images: getImages("die", "jpg"),
   },
   {
     id: generateId("Diet"),
@@ -155,17 +157,18 @@ export const letterD: SignProps[] = [
   {
     id: generateId("Dinner"),
     name: "Dinner",
-    images: getImages("dinner", "png"),
+    images: getImages("dinner", "jpg"),
   },
   {
     id: generateId("Director (Job)"),
     name: "Director (Job)",
-    images: getImages("director_job", "png"),
+    images: getImages("director", "png"),
+    tags: ["job"],
   },
   {
     id: generateId("Dirty"),
     name: "Dirty",
-    images: getImages("dirty", "png"),
+    images: getImages("dirty", "jpg"),
   },
   {
     id: generateId("Discipline"),
@@ -185,7 +188,7 @@ export const letterD: SignProps[] = [
   {
     id: generateId("Discuss"),
     name: "Discuss",
-    images: getImages("discuss", "png"),
+    images: getImages("discuss", "jpg"),
   },
   {
     id: generateId("Dislike"),
@@ -195,7 +198,7 @@ export const letterD: SignProps[] = [
   {
     id: generateId("Dissolve"),
     name: "Dissolve",
-    images: getImages("dissolve", "png"),
+    images: getImages("dissolve", "jpg"),
   },
   {
     id: generateId("Distant"),
@@ -205,7 +208,8 @@ export const letterD: SignProps[] = [
   {
     id: generateId("Divide (Mathematics)"),
     name: "Divide (Mathematics)",
-    images: getImages("divide_mathematics", "png"),
+    images: getImages("divide", "png"),
+    tags: ["mathematics"],
   },
   {
     id: generateId("Divorced"),
@@ -220,12 +224,12 @@ export const letterD: SignProps[] = [
   {
     id: generateId("Do"),
     name: "Do",
-    images: getImages("do", "png"),
+    images: getImages("do", "jpg"),
   },
   {
     id: generateId("Do Not"),
     name: "Do Not",
-    images: getImages("do_not", "png"),
+    images: getImages("do_not", "jpg"),
   },
   {
     id: generateId("Doctor"),
@@ -240,7 +244,7 @@ export const letterD: SignProps[] = [
   {
     id: generateId("Dog"),
     name: "Dog",
-    images: getImages("dog", "png"),
+    images: getImages("dog", "jpg"),
   },
   {
     id: generateId("Dollar"),
@@ -270,7 +274,7 @@ export const letterD: SignProps[] = [
   {
     id: generateId("Dream"),
     name: "Dream",
-    images: getImages("dream", "png"),
+    images: getImages("dream", "jpg"),
   },
   {
     id: generateId("Dress"),
@@ -280,17 +284,18 @@ export const letterD: SignProps[] = [
   {
     id: generateId("Drink"),
     name: "Drink",
-    images: getImages("drink", "png"),
+    images: getImages("drink", "jpg"),
   },
   {
     id: generateId("Drive"),
     name: "Drive",
-    images: getImages("drive", "png"),
+    images: getImages("drive", "jpg"),
   },
   {
     id: generateId("Driver (Job)"),
     name: "Driver (Job)",
-    images: getImages("driver_job", "png"),
+    images: getImages("driver", "png"),
+    tags: ["job"],
   },
   {
     id: generateId("Drowsy"),
@@ -300,17 +305,18 @@ export const letterD: SignProps[] = [
   {
     id: generateId("Dry"),
     name: "Dry",
-    images: getImages("dry", "png"),
+    images: getImages("dry", "jpg"),
   },
   {
     id: generateId("Dubai (Place)"),
     name: "Dubai (Place)",
-    images: getImages("dubai_place", "png"),
+    images: getImages("dubai", "png"),
+    tags: ["place"],
   },
   {
     id: generateId("Duck"),
     name: "Duck",
-    images: getImages("duck", "png"),
+    images: getImages("duck", "jpg"),
   },
   {
     id: generateId("Dumpling"),
@@ -325,6 +331,6 @@ export const letterD: SignProps[] = [
   {
     id: generateId("Dust"),
     name: "Dust",
-    images: getImages("dust", "png"),
+    images: getImages("dust", "jpg"),
   },
 ];

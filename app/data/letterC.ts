@@ -10,7 +10,7 @@ export const letterC: SignProps[] = [
   {
     id: generateId("Cake"),
     name: "Cake",
-    images: getImages("cake", "png"),
+    images: getImages("cake", "jpg"),
   },
   {
     id: generateId("Camera"),
@@ -20,12 +20,12 @@ export const letterC: SignProps[] = [
   {
     id: generateId("Camp"),
     name: "Camp",
-    images: getImages("camp", "png"),
+    images: getImages("camp", "jpg"),
   },
   {
     id: generateId("Can"),
     name: "Can",
-    images: getImages("can", "png"),
+    images: getImages("can", "jpg"),
   },
   {
     id: generateId("Cancel"),
@@ -40,7 +40,7 @@ export const letterC: SignProps[] = [
   {
     id: generateId("Cannot"),
     name: "Cannot",
-    images: getImages("cannot", "png"),
+    images: getImages("cannot", "jpg"),
   },
   {
     id: generateId("Cap"),
@@ -50,7 +50,7 @@ export const letterC: SignProps[] = [
   {
     id: generateId("Car"),
     name: "Car",
-    images: getImages("car", "png"),
+    images: getImages("car", "jpg"),
   },
   {
     id: generateId("Care"),
@@ -70,7 +70,7 @@ export const letterC: SignProps[] = [
   {
     id: generateId("Carry"),
     name: "Carry",
-    images: getImages("carry", "png"),
+    images: getImages("carry", "jpg"),
   },
   {
     id: generateId("Cash"),
@@ -90,7 +90,7 @@ export const letterC: SignProps[] = [
   {
     id: generateId("Cat"),
     name: "Cat",
-    images: getImages("cat", "png"),
+    images: getImages("cat", "jpg"),
   },
   {
     id: generateId("Catch"),
@@ -110,7 +110,7 @@ export const letterC: SignProps[] = [
   {
     id: generateId("Chair"),
     name: "Chair",
-    images: getImages("chair", "png"),
+    images: getImages("chair", "jpg"),
   },
   {
     id: generateId("Chauffeur"),
@@ -150,7 +150,7 @@ export const letterC: SignProps[] = [
   {
     id: generateId("Child"),
     name: "Child",
-    images: getImages("child", "png"),
+    images: getImages("child", "jpg"),
   },
   {
     id: generateId("Childcare"),
@@ -165,17 +165,20 @@ export const letterC: SignProps[] = [
   {
     id: generateId("China (Place)"),
     name: "China (Place)",
-    images: getImages("china_place", "png"),
+    images: getImages("china", "png"),
+    tags: ["place"],
   },
   {
     id: generateId("Chinese Garden (Place)"),
     name: "Chinese Garden (Place)",
-    images: getImages("chinese_garden_place", "png"),
+    images: getImages("chinese_garden", "jpg"),
+    tags: ["place"],
   },
   {
     id: generateId("Choa Chu Kang (Place)"),
     name: "Choa Chu Kang (Place)",
-    images: getImages("choa_chu_kang_place", "png"),
+    images: getImages("choa_chu_kang", "jpg"),
+    tags: ["place"],
   },
   {
     id: generateId("Chocolate"),
@@ -185,7 +188,7 @@ export const letterC: SignProps[] = [
   {
     id: generateId("Choose"),
     name: "Choose",
-    images: getImages("choose", "png"),
+    images: getImages("choose", "jpg"),
   },
   {
     id: generateId("Chopsticks"),
@@ -205,7 +208,7 @@ export const letterC: SignProps[] = [
   {
     id: generateId("Cinema"),
     name: "Cinema",
-    images: getImages("cinema", "png"),
+    images: getImages("cinema", "jpg"),
   },
   {
     id: generateId("City"),
@@ -215,12 +218,13 @@ export const letterC: SignProps[] = [
   {
     id: generateId("City Hall (Place)"),
     name: "City Hall (Place)",
-    images: getImages("city_hall_place", "png"),
+    images: getImages("city_hall", "jpg"),
+    tags: ["place"],
   },
   {
     id: generateId("Class"),
     name: "Class",
-    images: getImages("class", "png"),
+    images: getImages("class", "jpg"),
   },
   {
     id: generateId("Classroom"),
@@ -230,37 +234,39 @@ export const letterC: SignProps[] = [
   {
     id: generateId("Clean (Adjective)"),
     name: "Clean (Adjective)",
-    images: getImages("clean_adjective", "png"),
+    images: getImages("clean_adj", "jpg"),
   },
   {
     id: generateId("Clean (Verb)"),
     name: "Clean (Verb)",
-    images: getImages("clean_verb", "png"),
+    images: getImages("clean_adj", "jpg"),
   },
   {
     id: generateId("Cleaner (Job)"),
     name: "Cleaner (Job)",
-    images: getImages("cleaner_job", "png"),
+    images: getImages("cleaner", "png"),
+    tags: ["job"],
   },
   {
     id: generateId("Clear (Adjective)"),
     name: "Clear (Adjective)",
-    images: getImages("clear_adjective", "png"),
+    images: getImages("clear_adj", "png"),
   },
   {
     id: generateId("Clementi (Place)"),
     name: "Clementi (Place)",
-    images: getImages("clementi_place", "png"),
+    images: getImages("clementi", "jpg"),
+    tags: ["place"],
   },
   {
     id: generateId("Client"),
     name: "Client",
-    images: getImages("client", "png"),
+    images: getImages("client", "jpg"),
   },
   {
     id: generateId("Climb"),
     name: "Climb",
-    images: getImages("climb", "png"),
+    images: getImages("climb", "jpg"),
   },
   {
     id: generateId("Clinic"),
@@ -275,22 +281,22 @@ export const letterC: SignProps[] = [
   {
     id: generateId("Close (Adjective)"),
     name: "Close (Adjective)",
-    images: getImages("close_adjective", "png"),
+    images: getImages("close_adj", "png"),
   },
   {
     id: generateId("Closet"),
     name: "Closet",
-    images: getImages("closet", "png"),
+    images: getImages("closet", "jpg"),
   },
   {
     id: generateId("Clothes"),
     name: "Clothes",
-    images: getImages("clothes", "png"),
+    images: getImages("clothes", "jpg"),
   },
   {
     id: generateId("Cloud"),
     name: "Cloud",
-    images: getImages("cloud", "png"),
+    images: getImages("cloud", "jpg"),
   },
   {
     id: generateId("Clown"),
@@ -300,12 +306,12 @@ export const letterC: SignProps[] = [
   {
     id: generateId("Coat"),
     name: "Coat",
-    images: getImages("coat", "png"),
+    images: getImages("coat", "jpg"),
   },
   {
     id: generateId("Cochlear Implant"),
     name: "Cochlear Implant",
-    images: getImages("cochlear_implant", "png"),
+    images: getImages("cochlear_implant", "jpg"),
   },
   {
     id: generateId("Coffee"),
@@ -320,17 +326,17 @@ export const letterC: SignProps[] = [
   {
     id: generateId("Coke (Drink)"),
     name: "Coke (Drink)",
-    images: getImages("coke_drink", "png"),
+    images: getImages("coke", "png"),
   },
   {
     id: generateId("Cold"),
     name: "Cold",
-    images: getImages("cold", "png"),
+    images: getImages("cold", "jpg"),
   },
   {
     id: generateId("Colour"),
     name: "Colour",
-    images: getImages("colour", "png"),
+    images: getImages("colour", "jpg"),
   },
   {
     id: generateId("Come"),
@@ -340,7 +346,8 @@ export const letterC: SignProps[] = [
   {
     id: generateId("Commonwealth (Place)"),
     name: "Commonwealth (Place)",
-    images: getImages("commonwealth_place", "png"),
+    images: getImages("commonwealth", "jpg"),
+    tags: ["place"],
   },
   {
     id: generateId("Competition"),
@@ -350,12 +357,12 @@ export const letterC: SignProps[] = [
   {
     id: generateId("Computer"),
     name: "Computer",
-    images: getImages("computer", "png"),
+    images: getImages("computer", "jpg"),
   },
   {
     id: generateId("Condo"),
     name: "Condo",
-    images: getImages("condo", "png"),
+    images: getImages("condominium", "png"),
   },
   {
     id: generateId("Condominium"),
@@ -380,17 +387,17 @@ export const letterC: SignProps[] = [
   {
     id: generateId("Cookie"),
     name: "Cookie",
-    images: getImages("cookie", "png"),
+    images: getImages("cookie", "jpg"),
   },
   {
     id: generateId("Corn"),
     name: "Corn",
-    images: getImages("corn", "png"),
+    images: getImages("corn", "jpg"),
   },
   {
     id: generateId("Correct"),
     name: "Correct",
-    images: getImages("correct", "png"),
+    images: getImages("correct", "jpg"),
   },
   {
     id: generateId("Cost"),
@@ -405,7 +412,7 @@ export const letterC: SignProps[] = [
   {
     id: generateId("Cough Mixture"),
     name: "Cough Mixture",
-    images: getImages("cough_mixture", "png"),
+    images: getImages("cough_syrup", "png"),
   },
   {
     id: generateId("Cough Syrup"),
@@ -415,7 +422,7 @@ export const letterC: SignProps[] = [
   {
     id: generateId("Count"),
     name: "Count",
-    images: getImages("count", "png"),
+    images: getImages("count", "jpg"),
   },
   {
     id: generateId("Counter"),
@@ -435,12 +442,12 @@ export const letterC: SignProps[] = [
   {
     id: generateId("Covid 19"),
     name: "Covid 19",
-    images: getImages("covid_19", "png"),
+    images: getImages("covid19", "png"),
   },
   {
     id: generateId("Cow"),
     name: "Cow",
-    images: getImages("cow", "png"),
+    images: getImages("cow", "jpg"),
   },
   {
     id: generateId("Cramp"),
@@ -450,7 +457,7 @@ export const letterC: SignProps[] = [
   {
     id: generateId("Crazy"),
     name: "Crazy",
-    images: getImages("crazy", "png"),
+    images: getImages("crazy", "jpg"),
   },
   {
     id: generateId("Credit Card"),
@@ -470,7 +477,7 @@ export const letterC: SignProps[] = [
   {
     id: generateId("Cry"),
     name: "Cry",
-    images: getImages("cry", "png"),
+    images: getImages("cry", "jpg"),
   },
   {
     id: generateId("Culture"),
@@ -480,7 +487,7 @@ export const letterC: SignProps[] = [
   {
     id: generateId("Cup"),
     name: "Cup",
-    images: getImages("cup", "png"),
+    images: getImages("cup", "jpg"),
   },
   {
     id: generateId("Curtain"),
@@ -495,7 +502,7 @@ export const letterC: SignProps[] = [
   {
     id: generateId("Cute"),
     name: "Cute",
-    images: getImages("cute", "png"),
+    images: getImages("cute", "jpg"),
   },
   {
     id: generateId("Cycle (Verb)"),
