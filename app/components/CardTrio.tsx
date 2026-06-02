@@ -12,7 +12,7 @@ type Props = {
 const CardTrio = ({ data, answer }: Props) => {
   const CARD_LIST = data;
 
-  const [ref, entry] = useIntersectionObserver();
+  const [ref, entry] = useIntersectionObserver({ threshold: 0.5 });
 
   const [isReveal, setIsReveal] = useState(false);
   const [selectedId, setSelectedId] = useState("");
@@ -37,10 +37,13 @@ const CardTrio = ({ data, answer }: Props) => {
   return (
     <section
       ref={ref}
-      className="h-screen flex flex-col justify-center items-center"
+      className={twMerge(
+        "h-screen flex flex-col justify-center items-center opacity-0",
+        entry?.isIntersecting &&
+          "opacity-100 transition duration-500 delay-300",
+      )}
     >
       <h2 className="text-5xl mb-5 text-shadow-lg text-center">{answer}</h2>
-
       <div
         className={twMerge(
           "flex flex-col gap-4 w-9/10 md:flex-row md:h-2/5 md:w-auto",
