@@ -77,7 +77,7 @@ export default function Bank() {
         {isUpdating ? "Updating..." : "Update Signs"}
       </button>
 
-      <section className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-2">
+      <section className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-2">
         <button className="btn"></button>
 
         {SIGN_LIST.map((sign) => {
@@ -87,11 +87,16 @@ export default function Bank() {
                 onClick={() => handleVisibleGif(sign.id)}
                 className={twMerge(
                   "btn relative",
-                  visibleGif === sign.id && "btn-active",
+                  visibleGif === sign.id && "btn-active z-10",
                 )}
               >
                 {visibleGif === sign.id && (
-                  <div className="absolute top-0 w-[120%] translate-y-[-110%] aspect-video rounded-lg shadow-lg overflow-hidden">
+                  <div
+                    className={twMerge(
+                      "absolute top-0 translate-y-[-110%] w-[120%]",
+                      "aspect-video rounded-lg shadow-lg overflow-hidden",
+                    )}
+                  >
                     {isGifLoading && (
                       <div className="skeleton w-full h-full"></div>
                     )}
@@ -99,6 +104,26 @@ export default function Bank() {
                     <img
                       className="h-full w-full object-cover"
                       src={sign.images.imageAnimated}
+                      alt={sign.name}
+                      onLoad={() => setIsGifLoading(false)}
+                    />
+                  </div>
+                )}
+
+                {visibleGif === sign.id && (
+                  <div
+                    className={twMerge(
+                      "absolute bottom-0 translate-y-[110%] w-[120%]",
+                      "aspect-video rounded-lg shadow-lg overflow-hidden",
+                    )}
+                  >
+                    {isGifLoading && (
+                      <div className="skeleton w-full h-full"></div>
+                    )}
+
+                    <img
+                      className="h-full w-full object-cover"
+                      src={sign.images.imageStatic}
                       alt={sign.name}
                       onLoad={() => setIsGifLoading(false)}
                     />

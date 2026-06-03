@@ -23,6 +23,11 @@ export const letterA: SignProps[] = [
     images: getImages("act_verb", "png"),
   },
   {
+    id: generateId("Activity"),
+    name: "Activity",
+    images: getImages("activity", "png"),
+  },
+  {
     id: generateId("Actor (Job)"),
     name: "Actor (Job)",
     images: getImages("actor", "png"),
