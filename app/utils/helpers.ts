@@ -76,13 +76,13 @@ export function safeJsonParse(value: string): string {
 }
 
 export function safeJsonStringify(value: unknown): string {
-  if (typeof value === "string") {
-    return value;
+  if (value === undefined) {
+    return "";
   }
 
   try {
     return JSON.stringify(value);
-  } catch {
+  } catch (error) {
     return "";
   }
 }

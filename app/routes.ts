@@ -7,6 +7,7 @@ import {
 
 export default [
   route("under-construction", "routes/under-construction.tsx"),
+  route("error", "routes/error.tsx"),
 
   // Protected routes
   layout("layouts/ProtectedRoute.tsx", [

@@ -1,6 +1,7 @@
 import { Outlet, redirect } from "react-router";
 import { apiRequest } from "~/utils/apiRequest";
-import { safeJsonParse } from "~/utils/helpers";
+import { STORAGE_URL } from "~/utils/constants";
+import { safeJsonParse, safeJsonStringify } from "~/utils/helpers";
 import type { Route } from "./+types/ProtectedRoute";
 
 export async function clientLoader({}: Route.ClientLoaderArgs) {
@@ -9,14 +10,28 @@ export async function clientLoader({}: Route.ClientLoaderArgs) {
 
   const userKonami = safeJsonParse(konamiString);
 
-  const { data, error } = await apiRequest<{ isKonamiValid: boolean }>({
-    url: "/api/verify-konami",
-    method: "POST",
-    data: { userKonami },
-  });
+  const [authResult, canaryResult] = await Promise.all([
+    apiRequest<{ isKonamiValid: boolean }>({
+      url: "/api/verify-konami",
+      method: "POST",
+      data: { userKonami },
+    }),
+    apiRequest({
+      url: `${STORAGE_URL}/a_small.jpg`,
+      method: "HEAD",
+    }),
+  ]);
 
-  if (!data?.isKonamiValid || error) {
+  if (!authResult.data?.isKonamiValid || authResult.error) {
     return redirect("/under-construction");
+  }
+
+  if (canaryResult.error) {
+    const errorMessage = safeJsonStringify(canaryResult.error);
+    localStorage.setItem("last_error_debug", errorMessage);
+    return redirect("/error");
+  } else {
+    localStorage.removeItem("last_error_debug");
   }
 
   return null;
