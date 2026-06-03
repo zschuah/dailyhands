@@ -33,15 +33,17 @@ export default function Bank() {
   const fetcher = useFetcher();
   const isUpdating = fetcher.state !== "idle";
 
-  const [visibleGif, setVisibleGif] = useState("");
+  const [visibleImages, setVisibleImages] = useState("");
   const [isGifLoading, setIsGifLoading] = useState(false);
+  const [isStaticLoading, setIsStaticLoading] = useState(false);
 
   const handleVisibleGif = (id: string) => {
-    if (visibleGif !== id) {
-      setVisibleGif(id);
+    if (visibleImages !== id) {
+      setVisibleImages(id);
       setIsGifLoading(true);
+      setIsStaticLoading(true);
     } else {
-      setVisibleGif("");
+      setVisibleImages("");
     }
   };
 
@@ -87,10 +89,10 @@ export default function Bank() {
                 onClick={() => handleVisibleGif(sign.id)}
                 className={twMerge(
                   "btn relative",
-                  visibleGif === sign.id && "btn-active z-10",
+                  visibleImages === sign.id && "btn-active z-10",
                 )}
               >
-                {visibleGif === sign.id && (
+                {visibleImages === sign.id && (
                   <div
                     className={twMerge(
                       "absolute top-0 translate-y-[-110%] w-[120%]",
@@ -110,14 +112,14 @@ export default function Bank() {
                   </div>
                 )}
 
-                {visibleGif === sign.id && (
+                {visibleImages === sign.id && (
                   <div
                     className={twMerge(
                       "absolute bottom-0 translate-y-[110%] w-[120%]",
                       "aspect-video rounded-lg shadow-lg overflow-hidden",
                     )}
                   >
-                    {isGifLoading && (
+                    {isStaticLoading && (
                       <div className="skeleton w-full h-full"></div>
                     )}
 
@@ -125,7 +127,7 @@ export default function Bank() {
                       className="h-full w-full object-cover"
                       src={sign.images.imageStatic}
                       alt={sign.name}
-                      onLoad={() => setIsGifLoading(false)}
+                      onLoad={() => setIsStaticLoading(false)}
                     />
                   </div>
                 )}

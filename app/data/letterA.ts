@@ -62,6 +62,11 @@ export const letterA: SignProps[] = [
     images: getImages("afraid", "jpg"),
   },
   {
+    id: generateId("Africa (Place)"),
+    name: "Africa (Place)",
+    images: getImages("africa", "jpg"),
+  },
+  {
     id: generateId("After"),
     name: "After",
     images: getImages("after", "jpg"),
@@ -80,6 +85,11 @@ export const letterA: SignProps[] = [
     id: generateId("Age (Noun)"),
     name: "Age (Noun)",
     images: getImages("age_noun", "png"),
+  },
+  {
+    id: generateId("Air"),
+    name: "Air",
+    images: getImages("air", "png"),
   },
   {
     id: generateId("Air-conditioner"),
