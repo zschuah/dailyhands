@@ -232,8 +232,8 @@ export const letterC: SignProps[] = [
     images: getImages("classroom", "png"),
   },
   {
-    id: generateId("Clean (Adjective)"),
-    name: "Clean (Adjective)",
+    id: generateId("Clean (Adj)"),
+    name: "Clean (Adj)",
     images: getImages("clean_adj", "jpg"),
   },
   {
@@ -248,8 +248,8 @@ export const letterC: SignProps[] = [
     tags: ["job"],
   },
   {
-    id: generateId("Clear (Adjective)"),
-    name: "Clear (Adjective)",
+    id: generateId("Clear (Adj)"),
+    name: "Clear (Adj)",
     images: getImages("clear_adj", "png"),
   },
   {
@@ -279,8 +279,8 @@ export const letterC: SignProps[] = [
     images: getImages("clock", "png"),
   },
   {
-    id: generateId("Close (Adjective)"),
-    name: "Close (Adjective)",
+    id: generateId("Close (Adj)"),
+    name: "Close (Adj)",
     images: getImages("close_adj", "png"),
   },
   {

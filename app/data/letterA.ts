@@ -52,8 +52,8 @@ export const letterA: SignProps[] = [
     tags: ["job"],
   },
   {
-    id: generateId("Adopted (Adjective)"),
-    name: "Adopted (Adjective)",
+    id: generateId("Adopted (Adj)"),
+    name: "Adopted (Adj)",
     images: getImages("adopted_adj", "png"),
   },
   {

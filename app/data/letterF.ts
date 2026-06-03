@@ -49,8 +49,8 @@ export const letterF: SignProps[] = [
     images: getImages("fat", "jpg"),
   },
   {
-    id: generateId("Fat (Adjective)"),
-    name: "Fat (Adjective)",
+    id: generateId("Fat (Adj)"),
+    name: "Fat (Adj)",
     images: getImages("fat_adj", "png"),
   },
   {
@@ -131,8 +131,8 @@ export const letterF: SignProps[] = [
     images: getImages("find", "jpg"),
   },
   {
-    id: generateId("Fine (Adjective)"),
-    name: "Fine (Adjective)",
+    id: generateId("Fine (Adj)"),
+    name: "Fine (Adj)",
     images: getImages("fine_adj", "png"),
   },
   {
