@@ -383,6 +383,12 @@ export const letterB: SignProps[] = [
     images: getImages("brain", "png"),
   },
   {
+    id: generateId("Brazil (Place)"),
+    name: "Brazil (Place)",
+    images: getImages("brazil", "jpg"),
+    tags: ["place"],
+  },
+  {
     id: generateId("Bread"),
     name: "Bread",
     images: getImages("bread", "jpg"),
@@ -403,6 +409,16 @@ export const letterB: SignProps[] = [
     images: getImages("bring", "jpg"),
   },
   {
+    id: generateId("British"),
+    name: "British",
+    images: getImages("british", "jpg"),
+  },
+  {
+    id: generateId("Broom"),
+    name: "Broom",
+    images: getImages("broom", "png"),
+  },
+  {
     id: generateId("Brother"),
     name: "Brother",
     images: getImages("brother", "jpg"),
@@ -411,6 +427,17 @@ export const letterB: SignProps[] = [
     id: generateId("Brown"),
     name: "Brown",
     images: getImages("brown", "jpg"),
+  },
+  {
+    id: generateId("Brunei (Place)"),
+    name: "Brunei (Place)",
+    images: getImages("brunei", "jpg"),
+    tags: ["place"],
+  },
+  {
+    id: generateId("Buddha"),
+    name: "Buddha",
+    images: getImages("buddha", "png"),
   },
   {
     id: generateId("Budget"),
@@ -454,6 +481,11 @@ export const letterB: SignProps[] = [
     id: generateId("Burger"),
     name: "Burger",
     images: getImages("burger", "png"),
+  },
+  {
+    id: generateId("Bury"),
+    name: "Bury",
+    images: getImages("bury", "png"),
   },
   {
     id: generateId("Bus"),
