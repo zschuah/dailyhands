@@ -65,6 +65,7 @@ export const letterA: SignProps[] = [
     id: generateId("Africa (Place)"),
     name: "Africa (Place)",
     images: getImages("africa", "jpg"),
+    tags: ["place"],
   },
   {
     id: generateId("After"),
@@ -148,6 +149,11 @@ export const letterA: SignProps[] = [
     images: getImages("analyse", "png"),
   },
   {
+    id: generateId("Ancient"),
+    name: "Ancient",
+    images: getImages("ancient", "png"),
+  },
+  {
     id: generateId("Ang Mo Kio (Place)"),
     name: "Ang Mo Kio (Place)",
     images: getImages("ang_mo_kio", "jpg"),
@@ -164,9 +170,24 @@ export const letterA: SignProps[] = [
     images: getImages("animal", "jpg"),
   },
   {
+    id: generateId("Anniversary"),
+    name: "Anniversary",
+    images: getImages("anniversary", "png"),
+  },
+  {
+    id: generateId("Another"),
+    name: "Another",
+    images: getImages("another", "jpg"),
+  },
+  {
     id: generateId("Answer"),
     name: "Answer",
     images: getImages("answer", "jpg"),
+  },
+  {
+    id: generateId("Any"),
+    name: "Any",
+    images: getImages("any", "jpg"),
   },
   {
     id: generateId("Apartment"),
@@ -195,9 +216,19 @@ export const letterA: SignProps[] = [
     tags: ["month"],
   },
   {
+    id: generateId("April Fools' Day"),
+    name: "April Fools' Day",
+    images: getImages("april_fools_day", "png"),
+  },
+  {
     id: generateId("Argue"),
     name: "Argue",
     images: getImages("argue", "jpg"),
+  },
+  {
+    id: generateId("Arrive"),
+    name: "Arrive",
+    images: getImages("arrive", "png"),
   },
   {
     id: generateId("Art"),
