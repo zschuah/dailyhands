@@ -58,6 +58,16 @@ export const letterD: SignProps[] = [
     images: getImages("deafblind", "jpg"),
   },
   {
+    id: generateId("Dear (Adj)"),
+    name: "Dear (Adj)",
+    images: getImages("dear", "jpg"),
+  },
+  {
+    id: generateId("Death"),
+    name: "Death",
+    images: getImages("die", "jpg"),
+  },
+  {
     id: generateId("December (Month)"),
     name: "December (Month)",
     images: getImages("december", "png"),
@@ -79,9 +89,15 @@ export const letterD: SignProps[] = [
     images: getImages("deduct", "png"),
   },
   {
-    id: generateId("Deer"),
-    name: "Deer",
+    id: generateId("Deepavali"),
+    name: "Deepavali",
+    images: getImages("deepavali", "png"),
+  },
+  {
+    id: generateId("Deer (Animal)"),
+    name: "Deer (Animal)",
     images: getImages("deer", "jpg"),
+    tags: ["animal"],
   },
   {
     id: generateId("Defecate"),
@@ -97,6 +113,12 @@ export const letterD: SignProps[] = [
     id: generateId("Delicious"),
     name: "Delicious",
     images: getImages("delicious", "png"),
+  },
+  {
+    id: generateId("Denmark (Place)"),
+    name: "Denmark (Place)",
+    images: getImages("denmark", "jpg"),
+    tags: ["place"],
   },
   {
     id: generateId("Dentist"),
