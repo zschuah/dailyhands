@@ -13,6 +13,22 @@ export const letterC: SignProps[] = [
     images: getImages("cake", "jpg"),
   },
   {
+    id: generateId("Calm (Adj)"),
+    name: "Calm (Adj)",
+    images: getImages("calm", "png"),
+  },
+  {
+    id: generateId("Calm (Noun)"),
+    name: "Calm (Noun)",
+    images: getImages("calm", "png"),
+  },
+  {
+    id: generateId("Cambodia (Place)"),
+    name: "Cambodia (Place)",
+    images: getImages("cambodia", "jpg"),
+    tags: ["place"],
+  },
+  {
     id: generateId("Camera"),
     name: "Camera",
     images: getImages("camera", "png"),
@@ -28,6 +44,12 @@ export const letterC: SignProps[] = [
     images: getImages("can", "jpg"),
   },
   {
+    id: generateId("Canada (Place)"),
+    name: "Canada (Place)",
+    images: getImages("canada", "png"),
+    tags: ["place"],
+  },
+  {
     id: generateId("Cancel"),
     name: "Cancel",
     images: getImages("cancel", "png"),
@@ -38,9 +60,19 @@ export const letterC: SignProps[] = [
     images: getImages("cancer", "png"),
   },
   {
+    id: generateId("Candle"),
+    name: "Candle",
+    images: getImages("candle", "png"),
+  },
+  {
     id: generateId("Cannot"),
     name: "Cannot",
     images: getImages("cannot", "jpg"),
+  },
+  {
+    id: generateId("Cantonese"),
+    name: "Cantonese",
+    images: getImages("cantonese", "png"),
   },
   {
     id: generateId("Cap"),
@@ -53,8 +85,13 @@ export const letterC: SignProps[] = [
     images: getImages("car", "jpg"),
   },
   {
-    id: generateId("Care"),
-    name: "Care",
+    id: generateId("Care (Noun)"),
+    name: "Care (Noun)",
+    images: getImages("care", "png"),
+  },
+  {
+    id: generateId("Care (Verb)"),
+    name: "Care (Verb)",
     images: getImages("care", "png"),
   },
   {
@@ -93,8 +130,13 @@ export const letterC: SignProps[] = [
     images: getImages("cat", "jpg"),
   },
   {
-    id: generateId("Catch"),
-    name: "Catch",
+    id: generateId("Catch (Noun)"),
+    name: "Catch (Noun)",
+    images: getImages("catch", "png"),
+  },
+  {
+    id: generateId("Catch (Verb)"),
+    name: "Catch (Verb)",
     images: getImages("catch", "png"),
   },
   {
