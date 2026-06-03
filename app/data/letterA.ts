@@ -280,6 +280,12 @@ export const letterA: SignProps[] = [
     tags: ["place"],
   },
   {
+    id: generateId("Austria (Place)"),
+    name: "Austria (Place)",
+    images: getImages("austria", "jpg"),
+    tags: ["place"],
+  },
+  {
     id: generateId("Autumn"),
     name: "Autumn",
     images: getImages("autumn", "jpg"),

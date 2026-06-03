@@ -64,9 +64,20 @@ export const letterB: SignProps[] = [
     tags: ["place"],
   },
   {
+    id: generateId("Bangladesh (Place)"),
+    name: "Bangladesh (Place)",
+    images: getImages("bangladesh", "jpg"),
+    tags: ["place"],
+  },
+  {
     id: generateId("Bank (Noun)"),
     name: "Bank (Noun)",
     images: getImages("bank_noun", "png"),
+  },
+  {
+    id: generateId("Barefoot"),
+    name: "Barefoot",
+    images: getImages("barefoot", "png"),
   },
   {
     id: generateId("Bargain"),
@@ -120,6 +131,12 @@ export const letterB: SignProps[] = [
     tags: ["place"],
   },
   {
+    id: generateId("Bedok Reservoir (Place)"),
+    name: "Bedok Reservoir (Place)",
+    images: getImages("bedok_reservoir", "png"),
+    tags: ["place"],
+  },
+  {
     id: generateId("Bedroom"),
     name: "Bedroom",
     images: getImages("bedroom", "png"),
@@ -128,6 +145,11 @@ export const letterB: SignProps[] = [
     id: generateId("Beef"),
     name: "Beef",
     images: getImages("beef", "png"),
+  },
+  {
+    id: generateId("Beer"),
+    name: "Beer",
+    images: getImages("beer", "png"),
   },
   {
     id: generateId("Before"),
@@ -143,6 +165,18 @@ export const letterB: SignProps[] = [
     id: generateId("Beijing (Place)"),
     name: "Beijing (Place)",
     images: getImages("beijing", "png"),
+    tags: ["place"],
+  },
+  {
+    id: generateId("Belgium (Place)"),
+    name: "Belgium (Place)",
+    images: getImages("belgium", "jpg"),
+    tags: ["place"],
+  },
+  {
+    id: generateId("Bell"),
+    name: "Bell",
+    images: getImages("bell", "png"),
   },
   {
     id: generateId("Belt"),
@@ -226,6 +260,11 @@ export const letterB: SignProps[] = [
     images: getImages("bleed", "png"),
   },
   {
+    id: generateId("Bless"),
+    name: "Bless",
+    images: getImages("bless", "png"),
+  },
+  {
     id: generateId("Blind"),
     name: "Blind",
     images: getImages("blind", "png"),
@@ -254,6 +293,11 @@ export const letterB: SignProps[] = [
     id: generateId("Boat"),
     name: "Boat",
     images: getImages("boat", "jpg"),
+  },
+  {
+    id: generateId("Boat Quay (Place)"),
+    name: "Boat Quay (Place)",
+    images: getImages("boat_quay", "png"),
   },
   {
     id: generateId("Body"),
