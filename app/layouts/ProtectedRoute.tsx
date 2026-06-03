@@ -17,15 +17,17 @@ export async function clientLoader({}: Route.ClientLoaderArgs) {
       data: { userKonami },
     }),
     apiRequest({
-      url: `${STORAGE_URL}/a_small.jpg`,
+      url: `${STORAGE_URL}/aa_small.jpg`,
       method: "HEAD",
     }),
   ]);
 
+  // Checks for Konami code
   if (!authResult.data?.isKonamiValid || authResult.error) {
     return redirect("/under-construction");
   }
 
+  // Checks for rate limit in Supabase
   if (canaryResult.error) {
     const errorMessage = safeJsonStringify(canaryResult.error);
     localStorage.setItem("last_error_debug", errorMessage);
@@ -36,17 +38,6 @@ export async function clientLoader({}: Route.ClientLoaderArgs) {
 
   return null;
 }
-
-// Renders on initial page refresh while the client loader makes the Axios call
-// export function HydrateFallback() {
-//   return (
-//     <div className="bg-zinc-300 min-h-screen flex items-center justify-center">
-//       <p className="text-xl font-medium text-zinc-600 animate-pulse">
-//         Securing connection environment...
-//       </p>
-//     </div>
-//   );
-// }
 
 export default function ProtectedRoute() {
   return <Outlet />;
