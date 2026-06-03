@@ -123,9 +123,10 @@ export const letterA: SignProps[] = [
     images: getImages("allergy_medical", "png"),
   },
   {
-    id: generateId("Alligator"),
-    name: "Alligator",
+    id: generateId("Alligator (Animal)"),
+    name: "Alligator (Animal)",
     images: getImages("alligator", "png"),
+    tags: ["animal"],
   },
   {
     id: generateId("Alright"),
@@ -195,9 +196,10 @@ export const letterA: SignProps[] = [
     images: getImages("apartment", "png"),
   },
   {
-    id: generateId("Ape"),
-    name: "Ape",
+    id: generateId("Ape (Animal)"),
+    name: "Ape (Animal)",
     images: getImages("ape", "png"),
+    tags: ["animal"],
   },
   {
     id: generateId("Apple"),

@@ -252,9 +252,10 @@ export const letterD: SignProps[] = [
     images: getImages("dollar", "png"),
   },
   {
-    id: generateId("Dolphin"),
-    name: "Dolphin",
+    id: generateId("Dolphin (Animal)"),
+    name: "Dolphin (Animal)",
     images: getImages("dolphin", "png"),
+    tags: ["animal"],
   },
   {
     id: generateId("Donor"),

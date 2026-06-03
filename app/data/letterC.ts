@@ -140,9 +140,10 @@ export const letterC: SignProps[] = [
     images: getImages("catch", "png"),
   },
   {
-    id: generateId("Caterpillar"),
-    name: "Caterpillar",
+    id: generateId("Caterpillar (Animal)"),
+    name: "Caterpillar (Animal)",
     images: getImages("caterpillar", "png"),
+    tags: ["animal"],
   },
   {
     id: generateId("Cent"),
@@ -507,9 +508,10 @@ export const letterC: SignProps[] = [
     images: getImages("credit_card", "png"),
   },
   {
-    id: generateId("Crocodile"),
-    name: "Crocodile",
+    id: generateId("Crocodile (Animal)"),
+    name: "Crocodile (Animal)",
     images: getImages("crocodile", "png"),
+    tags: ["animal"],
   },
   {
     id: generateId("Crowd"),
