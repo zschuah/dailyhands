@@ -152,6 +152,11 @@ export const letterD: SignProps[] = [
     images: getImages("diabetes", "png"),
   },
   {
+    id: generateId("Dialect"),
+    name: "Dialect",
+    images: getImages("dialect", "png"),
+  },
+  {
     id: generateId("Die"),
     name: "Die",
     images: getImages("die", "jpg"),
@@ -290,6 +295,16 @@ export const letterD: SignProps[] = [
     images: getImages("door", "png"),
   },
   {
+    id: generateId("Dragon Boat Festival"),
+    name: "Dragon Boat Festival",
+    images: getImages("dragon_boat_festival", "png"),
+  },
+  {
+    id: generateId("Drama"),
+    name: "Drama",
+    images: getImages("drama", "png"),
+  },
+  {
     id: generateId("Draw (Verb)"),
     name: "Draw (Verb)",
     images: getImages("draw_verb", "png"),
@@ -321,9 +336,24 @@ export const letterD: SignProps[] = [
     tags: ["job"],
   },
   {
+    id: generateId("Drought"),
+    name: "Drought",
+    images: getImages("drought", "jpg"),
+  },
+  {
     id: generateId("Drowsy"),
     name: "Drowsy",
     images: getImages("drowsy", "png"),
+  },
+  {
+    id: generateId("Drum"),
+    name: "Drum",
+    images: getImages("drum", "png"),
+  },
+  {
+    id: generateId("Drunk"),
+    name: "Drunk",
+    images: getImages("drunk", "png"),
   },
   {
     id: generateId("Dry"),
@@ -337,9 +367,15 @@ export const letterD: SignProps[] = [
     tags: ["place"],
   },
   {
-    id: generateId("Duck"),
-    name: "Duck",
+    id: generateId("Duck (Animal)"),
+    name: "Duck (Animal)",
     images: getImages("duck", "jpg"),
+    tags: ["animal"],
+  },
+  {
+    id: generateId("Dumb"),
+    name: "Dumb",
+    images: getImages("dumb", "png"),
   },
   {
     id: generateId("Dumpling"),

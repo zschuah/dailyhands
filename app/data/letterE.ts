@@ -28,6 +28,17 @@ export const letterE: SignProps[] = [
     images: getImages("east", "png"),
   },
   {
+    id: generateId("East Coast (Place)"),
+    name: "East Coast (Place)",
+    images: getImages("east_coast", "png"),
+    tags: ["place"],
+  },
+  {
+    id: generateId("Easter"),
+    name: "Easter",
+    images: getImages("easter", "png"),
+  },
+  {
     id: generateId("Easy"),
     name: "Easy",
     images: getImages("easy", "jpg"),
@@ -46,6 +57,12 @@ export const letterE: SignProps[] = [
     id: generateId("Egg"),
     name: "Egg",
     images: getImages("egg", "jpg"),
+  },
+  {
+    id: generateId("Egypt (Place)"),
+    name: "Egypt (Place)",
+    images: getImages("egypt", "jpg"),
+    tags: ["place"],
   },
   {
     id: generateId("Eight (Numeral)"),
@@ -86,14 +103,45 @@ export const letterE: SignProps[] = [
     images: getImages("empty", "jpg"),
   },
   {
+    id: generateId("Endurance"),
+    name: "Endurance",
+    images: getImages("endure", "png"),
+  },
+  {
+    id: generateId("Endure"),
+    name: "Endure",
+    images: getImages("endure", "png"),
+  },
+  {
     id: generateId("Engaged"),
     name: "Engaged",
     images: getImages("engaged", "png"),
   },
   {
+    id: generateId("England (Place)"),
+    name: "England (Place)",
+    images: getImages("england", "jpg"),
+    tags: ["place"],
+  },
+  {
+    id: generateId("Enjoy"),
+    name: "Enjoy",
+    images: getImages("enjoy", "png"),
+  },
+  {
+    id: generateId("Enough"),
+    name: "Enough",
+    images: getImages("enough", "jpg"),
+  },
+  {
     id: generateId("Enter"),
     name: "Enter",
     images: getImages("enter", "png"),
+  },
+  {
+    id: generateId("Entertainment"),
+    name: "Entertainment",
+    images: getImages("entertainment", "png"),
   },
   {
     id: generateId("Equal (Mathematics)"),
