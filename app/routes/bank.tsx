@@ -30,8 +30,9 @@ export default function Bank() {
   const CURRENT_SIGNS = SIGN_LIST.length;
   const TOTAL_SIGNS = 1559;
 
-  const fetcher = useFetcher();
+  const fetcher = useFetcher<{ isSuccess: boolean }>();
   const isUpdating = fetcher.state !== "idle";
+  const isSuccess = fetcher.data?.isSuccess;
 
   const [visibleImages, setVisibleImages] = useState("");
   const [isGifLoading, setIsGifLoading] = useState(false);
@@ -78,6 +79,16 @@ export default function Bank() {
       >
         {isUpdating ? "Updating..." : "Update Signs"}
       </button>
+
+      <div
+        className={twMerge(
+          "inline-flex items-center gap-2 text-sm font-bold text-success-content",
+          !isSuccess && "invisible",
+        )}
+      >
+        <div className="status status-success"></div>
+        <span>Success!</span>
+      </div>
 
       <section className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-2">
         <button className="btn"></button>
