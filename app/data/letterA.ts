@@ -40,10 +40,10 @@ export const letterA: SignProps[] = [
     tags: ["job"],
   },
   {
-    id: generateId("Add (Mathematics)"),
-    name: "Add (Mathematics)",
+    id: generateId("Add (Math)"),
+    name: "Add (Math)",
     images: getImages("add", "png"),
-    tags: ["mathematics"],
+    tags: ["math"],
   },
   {
     id: generateId("Administrator (Job)"),

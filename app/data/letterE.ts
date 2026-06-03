@@ -144,10 +144,15 @@ export const letterE: SignProps[] = [
     images: getImages("entertainment", "png"),
   },
   {
-    id: generateId("Equal (Mathematics)"),
-    name: "Equal (Mathematics)",
+    id: generateId("Equal (Math)"),
+    name: "Equal (Math)",
     images: getImages("equal", "png"),
-    tags: ["mathematics"],
+    tags: ["math"],
+  },
+  {
+    id: generateId("Escape"),
+    name: "Escape",
+    images: getImages("escape", "png"),
   },
   {
     id: generateId("Esplanade (Place)"),
@@ -178,9 +183,29 @@ export const letterE: SignProps[] = [
     images: getImages("evening", "jpg"),
   },
   {
+    id: generateId("Event"),
+    name: "Event",
+    images: getImages("event", "png"),
+  },
+  {
     id: generateId("Every"),
     name: "Every",
     images: getImages("every", "png"),
+  },
+  {
+    id: generateId("Exchange (Noun)"),
+    name: "Exchange (Noun)",
+    images: getImages("exchange", "png"),
+  },
+  {
+    id: generateId("Exchange (Verb)"),
+    name: "Exchange (Verb)",
+    images: getImages("exchange", "png"),
+  },
+  {
+    id: generateId("Excited"),
+    name: "Excited",
+    images: getImages("excited", "png"),
   },
   {
     id: generateId("Executive (Job)"),
@@ -202,5 +227,15 @@ export const letterE: SignProps[] = [
     id: generateId("Explain"),
     name: "Explain",
     images: getImages("explain", "png"),
+  },
+  {
+    id: generateId("Explode"),
+    name: "Explode",
+    images: getImages("explode", "png"),
+  },
+  {
+    id: generateId("Explosion"),
+    name: "Explosion",
+    images: getImages("explode", "png"),
   },
 ];

@@ -55,7 +55,7 @@ export default function Bank() {
   };
 
   return (
-    <div className="bg-zinc-300 min-h-screen grid place-items-center gap-4 p-8">
+    <div className="bg-zinc-300 min-h-screen grid place-items-center gap-4 p-8 pb-40">
       <h2 className="text-5xl">Bank</h2>
 
       <p>TAGS: {AVAILABLE_TAGS.join(", ").toString()}</p>

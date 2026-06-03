@@ -9,6 +9,11 @@ export const letterF: SignProps[] = [
     tags: ["brand"],
   },
   {
+    id: generateId("Faith"),
+    name: "Faith",
+    images: getImages("faith", "png"),
+  },
+  {
     id: generateId("Fall (Season)"),
     name: "Fall (Season)",
     images: getImages("fall_season", "png"),
@@ -39,9 +44,19 @@ export const letterF: SignProps[] = [
     images: getImages("fashion", "png"),
   },
   {
-    id: generateId("Fast"),
-    name: "Fast",
+    id: generateId("Fast (Adj)"),
+    name: "Fast (Adj)",
     images: getImages("fast", "jpg"),
+  },
+  {
+    id: generateId("Fast (Verb)"),
+    name: "Fast (Verb)",
+    images: getImages("fasting", "png"),
+  },
+  {
+    id: generateId("Fasting"),
+    name: "Fasting",
+    images: getImages("fasting", "png"),
   },
   {
     id: generateId("Fat"),
@@ -141,6 +156,12 @@ export const letterF: SignProps[] = [
     images: getImages("finish", "jpg"),
   },
   {
+    id: generateId("Finland (Place)"),
+    name: "Finland (Place)",
+    images: getImages("finland", "jpg"),
+    tags: ["place"],
+  },
+  {
     id: generateId("Fire"),
     name: "Fire",
     images: getImages("fire", "jpg"),
@@ -156,13 +177,19 @@ export const letterF: SignProps[] = [
     images: getImages("fireman", "png"),
   },
   {
-    id: generateId("Fish"),
-    name: "Fish",
-    images: getImages("fish", "jpg"),
+    id: generateId("Fireworks"),
+    name: "Fireworks",
+    images: getImages("fireworks", "png"),
   },
   {
-    id: generateId("Five"),
-    name: "Five",
+    id: generateId("Fish (Animal)"),
+    name: "Fish (Animal)",
+    images: getImages("fish", "jpg"),
+    tags: ["animal"],
+  },
+  {
+    id: generateId("Five (Numeral)"),
+    name: "Five (Numeral)",
     images: getImages("five", "png"),
     tags: ["numeral"],
   },
@@ -192,6 +219,11 @@ export const letterF: SignProps[] = [
     images: getImages("float", "jpg"),
   },
   {
+    id: generateId("Flood"),
+    name: "Flood",
+    images: getImages("flood", "jpg"),
+  },
+  {
     id: generateId("Floor (Level of building)"),
     name: "Floor (Level of building)",
     images: getImages("floor", "jpg"),
@@ -217,6 +249,16 @@ export const letterF: SignProps[] = [
     images: getImages("fly", "png"),
   },
   {
+    id: generateId("Fly a kite"),
+    name: "Fly a kite",
+    images: getImages("fly_a_kite", "png"),
+  },
+  {
+    id: generateId("Fog"),
+    name: "Fog",
+    images: getImages("fog", "jpg"),
+  },
+  {
     id: generateId("Follow"),
     name: "Follow",
     images: getImages("follow", "png"),
@@ -227,9 +269,24 @@ export const letterF: SignProps[] = [
     images: getImages("food", "jpg"),
   },
   {
+    id: generateId("Fool (Noun)"),
+    name: "Fool (Noun)",
+    images: getImages("fool_noun", "png"),
+  },
+  {
+    id: generateId("Fool (Verb)"),
+    name: "Fool (Verb)",
+    images: getImages("fool_verb", "png"),
+  },
+  {
     id: generateId("Foot"),
     name: "Foot",
     images: getImages("foot", "jpg"),
+  },
+  {
+    id: generateId("Forest"),
+    name: "Forest",
+    images: getImages("forest", "png"),
   },
   {
     id: generateId("Forget"),
@@ -247,16 +304,22 @@ export const letterF: SignProps[] = [
     images: getImages("fortune", "png"),
   },
   {
-    id: generateId("Four"),
-    name: "Four",
+    id: generateId("Four (Numeral)"),
+    name: "Four (Numeral)",
     images: getImages("four", "png"),
     tags: ["numeral"],
   },
   {
-    id: generateId("Fourteen"),
-    name: "Fourteen",
+    id: generateId("Fourteen (Numeral)"),
+    name: "Fourteen (Numeral)",
     images: getImages("fourteen", "png"),
     tags: ["numeral"],
+  },
+  {
+    id: generateId("France (Place)"),
+    name: "France (Place)",
+    images: getImages("france", "jpg"),
+    tags: ["place"],
   },
   {
     id: generateId("Free (Adj)"),
@@ -271,6 +334,11 @@ export const letterF: SignProps[] = [
   {
     id: generateId("Freeze"),
     name: "Freeze",
+    images: getImages("freeze", "jpg"),
+  },
+  {
+    id: generateId("Freezing (Adj)"),
+    name: "Freezing (Adj)",
     images: getImages("freeze", "jpg"),
   },
   {
@@ -292,6 +360,11 @@ export const letterF: SignProps[] = [
     id: generateId("Friend"),
     name: "Friend",
     images: getImages("friend", "jpg"),
+  },
+  {
+    id: generateId("Frozen"),
+    name: "Frozen (Adj)",
+    images: getImages("freeze", "jpg"),
   },
   {
     id: generateId("Fruit"),

@@ -233,10 +233,10 @@ export const letterD: SignProps[] = [
     images: getImages("distant", "png"),
   },
   {
-    id: generateId("Divide (Mathematics)"),
-    name: "Divide (Mathematics)",
+    id: generateId("Divide (Math)"),
+    name: "Divide (Math)",
     images: getImages("divide", "png"),
-    tags: ["mathematics"],
+    tags: ["math"],
   },
   {
     id: generateId("Divorced"),
