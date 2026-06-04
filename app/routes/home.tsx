@@ -2,6 +2,7 @@ import { useWindowScroll } from "@uidotdev/usehooks";
 import { Link } from "react-router";
 import { twMerge } from "tailwind-merge";
 import CardTrio from "~/components/CardTrio";
+import NavbarIsland from "~/components/NavbarIsland";
 
 export default function Home() {
   const [{ y }] = useWindowScroll();
@@ -15,36 +16,7 @@ export default function Home() {
           "min-h-screen grid place-items-center relative bg-zinc-300",
         )}
       >
-        <nav
-          className={twMerge(
-            "fixed top-5 h-16 w-9/10 max-w-3xl bg-zinc-300 transition duration-700",
-            "rounded-full z-10 animate-[fadeIn_0.5s_ease-in]",
-            isScrolled && "bg-zinc-200 shadow-2xl",
-          )}
-        >
-          <h1
-            className={twMerge(
-              "absolute whitespace-nowrap text-7xl transition-all duration-700",
-              isScrolled
-                ? "top-1/2 left-6 -translate-y-1/2 text-xl md:text-3xl"
-                : "top-[50vh] left-1/2 -translate-x-1/2 translate-y-[-450%] md:translate-y-[-330%] text-5xl md:text-7xl",
-            )}
-          >
-            Daily Hands
-          </h1>
-
-          <div
-            className={twMerge(
-              "h-full flex items-center justify-end",
-              "opacity-0 pointer-events-none transition duration-700",
-              isScrolled && "opacity-100 pointer-events-auto",
-            )}
-          >
-            <Link to="/bank" className="mr-8">
-              <div className="btn btn-sm">Bank</div>
-            </Link>
-          </div>
-        </nav>
+        <NavbarIsland isScrolled={isScrolled} />
 
         <div
           className={twMerge(
