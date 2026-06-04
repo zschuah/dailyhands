@@ -1,4 +1,5 @@
 import { useWindowScroll } from "@uidotdev/usehooks";
+import { Link } from "react-router";
 import { twMerge } from "tailwind-merge";
 import CardTrio from "~/components/CardTrio";
 
@@ -31,6 +32,18 @@ export default function Home() {
           >
             Daily Hands
           </h1>
+
+          <div
+            className={twMerge(
+              "h-full flex items-center justify-end",
+              "opacity-0 pointer-events-none transition duration-700",
+              isScrolled && "opacity-100 pointer-events-auto",
+            )}
+          >
+            <Link to="/bank" className="mr-8">
+              <div className="btn btn-sm">Bank</div>
+            </Link>
+          </div>
         </nav>
 
         <div
