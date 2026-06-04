@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useFetcher } from "react-router";
 import { twMerge } from "tailwind-merge";
 import supabase from "~/api/supabase";
+import BankButton from "~/components/BankButton";
 import { AVAILABLE_TAGS, SIGN_LIST } from "~/utils/signList";
 import type { Route } from "./+types/bank";
 
@@ -36,14 +37,10 @@ export default function Bank() {
   const isSuccess = fetcher.data?.isSuccess;
 
   const [visibleImages, setVisibleImages] = useState("");
-  const [isGifLoading, setIsGifLoading] = useState(false);
-  const [isStaticLoading, setIsStaticLoading] = useState(false);
 
-  const handleVisibleGif = (id: string) => {
+  const handleToggleVisible = (id: string) => {
     if (visibleImages !== id) {
       setVisibleImages(id);
-      setIsGifLoading(true);
-      setIsStaticLoading(true);
     } else {
       setVisibleImages("");
     }
@@ -97,58 +94,11 @@ export default function Bank() {
         {SIGN_LIST.map((sign) => {
           return (
             <div key={sign.id} className="flex flex-col">
-              <button
-                onClick={() => handleVisibleGif(sign.id)}
-                className={twMerge(
-                  "btn relative",
-                  visibleImages === sign.id && "btn-active z-10",
-                )}
-              >
-                {visibleImages === sign.id && (
-                  <div
-                    className={twMerge(
-                      "absolute top-0 translate-y-[-110%] w-[120%]",
-                      "aspect-video rounded-lg shadow-lg overflow-hidden",
-                    )}
-                  >
-                    {isGifLoading && (
-                      <div className="skeleton w-full h-full"></div>
-                    )}
-
-                    <img
-                      className="h-full w-full object-cover"
-                      src={sign.images.imageAnimated}
-                      alt={sign.name}
-                      onLoad={() => setIsGifLoading(false)}
-                    />
-                  </div>
-                )}
-
-                {visibleImages === sign.id && (
-                  <div
-                    className={twMerge(
-                      "absolute bottom-0 translate-y-[110%] w-[120%]",
-                      "aspect-video rounded-lg shadow-lg overflow-hidden",
-                    )}
-                  >
-                    {isStaticLoading && (
-                      <div className="skeleton w-full h-full"></div>
-                    )}
-
-                    <img
-                      className="h-full w-full object-cover"
-                      src={sign.images.imageStatic}
-                      alt={sign.name}
-                      onLoad={() => setIsStaticLoading(false)}
-                    />
-                  </div>
-                )}
-
-                <div>
-                  <span>{sign.name}</span>
-                  {sign.tags && <span>*</span>}
-                </div>
-              </button>
+              <BankButton
+                sign={sign}
+                isOpen={visibleImages === sign.id}
+                handleToggleVisible={() => handleToggleVisible(sign.id)}
+              />
 
               <p className="text-center">{sign.id}</p>
             </div>

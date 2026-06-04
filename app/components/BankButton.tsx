@@ -1,0 +1,64 @@
+import { useState } from "react";
+import { twMerge } from "tailwind-merge";
+import type { SignProps } from "~/utils/types";
+
+type Props = {
+  sign: SignProps;
+  isOpen: boolean;
+  handleToggleVisible: (id: string) => void;
+};
+
+const BankButton = ({ sign, isOpen, handleToggleVisible }: Props) => {
+  const [isGifLoading, setIsGifLoading] = useState(true);
+  const [isStaticLoading, setIsStaticLoading] = useState(true);
+
+  return (
+    <button
+      onClick={() => handleToggleVisible(sign.id)}
+      className={twMerge("btn relative", isOpen && "btn-active z-10")}
+    >
+      {isOpen && (
+        <div
+          className={twMerge(
+            "absolute top-0 translate-y-[-110%] w-[120%]",
+            "aspect-video rounded-lg shadow-lg overflow-hidden",
+          )}
+        >
+          {isGifLoading && <div className="skeleton w-full h-full"></div>}
+
+          <img
+            className="h-full w-full object-cover"
+            src={sign.images.imageAnimated}
+            alt={sign.name}
+            onLoad={() => setIsGifLoading(false)}
+          />
+        </div>
+      )}
+
+      {isOpen && (
+        <div
+          className={twMerge(
+            "absolute bottom-0 translate-y-[110%] w-[120%]",
+            "aspect-video rounded-lg shadow-lg overflow-hidden",
+          )}
+        >
+          {isStaticLoading && <div className="skeleton w-full h-full"></div>}
+
+          <img
+            className="h-full w-full object-cover"
+            src={sign.images.imageStatic}
+            alt={sign.name}
+            onLoad={() => setIsStaticLoading(false)}
+          />
+        </div>
+      )}
+
+      <div>
+        <span>{sign.name}</span>
+        {sign.tags && <span>*</span>}
+      </div>
+    </button>
+  );
+};
+
+export default BankButton;
