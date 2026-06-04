@@ -12,4 +12,35 @@ export const letterG: SignProps[] = [
     name: "Game",
     images: getImages("game", "png"),
   },
+  {
+    id: generateId("Generation"),
+    name: "Generation",
+    images: getImages("generation", "png"),
+  },
+  {
+    id: generateId("Germany (Place)"),
+    name: "Germany (Place)",
+    images: getImages("germany", "jpg"),
+    tags: ["place"],
+  },
+  {
+    id: generateId("Ghost"),
+    name: "Ghost",
+    images: getImages("ghost", "png"),
+  },
+  {
+    id: generateId("Giddy"),
+    name: "Giddy",
+    images: getImages("giddy", "png"),
+  },
+  {
+    id: generateId("Girl"),
+    name: "Girl",
+    images: getImages("girl", "jpg"),
+  },
+  {
+    id: generateId("Girlfriend"),
+    name: "Girlfriend",
+    images: getImages("girlfriend", "png"),
+  },
 ];
