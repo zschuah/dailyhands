@@ -1,5 +1,4 @@
 import { useWindowScroll } from "@uidotdev/usehooks";
-import { Link } from "react-router";
 import { twMerge } from "tailwind-merge";
 import CardTrio from "~/components/CardTrio";
 import NavbarIsland from "~/components/NavbarIsland";
