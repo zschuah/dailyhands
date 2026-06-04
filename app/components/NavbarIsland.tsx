@@ -1,4 +1,4 @@
-import { Link, NavLink, useLocation, useNavigate } from "react-router";
+import { useLocation, useNavigate } from "react-router";
 import { twMerge } from "tailwind-merge";
 
 type Props = {
@@ -47,13 +47,9 @@ const NavbarIsland = ({ isScrolled }: Props) => {
           isScrolled && "opacity-100 pointer-events-auto",
         )}
       >
-        <NavLink to="/bank" className="mr-8">
-          {({ isActive }) => (
-            <div className={twMerge("btn btn-sm", isActive && "btn-active")}>
-              Bank
-            </div>
-          )}
-        </NavLink>
+        <label htmlFor="my-drawer-1" className="btn btn-sm mr-6">
+          MENU
+        </label>
       </div>
     </nav>
   );
