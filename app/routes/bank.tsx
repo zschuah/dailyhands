@@ -29,6 +29,7 @@ export async function action({ request }: Route.ActionArgs) {
 export default function Bank() {
   const CURRENT_SIGNS = SIGN_LIST.length;
   const TOTAL_SIGNS = 1559;
+  const PERCENT_TEXT = `(${Math.round((CURRENT_SIGNS / TOTAL_SIGNS) * 100)}%)`;
 
   const fetcher = useFetcher<{ isSuccess: boolean }>();
   const isUpdating = fetcher.state !== "idle";
@@ -63,7 +64,7 @@ export default function Bank() {
 
       <div className="text-center">
         <p>
-          {CURRENT_SIGNS} out of {TOTAL_SIGNS} signs
+          {CURRENT_SIGNS} out of {TOTAL_SIGNS} signs {PERCENT_TEXT}
         </p>
         <progress
           className="progress progress-primary w-60"
