@@ -1,15 +1,6 @@
-import { Link } from "react-router";
+import { useWindowScroll } from "@uidotdev/usehooks";
 import { twMerge } from "tailwind-merge";
 import CardTrio from "~/components/CardTrio";
-import type { Route } from "./+types/home";
-import { useWindowScroll } from "@uidotdev/usehooks";
-
-export function meta({}: Route.MetaArgs) {
-  return [
-    { title: "DailyHands" },
-    { name: "description", content: "Welcome to DailyHands!" },
-  ];
-}
 
 export default function Home() {
   const [{ y }] = useWindowScroll();
@@ -23,31 +14,31 @@ export default function Home() {
           "min-h-screen grid place-items-center relative bg-zinc-300",
         )}
       >
-        <div
+        <nav
           className={twMerge(
-            "text-center flex flex-col items-center bg-zinc-200 p-8 rounded-3xl animate-[fadeIn_0.5s_ease-in]",
+            "fixed top-5 h-16 w-9/10 max-w-3xl bg-zinc-300 transition duration-700",
+            "rounded-full z-10 animate-[fadeIn_0.5s_ease-in]",
+            isScrolled && "bg-zinc-200 shadow-2xl",
           )}
         >
-          <nav
+          <h1
             className={twMerge(
-              "fixed top-5 h-16 w-4/5 max-w-3xl bg-zinc-300 transition duration-700",
-              "rounded-full z-10",
-              isScrolled && "bg-zinc-200 shadow-2xl",
+              "absolute whitespace-nowrap text-7xl transition-all duration-700",
+              isScrolled
+                ? "top-1/2 left-6 -translate-y-1/2 text-xl md:text-3xl"
+                : "top-[50vh] left-1/2 -translate-x-1/2 translate-y-[-450%] md:translate-y-[-330%] text-5xl md:text-7xl",
             )}
           >
-            <h2
-              className={twMerge(
-                "absolute text-7xl transition-all duration-700",
-                isScrolled
-                  ? "top-1/2 left-6 -translate-y-1/2 text-3xl"
-                  : "top-[24vh] left-1/2 -translate-x-1/2 text-7xl",
-              )}
-            >
-              Daily Hands
-            </h2>
-          </nav>
+            Daily Hands
+          </h1>
+        </nav>
 
-          {/* <h2 className="text-5xl">Daily Hands</h2> */}
+        <div
+          className={twMerge(
+            "text-center flex flex-col items-center bg-zinc-200 p-8",
+            "rounded-3xl animate-[fadeIn_0.5s_ease-in]",
+          )}
+        >
           <p>Welcome! Welcome!</p>
           <img
             className="w-60"
