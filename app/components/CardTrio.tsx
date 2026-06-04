@@ -1,17 +1,26 @@
 import { useIntersectionObserver } from "@uidotdev/usehooks";
 import { useEffect, useState } from "react";
 import { twMerge } from "tailwind-merge";
-import type { SignProps } from "~/utils/types";
+import { getUniqueIntegers } from "~/utils/helpers";
+import { SIGN_LIST } from "~/utils/signList";
 import Card from "./Card";
 
-type Props = {
-  data: SignProps[];
-  answer: string;
-  handleNextRound: () => void;
+const generateNewRound = () => {
+  const randomSigns = getUniqueIntegers({ size: SIGN_LIST.length }).map(
+    (integer) => SIGN_LIST[integer],
+  );
+  const answerIndex = Math.floor(Math.random() * randomSigns.length);
+
+  return {
+    signs: randomSigns,
+    answer: randomSigns[answerIndex].name,
+  };
 };
 
-const CardTrio = ({ data, answer, handleNextRound }: Props) => {
-  const CARD_LIST = data;
+const CardTrio = () => {
+  const [currentRound, setCurrentRound] = useState(generateNewRound());
+  const CARD_LIST = currentRound.signs;
+  const answer = currentRound.answer;
 
   const [ref, entry] = useIntersectionObserver({ threshold: 0.5 });
   const isIntersecting = entry?.isIntersecting;
@@ -36,15 +45,15 @@ const CardTrio = ({ data, answer, handleNextRound }: Props) => {
   };
 
   const handleNextClick = (e: React.MouseEvent) => {
-    // Prevent handleReset from the parent container from firing immediately
+    // Prevent handleReset from trigerring
     e.stopPropagation();
     setIsFadingOut(true);
 
     // Wait for the CSS duration (500ms) to finish
     setTimeout(() => {
       handleReset();
-      handleNextRound(); // Tell parent to give new signs
-      setIsFadingOut(false); // Fade back in with new signs
+      setCurrentRound(generateNewRound());
+      setIsFadingOut(false);
     }, 500);
   };
 
@@ -73,23 +82,19 @@ const CardTrio = ({ data, answer, handleNextRound }: Props) => {
       </div>
 
       <section
-        className={twMerge(
-          "flex flex-col gap-4 w-9/10 md:flex-row md:h-2/5 md:w-auto",
-        )}
+        className="flex flex-col gap-4 w-9/10 md:flex-row md:h-2/5 md:w-auto"
         onClick={(e) => e.stopPropagation()}
       >
-        {CARD_LIST.map((card) => {
-          return (
-            <Card
-              key={card.id}
-              data={card}
-              answer={answer}
-              isReveal={isReveal}
-              isSelected={card.id === selectedId}
-              handleCardClick={handleCardClick}
-            />
-          );
-        })}
+        {CARD_LIST.map((card) => (
+          <Card
+            key={card.id}
+            data={card}
+            answer={answer}
+            isReveal={isReveal}
+            isSelected={card.id === selectedId}
+            handleCardClick={handleCardClick}
+          />
+        ))}
       </section>
 
       <button
