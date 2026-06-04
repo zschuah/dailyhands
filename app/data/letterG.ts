@@ -43,4 +43,34 @@ export const letterG: SignProps[] = [
     name: "Girlfriend",
     images: getImages("girlfriend", "png"),
   },
+  {
+    id: generateId("Give"),
+    name: "Give",
+    images: getImages("give", "png"),
+  },
+  {
+    id: generateId("Gloves"),
+    name: "Gloves",
+    images: getImages("gloves", "png"),
+  },
+  {
+    id: generateId("Glow stick"),
+    name: "Glow stick",
+    images: getImages("glow_stick", "png"),
+  },
+  {
+    id: generateId("Go"),
+    name: "Go",
+    images: getImages("go", "png"),
+  },
+  {
+    id: generateId("God"),
+    name: "God",
+    images: getImages("god", "jpg"),
+  },
+  {
+    id: generateId("Gold"),
+    name: "Gold",
+    images: getImages("gold", "png"),
+  },
 ];
