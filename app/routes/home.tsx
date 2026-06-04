@@ -5,7 +5,8 @@ import NavbarIsland from "~/components/NavbarIsland";
 
 export default function Home() {
   const [{ y }] = useWindowScroll();
-  const isScrolled = (y ?? 0) > 100;
+  const currentY = y ?? 0;
+  const isScrolled = currentY > 100;
 
   return (
     <>
@@ -32,7 +33,7 @@ export default function Home() {
         </div>
 
         <div className="absolute bottom-4 flex flex-col items-center animate-bounce">
-          <p>Scroll down for more!</p>
+          <p>Scroll down to start!</p>
           <span className="text-5xl">&#8609;</span>
         </div>
       </section>

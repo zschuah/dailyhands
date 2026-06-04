@@ -6,6 +6,7 @@ import BankButton from "~/components/BankButton";
 import { AVAILABLE_TAGS, SIGN_LIST } from "~/utils/signList";
 import type { Route } from "./+types/bank";
 import NavbarIsland from "~/components/NavbarIsland";
+import { usePrevious, useWindowScroll } from "@uidotdev/usehooks";
 
 export async function action({ request }: Route.ActionArgs) {
   const signData = await request.json();
@@ -29,6 +30,12 @@ export async function action({ request }: Route.ActionArgs) {
 }
 
 export default function Bank() {
+  const [{ y }] = useWindowScroll();
+  const currentY = y ?? 0;
+  const prevY = usePrevious(currentY) ?? 0;
+  const isScrollingUp = prevY > currentY;
+  const isNavHidden = currentY > 500 && !isScrollingUp;
+
   const CURRENT_SIGNS = SIGN_LIST.length;
   const TOTAL_SIGNS = 1559;
   const PERCENT_TEXT = `(${Math.round((CURRENT_SIGNS / TOTAL_SIGNS) * 100)}%)`;
@@ -56,7 +63,7 @@ export default function Bank() {
 
   return (
     <div className="bg-zinc-300 min-h-screen grid place-items-center gap-4 p-8 pb-40">
-      <NavbarIsland isScrolled />
+      <NavbarIsland isScrolled isHidden={isNavHidden} />
 
       <h2 className="text-5xl pt-20">Bank</h2>
 

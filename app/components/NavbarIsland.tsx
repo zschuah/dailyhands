@@ -3,9 +3,10 @@ import { twMerge } from "tailwind-merge";
 
 type Props = {
   isScrolled: boolean;
+  isHidden?: boolean;
 };
 
-const NavbarIsland = ({ isScrolled }: Props) => {
+const NavbarIsland = ({ isScrolled, isHidden }: Props) => {
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -26,6 +27,7 @@ const NavbarIsland = ({ isScrolled }: Props) => {
         "fixed top-5 h-16 w-9/10 max-w-3xl bg-zinc-300 rounded-full z-10 transition duration-700",
         "transition duration-700",
         isScrolled && "bg-zinc-200 shadow-2xl",
+        isHidden && "-translate-y-32",
       )}
     >
       <h1
