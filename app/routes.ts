@@ -4,6 +4,7 @@ import {
   layout,
   route,
 } from "@react-router/dev/routes";
+import { redirect } from "react-router";
 
 export default [
   route("under-construction", "routes/under-construction.tsx"),
@@ -17,4 +18,7 @@ export default [
 
   // User functions
   route("api/verify-konami", "api/verify-konami.ts"),
+
+  // Catchall redirect
+  route("*", "routes/catchall.tsx"),
 ] satisfies RouteConfig;
