@@ -23,10 +23,10 @@ const Card = ({
     <div
       className={twMerge(
         "relative overflow-hidden flex justify-center items-end",
-        "h-20 md:w-20 md:h-auto",
-        "bg-zinc-800 rounded-3xl shadow-lg cursor-pointer",
+        "h-14 md:w-20 md:h-auto",
+        "bg-zinc-800 rounded-2xl md:rounded-3xl shadow-lg cursor-pointer",
         "transition-all duration-700",
-        isSelected && "h-80 md:w-150",
+        isSelected && "h-60 md:w-150",
       )}
       onClick={() => handleCardClick(data.id)}
     >

@@ -71,7 +71,7 @@ const CardTrio = () => {
       ref={ref}
       className={twMerge(
         "h-full w-full flex flex-col justify-center items-center gap-5",
-        "transition duration-500",
+        "transition duration-500 pt-20 md:pt-0",
         isVisible ? "opacity-100 delay-200" : "opacity-0 delay-0",
       )}
       onClick={() => handleReset()}
