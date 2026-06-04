@@ -2,6 +2,7 @@ import { Link } from "react-router";
 import { twMerge } from "tailwind-merge";
 import CardTrio from "~/components/CardTrio";
 import type { Route } from "./+types/home";
+import { useWindowScroll } from "@uidotdev/usehooks";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -11,26 +12,42 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export default function Home() {
+  const [{ y }] = useWindowScroll();
+  const isScrolled = (y ?? 0) > 100;
+
   return (
-    <div className="h-screen overflow-y-auto snap-y scroll-smooth">
+    <>
       {/* Welcome Section */}
       <section
         className={twMerge(
-          "min-h-screen grid place-items-center relative bg-zinc-300 snap-start",
+          "min-h-screen grid place-items-center relative bg-zinc-300",
         )}
       >
-        <div className="absolute top-5 right-10">
-          <Link to="/bank" className="btn btn-primary">
-            Bank
-          </Link>
-        </div>
-
         <div
           className={twMerge(
             "text-center flex flex-col items-center bg-zinc-200 p-8 rounded-3xl animate-[fadeIn_0.5s_ease-in]",
           )}
         >
-          <h2 className="text-5xl">Daily Hands</h2>
+          <nav
+            className={twMerge(
+              "fixed top-5 h-16 w-4/5 max-w-3xl bg-zinc-300 transition duration-700",
+              "rounded-full z-10",
+              isScrolled && "bg-zinc-200 shadow-2xl",
+            )}
+          >
+            <h2
+              className={twMerge(
+                "absolute text-7xl transition-all duration-700",
+                isScrolled
+                  ? "top-1/2 left-6 -translate-y-1/2 text-3xl"
+                  : "top-[24vh] left-1/2 -translate-x-1/2 text-7xl",
+              )}
+            >
+              Daily Hands
+            </h2>
+          </nav>
+
+          {/* <h2 className="text-5xl">Daily Hands</h2> */}
           <p>Welcome! Welcome!</p>
           <img
             className="w-60"
@@ -48,11 +65,11 @@ export default function Home() {
       {/* Game Section */}
       <section
         className={twMerge(
-          "min-h-screen grid place-items-center bg-linear-to-b from-zinc-300 to-orange-300 snap-start",
+          "min-h-screen grid place-items-center bg-linear-to-b from-zinc-300 to-orange-300",
         )}
       >
         <CardTrio />
       </section>
-    </div>
+    </>
   );
 }
