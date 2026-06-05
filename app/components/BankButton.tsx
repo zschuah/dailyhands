@@ -29,7 +29,7 @@ const BankButton = ({ sign, isOpen, handleToggleVisible }: Props) => {
       {isOpen && (
         <div
           className={twMerge(
-            "absolute top-0 translate-y-[-110%] w-[120%]",
+            "absolute top-0 translate-y-[-105%] w-[150%]",
             "aspect-video rounded-lg shadow-lg overflow-hidden",
           )}
         >
@@ -47,7 +47,7 @@ const BankButton = ({ sign, isOpen, handleToggleVisible }: Props) => {
       {isOpen && IS_DEV && (
         <div
           className={twMerge(
-            "absolute bottom-0 translate-y-[110%] w-[120%]",
+            "absolute bottom-0 translate-y-[105%] w-[120%]",
             "aspect-video rounded-lg shadow-lg overflow-hidden",
           )}
         >

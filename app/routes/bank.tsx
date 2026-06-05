@@ -125,7 +125,7 @@ export default function Bank() {
 
       <section
         className={twMerge(
-          "grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6",
+          "grid grid-cols-1 sm:grid-cols-3 md:grid-cols-6",
           "gap-2 min-h-[50vh] auto-rows-min min-w-3/5",
         )}
       >
