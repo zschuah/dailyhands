@@ -67,9 +67,9 @@ export const getUniqueIntegers = ({
   return Array.from(randomSet);
 };
 
-export function safeJsonParse(value: string): string {
+export function safeJsonParse<T>(value: string): T | string {
   try {
-    return JSON.parse(value);
+    return JSON.parse(value) as T;
   } catch {
     return value;
   }
