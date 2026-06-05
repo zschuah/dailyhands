@@ -1,5 +1,5 @@
 import { usePrevious, useWindowScroll } from "@uidotdev/usehooks";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { useFetcher } from "react-router";
 import { twMerge } from "tailwind-merge";
 import supabase from "~/api/supabase";
@@ -42,9 +42,12 @@ export default function Bank() {
   const PERCENT_TEXT = `(${Math.round((CURRENT_SIGNS / TOTAL_SIGNS) * 100)}%)`;
 
   const [inputValue, setInputValue] = useState("");
-  const filteredSigns = SIGN_LIST.filter((sign) =>
-    sign.name.includes(inputValue),
-  );
+  const filteredSigns = useMemo(() => {
+    const normalizedInput = inputValue.trim().toLowerCase();
+    return SIGN_LIST.filter((sign) =>
+      sign.name.toLowerCase().includes(normalizedInput),
+    );
+  }, [inputValue]);
 
   const fetcher = useFetcher<{ isSuccess: boolean }>();
   const isUpdating = fetcher.state !== "idle";
