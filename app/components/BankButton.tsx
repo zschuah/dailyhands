@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { twMerge } from "tailwind-merge";
+import { IS_DEV } from "~/utils/constants";
 import type { SignProps } from "~/utils/types";
 
 type Props = {
@@ -35,7 +36,7 @@ const BankButton = ({ sign, isOpen, handleToggleVisible }: Props) => {
         </div>
       )}
 
-      {isOpen && (
+      {isOpen && IS_DEV && (
         <div
           className={twMerge(
             "absolute bottom-0 translate-y-[110%] w-[120%]",

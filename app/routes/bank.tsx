@@ -1,13 +1,13 @@
+import { usePrevious, useWindowScroll } from "@uidotdev/usehooks";
 import { useState } from "react";
 import { useFetcher } from "react-router";
 import { twMerge } from "tailwind-merge";
 import supabase from "~/api/supabase";
 import BankButton from "~/components/BankButton";
+import NavbarIsland from "~/components/NavbarIsland";
+import { IS_DEV } from "~/utils/constants";
 import { AVAILABLE_TAGS, SIGN_LIST } from "~/utils/signList";
 import type { Route } from "./+types/bank";
-import NavbarIsland from "~/components/NavbarIsland";
-import { usePrevious, useWindowScroll } from "@uidotdev/usehooks";
-import { IS_DEV } from "~/utils/constants";
 
 export async function action({ request }: Route.ActionArgs) {
   const signData = await request.json();
@@ -41,6 +41,11 @@ export default function Bank() {
   const TOTAL_SIGNS = 1559;
   const PERCENT_TEXT = `(${Math.round((CURRENT_SIGNS / TOTAL_SIGNS) * 100)}%)`;
 
+  const [inputValue, setInputValue] = useState("");
+  const filteredSigns = SIGN_LIST.filter((sign) =>
+    sign.name.includes(inputValue),
+  );
+
   const fetcher = useFetcher<{ isSuccess: boolean }>();
   const isUpdating = fetcher.state !== "idle";
   const isSuccess = fetcher.data?.isSuccess;
@@ -68,7 +73,7 @@ export default function Bank() {
 
       <h2 className="text-5xl pt-20">Bank</h2>
 
-      <div className="text-center">
+      <div className="flex flex-col items-center gap-2">
         <p>
           {CURRENT_SIGNS} out of {TOTAL_SIGNS} signs {PERCENT_TEXT}
         </p>
@@ -77,6 +82,13 @@ export default function Bank() {
           value={CURRENT_SIGNS}
           max={TOTAL_SIGNS}
         ></progress>
+        <input
+          className="input input-primary"
+          placeholder="Search for sign"
+          type="text"
+          value={inputValue}
+          onChange={(prev) => setInputValue(prev.target.value)}
+        />
       </div>
 
       {/* DEV only section */}
@@ -104,10 +116,20 @@ export default function Bank() {
         </section>
       )}
 
-      <section className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-2">
-        <button className="btn"></button>
+      {filteredSigns.length === 0 && (
+        <p className="text-center text-lg">No signs found.</p>
+      )}
 
-        {SIGN_LIST.map((sign) => {
+      <section
+        className={twMerge(
+          "grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6",
+          "gap-2 min-h-[50vh] auto-rows-min min-w-3/5",
+        )}
+      >
+        {/* Replicate extra slot from SgSL site */}
+        {IS_DEV && <button className="btn"></button>}
+
+        {filteredSigns.map((sign) => {
           return (
             <div key={sign.id} className="flex flex-col">
               <BankButton
@@ -116,7 +138,7 @@ export default function Bank() {
                 handleToggleVisible={() => handleToggleVisible(sign.id)}
               />
 
-              <p className="text-center">{sign.id}</p>
+              {IS_DEV && <p className="text-center">{sign.id}</p>}
             </div>
           );
         })}
