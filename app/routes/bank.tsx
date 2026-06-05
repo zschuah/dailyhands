@@ -43,7 +43,7 @@ export default function Bank() {
   const isNavHidden = currentY > 500 && !isScrollingUp;
 
   const CURRENT_SIGNS = SIGN_LIST.length;
-  const TOTAL_SIGNS = 1559;
+  const TOTAL_SIGNS = 1307;
   const PERCENT_TEXT = `(${Math.round((CURRENT_SIGNS / TOTAL_SIGNS) * 100)}%)`;
 
   const [inputValue, setInputValue] = useState("");
@@ -83,7 +83,7 @@ export default function Bank() {
 
       <div className="flex flex-col items-center gap-2">
         <p>
-          {CURRENT_SIGNS} out of {TOTAL_SIGNS} signs {PERCENT_TEXT}
+          {CURRENT_SIGNS} out of {TOTAL_SIGNS} words {PERCENT_TEXT}
         </p>
         <progress
           className="progress progress-primary w-60"
