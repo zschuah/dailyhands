@@ -50,7 +50,7 @@ const CardTrio = () => {
       const isCorrect = selectedId === answer.id;
       const points = isCorrect ? 3 : -1;
 
-      setScore((prev) => prev + points);
+      setScore((prev) => Math.max(0, prev + points));
       setIsScored(true);
     }
   };

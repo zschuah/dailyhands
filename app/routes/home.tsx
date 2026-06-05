@@ -1,4 +1,5 @@
 import { useWindowScroll } from "@uidotdev/usehooks";
+import { PiArrowFatLinesDownFill } from "react-icons/pi";
 import { twMerge } from "tailwind-merge";
 import CardTrio from "~/components/CardTrio";
 import NavbarIsland from "~/components/NavbarIsland";
@@ -34,7 +35,7 @@ export default function Home() {
 
         <div className="absolute bottom-4 flex flex-col items-center animate-bounce">
           <p>Scroll down to start!</p>
-          <span className="text-5xl">&#8609;</span>
+          <PiArrowFatLinesDownFill className="text-3xl" />
         </div>
       </section>
 

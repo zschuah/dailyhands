@@ -1,4 +1,8 @@
+import { usePrevious } from "@uidotdev/usehooks";
+import { FaBars, FaTrophy } from "react-icons/fa6";
+import { TiArrowSortedDown, TiArrowSortedUp } from "react-icons/ti";
 import { useLocation, useNavigate } from "react-router";
+import SlotCounter from "react-slot-counter";
 import { twMerge } from "tailwind-merge";
 import { useAppContext } from "~/context/AppContext";
 
@@ -12,6 +16,7 @@ const NavbarIsland = ({ isScrolled, isHidden }: Props) => {
   const location = useLocation();
 
   const { score } = useAppContext();
+  const prevScore = usePrevious(score);
 
   const handleClickLogo = () => {
     if (location.pathname === "/") {
@@ -45,21 +50,35 @@ const NavbarIsland = ({ isScrolled, isHidden }: Props) => {
         Daily Hands
       </h1>
 
-      <div
+      <section
         className={twMerge(
           "h-full flex items-center justify-between mx-6",
           "opacity-0 pointer-events-none transition duration-700",
           isScrolled && "opacity-100 pointer-events-auto",
         )}
       >
-        <span></span>
+        {/* Empty span for justify between */}
+        <span className="w-20 md:w-10"></span>
 
-        <p>{score}</p>
+        <div className="flex items-center">
+          <FaTrophy className="text-xl mr-1" />
+          <SlotCounter
+            containerClassName="text-lg font-bold"
+            value={score}
+            sequentialAnimationMode
+          />
+          {score > prevScore && (
+            <TiArrowSortedUp className="text-3xl text-green-500" />
+          )}
+          {score < prevScore && (
+            <TiArrowSortedDown className="text-3xl text-red-500" />
+          )}
+        </div>
 
-        <label htmlFor="my-drawer-1" className="btn btn-sm">
-          MENU
+        <label htmlFor="my-drawer-1">
+          <FaBars className="cursor-pointer text-2xl" />
         </label>
-      </div>
+      </section>
     </nav>
   );
 };
