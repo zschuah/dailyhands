@@ -1,5 +1,6 @@
 import { useLocation, useNavigate } from "react-router";
 import { twMerge } from "tailwind-merge";
+import { useAppContext } from "~/context/AppContext";
 
 type Props = {
   isScrolled: boolean;
@@ -9,6 +10,8 @@ type Props = {
 const NavbarIsland = ({ isScrolled, isHidden }: Props) => {
   const navigate = useNavigate();
   const location = useLocation();
+
+  const { score } = useAppContext();
 
   const handleClickLogo = () => {
     if (location.pathname === "/") {
@@ -44,12 +47,16 @@ const NavbarIsland = ({ isScrolled, isHidden }: Props) => {
 
       <div
         className={twMerge(
-          "h-full flex items-center justify-end",
+          "h-full flex items-center justify-between mx-6",
           "opacity-0 pointer-events-none transition duration-700",
           isScrolled && "opacity-100 pointer-events-auto",
         )}
       >
-        <label htmlFor="my-drawer-1" className="btn btn-sm mr-6">
+        <span></span>
+
+        <p>{score}</p>
+
+        <label htmlFor="my-drawer-1" className="btn btn-sm">
           MENU
         </label>
       </div>

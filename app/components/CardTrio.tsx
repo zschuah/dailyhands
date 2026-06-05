@@ -4,6 +4,7 @@ import { twMerge } from "tailwind-merge";
 import { getUniqueIntegers } from "~/utils/helpers";
 import { SIGN_LIST } from "~/utils/signList";
 import Card from "./Card";
+import { useAppContext } from "~/context/AppContext";
 
 const generateNewRound = () => {
   const randomSigns = getUniqueIntegers({ size: SIGN_LIST.length }).map(
@@ -13,7 +14,7 @@ const generateNewRound = () => {
 
   return {
     signs: randomSigns,
-    answer: randomSigns[answerIndex].name,
+    answer: randomSigns[answerIndex],
   };
 };
 
@@ -31,9 +32,24 @@ const CardTrio = () => {
   // Track if we are currently animating between rounds
   const [isFadingOut, setIsFadingOut] = useState(false);
 
+  const { setScore } = useAppContext();
+  const [isScored, setIsScored] = useState(false);
+
   const handleCardClick = (cardId: string) => {
     if (selectedId === cardId) {
       setIsReveal(true);
+
+      if (selectedId === answer.id) {
+        if (!isScored) {
+          setScore((prev) => prev + 3);
+          setIsScored(true);
+        }
+      } else {
+        if (!isScored) {
+          setScore((prev) => prev - 1);
+          setIsScored(true);
+        }
+      }
     } else {
       setSelectedId(cardId);
     }
@@ -53,6 +69,7 @@ const CardTrio = () => {
     setTimeout(() => {
       handleReset();
       setCurrentRound(generateNewRound());
+      setIsScored(false);
       setIsFadingOut(false);
     }, 500);
   };
@@ -77,7 +94,9 @@ const CardTrio = () => {
       onClick={() => handleReset()}
     >
       <div className="text-center">
-        <h2 className="text-3xl md:text-5xl text-shadow-lg mb-2">{answer}</h2>
+        <h2 className="text-3xl md:text-5xl text-shadow-lg mb-2">
+          {answer.name}
+        </h2>
         <p>Which is correct?</p>
       </div>
 
@@ -89,7 +108,7 @@ const CardTrio = () => {
           <Card
             key={card.id}
             data={card}
-            answer={answer}
+            answerName={answer.name}
             isReveal={isReveal}
             isSelected={card.id === selectedId}
             handleCardClick={handleCardClick}

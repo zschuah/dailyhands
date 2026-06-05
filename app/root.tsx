@@ -10,6 +10,7 @@ import type { Route } from "./+types/root";
 import "./app.css";
 import Drawer from "./layouts/Drawer";
 import { VERSION_NUMBER } from "./utils/constants";
+import { AppProvider } from "./context/AppContext";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -44,15 +45,17 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
 export default function App() {
   return (
-    <Drawer>
-      <Outlet />
+    <AppProvider>
+      <Drawer>
+        <Outlet />
 
-      <div className="fixed bottom-5 right-10">
-        <p className="text-zinc-500/50 font-mono text-xs md:text-sm">
-          {VERSION_NUMBER}
-        </p>
-      </div>
-    </Drawer>
+        <div className="fixed bottom-5 right-10 pointer-events-none">
+          <p className="text-zinc-500/50 font-mono text-xs md:text-sm">
+            {VERSION_NUMBER}
+          </p>
+        </div>
+      </Drawer>
+    </AppProvider>
   );
 }
 

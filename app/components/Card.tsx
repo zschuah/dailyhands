@@ -3,7 +3,7 @@ import type { SignProps } from "~/utils/types";
 
 type Props = {
   data: SignProps;
-  answer: string;
+  answerName: string;
   isReveal: boolean;
   isSelected: boolean;
   handleCardClick: (cardId: string) => void;
@@ -11,7 +11,7 @@ type Props = {
 
 const Card = ({
   data,
-  answer,
+  answerName,
   isReveal,
   isSelected,
   handleCardClick,
@@ -42,7 +42,7 @@ const Card = ({
             "absolute inset-0 transition duration-500 opacity-0",
             "blur-xl scale-150",
             isReveal && "opacity-100",
-            name === answer ? "bg-green-500/50" : "bg-red-500/50",
+            name === answerName ? "bg-green-500/50" : "bg-red-500/50",
           )}
         ></div>
 
