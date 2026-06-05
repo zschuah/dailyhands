@@ -1,3 +1,4 @@
+import { useClickAway } from "@uidotdev/usehooks";
 import { useState } from "react";
 import { twMerge } from "tailwind-merge";
 import { IS_DEV } from "~/utils/constants";
@@ -13,8 +14,15 @@ const BankButton = ({ sign, isOpen, handleToggleVisible }: Props) => {
   const [isGifLoading, setIsGifLoading] = useState(true);
   const [isStaticLoading, setIsStaticLoading] = useState(true);
 
+  const ref = useClickAway<HTMLButtonElement>(() => {
+    if (isOpen) {
+      handleToggleVisible(sign.id);
+    }
+  });
+
   return (
     <button
+      ref={ref}
       onClick={() => handleToggleVisible(sign.id)}
       className={twMerge("btn relative", isOpen && "btn-active z-10")}
     >
