@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import { PiBankFill, PiHandWavingFill } from "react-icons/pi";
 import { Link } from "react-router";
 
 type Props = {
@@ -34,13 +35,15 @@ const Drawer = ({ children }: Props) => {
         <ul className="menu bg-base-200 min-h-full w-80 p-4 text-lg">
           <li>
             <Link to="/" onClick={handleCloseDrawer}>
-              Home
+              <PiHandWavingFill className="text-3xl" />
+              <span>Home</span>
             </Link>
           </li>
 
           <li>
             <Link to="/bank" onClick={handleCloseDrawer}>
-              Bank
+              <PiBankFill className="text-3xl" />
+              <span>Bank</span>
             </Link>
           </li>
         </ul>

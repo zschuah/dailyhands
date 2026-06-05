@@ -7,6 +7,7 @@ import { AVAILABLE_TAGS, SIGN_LIST } from "~/utils/signList";
 import type { Route } from "./+types/bank";
 import NavbarIsland from "~/components/NavbarIsland";
 import { usePrevious, useWindowScroll } from "@uidotdev/usehooks";
+import { IS_DEV } from "~/utils/constants";
 
 export async function action({ request }: Route.ActionArgs) {
   const signData = await request.json();
@@ -67,8 +68,6 @@ export default function Bank() {
 
       <h2 className="text-5xl pt-20">Bank</h2>
 
-      <p>TAGS: {AVAILABLE_TAGS.join(", ").toString()}</p>
-
       <div className="text-center">
         <p>
           {CURRENT_SIGNS} out of {TOTAL_SIGNS} signs {PERCENT_TEXT}
@@ -80,23 +79,30 @@ export default function Bank() {
         ></progress>
       </div>
 
-      <button
-        className="btn btn-secondary"
-        onClick={handleUpdateSigns}
-        disabled={isUpdating}
-      >
-        {isUpdating ? "Updating..." : "Update Signs"}
-      </button>
+      {/* DEV only section */}
+      {IS_DEV && (
+        <section className="flex flex-col items-center gap-2">
+          <p>TAGS: {AVAILABLE_TAGS.join(", ").toString()}</p>
 
-      <div
-        className={twMerge(
-          "inline-flex items-center gap-2 text-sm font-bold text-success-content",
-          !isSuccess && "invisible",
-        )}
-      >
-        <div className="status status-success"></div>
-        <span>Success!</span>
-      </div>
+          <button
+            className="btn btn-secondary"
+            onClick={handleUpdateSigns}
+            disabled={isUpdating}
+          >
+            {isUpdating ? "Updating..." : "Update Signs"}
+          </button>
+
+          <div
+            className={twMerge(
+              "inline-flex items-center gap-2 text-sm font-bold text-success-content",
+              !isSuccess && "invisible",
+            )}
+          >
+            <div className="status status-success"></div>
+            <span>Success!</span>
+          </div>
+        </section>
+      )}
 
       <section className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-2">
         <button className="btn"></button>
