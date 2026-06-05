@@ -5,6 +5,13 @@ import { apiRequest } from "~/utils/apiRequest";
 import { safeJsonStringify } from "~/utils/helpers";
 import type { Route } from "./+types/under-construction";
 
+export function meta({}: Route.MetaArgs) {
+  return [
+    { title: "DailyHands | Under Construction" },
+    { name: "description", content: "Practice SgSL here!" },
+  ];
+}
+
 export async function clientAction({ request }: Route.ClientActionArgs) {
   const formData = await request.formData();
   const userKonami = formData.get("konami");

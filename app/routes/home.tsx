@@ -3,6 +3,14 @@ import { PiArrowFatLinesDownFill } from "react-icons/pi";
 import { twMerge } from "tailwind-merge";
 import CardTrio from "~/components/CardTrio";
 import NavbarIsland from "~/components/NavbarIsland";
+import type { Route } from "./+types/home";
+
+export function meta({}: Route.MetaArgs) {
+  return [
+    { title: "DailyHands | Home" },
+    { name: "description", content: "Practice SgSL here!" },
+  ];
+}
 
 export default function Home() {
   const [{ y }] = useWindowScroll();

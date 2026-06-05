@@ -47,7 +47,7 @@ const NavbarIsland = ({ isScrolled, isHidden }: Props) => {
         )}
         onClick={handleClickLogo}
       >
-        Daily Hands
+        DailyHands
       </h1>
 
       <section

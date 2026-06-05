@@ -1,5 +1,13 @@
 import { useEffect } from "react";
 import { safeJsonParse } from "~/utils/helpers";
+import type { Route } from "./+types/error";
+
+export function meta({}: Route.MetaArgs) {
+  return [
+    { title: "DailyHands | Error" },
+    { name: "description", content: "Practice SgSL here!" },
+  ];
+}
 
 export default function Error() {
   useEffect(() => {
