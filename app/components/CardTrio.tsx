@@ -36,22 +36,22 @@ const CardTrio = () => {
   const [isScored, setIsScored] = useState(false);
 
   const handleCardClick = (cardId: string) => {
-    if (selectedId === cardId) {
-      setIsReveal(true);
-
-      if (selectedId === answer.id) {
-        if (!isScored) {
-          setScore((prev) => prev + 3);
-          setIsScored(true);
-        }
-      } else {
-        if (!isScored) {
-          setScore((prev) => prev - 1);
-          setIsScored(true);
-        }
-      }
-    } else {
+    // If new card selection, expand card and exit early
+    if (selectedId !== cardId) {
       setSelectedId(cardId);
+      return;
+    }
+
+    // Reveal when clicked again
+    setIsReveal(true);
+
+    // Scoring only if not scored yet
+    if (!isScored) {
+      const isCorrect = selectedId === answer.id;
+      const points = isCorrect ? 3 : -1;
+
+      setScore((prev) => prev + points);
+      setIsScored(true);
     }
   };
 
