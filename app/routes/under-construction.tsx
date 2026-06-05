@@ -3,13 +3,11 @@ import { useFetcher, useNavigate } from "react-router";
 import { twMerge } from "tailwind-merge";
 import { apiRequest } from "~/utils/apiRequest";
 import { safeJsonStringify } from "~/utils/helpers";
+import { createMeta } from "~/utils/meta";
 import type { Route } from "./+types/under-construction";
 
 export function meta({}: Route.MetaArgs) {
-  return [
-    { title: "DailyHands | Under Construction" },
-    { name: "description", content: "Practice SgSL here!" },
-  ];
+  return createMeta({ title: "Under Construction" });
 }
 
 export async function clientAction({ request }: Route.ClientActionArgs) {

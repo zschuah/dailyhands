@@ -6,14 +6,12 @@ import supabase from "~/api/supabase";
 import BankButton from "~/components/BankButton";
 import NavbarIsland from "~/components/NavbarIsland";
 import { IS_DEV } from "~/utils/constants";
+import { createMeta } from "~/utils/meta";
 import { AVAILABLE_TAGS, SIGN_LIST } from "~/utils/signList";
 import type { Route } from "./+types/bank";
 
 export function meta({}: Route.MetaArgs) {
-  return [
-    { title: "DailyHands | Bank" },
-    { name: "description", content: "Practice SgSL here!" },
-  ];
+  return createMeta({ title: "Bank" });
 }
 
 export async function action({ request }: Route.ActionArgs) {

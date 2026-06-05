@@ -4,12 +4,10 @@ import { twMerge } from "tailwind-merge";
 import CardTrio from "~/components/CardTrio";
 import NavbarIsland from "~/components/NavbarIsland";
 import type { Route } from "./+types/home";
+import { createMeta } from "~/utils/meta";
 
 export function meta({}: Route.MetaArgs) {
-  return [
-    { title: "DailyHands | Home" },
-    { name: "description", content: "Practice SgSL here!" },
-  ];
+  return createMeta({ title: "Home" });
 }
 
 export default function Home() {
