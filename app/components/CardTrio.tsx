@@ -91,7 +91,7 @@ const CardTrio = () => {
         "transition duration-500 pt-20 md:pt-0",
         isVisible ? "opacity-100 delay-200" : "opacity-0 delay-0",
       )}
-      onClick={() => handleReset()}
+      // onClick={() => handleReset()}
     >
       <div className="text-center">
         <h2 className="text-3xl md:text-5xl text-shadow-lg mb-2">
