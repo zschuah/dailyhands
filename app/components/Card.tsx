@@ -46,7 +46,7 @@ const Card = ({
           )}
         ></div>
 
-        <h2
+        <h3
           className={twMerge(
             "p-4 text-center text-xl md:text-3xl font-bold text-slate-100 drop-shadow truncate",
             "opacity-0 translate-y-2 transition duration-500",
@@ -57,7 +57,7 @@ const Card = ({
           )}
         >
           {name}
-        </h2>
+        </h3>
       </div>
     </div>
   );
