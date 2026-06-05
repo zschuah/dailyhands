@@ -66,6 +66,7 @@ const NavbarIsland = ({ isScrolled, isHidden }: Props) => {
             containerClassName="text-lg font-bold"
             value={score}
             sequentialAnimationMode
+            autoAnimationStart={false}
           />
           {score > prevScore && (
             <TiArrowSortedUp className="text-3xl text-green-500" />
