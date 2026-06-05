@@ -1,12 +1,19 @@
 import { useRef } from "react";
-import { PiBankFill, PiHandWavingFill } from "react-icons/pi";
+import {
+  PiArrowCounterClockwiseBold,
+  PiBankFill,
+  PiHandWavingFill,
+} from "react-icons/pi";
 import { Link } from "react-router";
+import { useAppContext } from "~/context/AppContext";
 
 type Props = {
   children: React.ReactNode;
 };
 
 const Drawer = ({ children }: Props) => {
+  const { setScore } = useAppContext();
+
   const checkboxRef = useRef<HTMLInputElement>(null);
 
   const handleCloseDrawer = () => {
@@ -35,16 +42,28 @@ const Drawer = ({ children }: Props) => {
         <ul className="menu bg-base-200 min-h-full w-80 p-4 text-lg">
           <li>
             <Link to="/" onClick={handleCloseDrawer}>
-              <PiHandWavingFill className="text-3xl" />
+              <PiHandWavingFill className="text-2xl" />
               <span>Home</span>
             </Link>
           </li>
 
           <li>
             <Link to="/bank" onClick={handleCloseDrawer}>
-              <PiBankFill className="text-3xl" />
+              <PiBankFill className="text-2xl" />
               <span>Bank</span>
             </Link>
+          </li>
+
+          <li>
+            <button
+              onClick={() => {
+                handleCloseDrawer();
+                setScore(0);
+              }}
+            >
+              <PiArrowCounterClockwiseBold className="text-2xl" />
+              <span>Reset score</span>
+            </button>
           </li>
         </ul>
       </div>
