@@ -12,7 +12,7 @@ export default [
   // Protected routes
   layout("layouts/ProtectedRoute.tsx", [
     index("routes/home.tsx"),
-    route("bank/:word?", "routes/bank.tsx"),
+    route("bank", "routes/bank.tsx"),
   ]),
 
   // User functions
