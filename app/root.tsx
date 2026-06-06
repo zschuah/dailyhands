@@ -44,10 +44,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <ScrollRestoration />
         <Scripts />
 
-        <Analytics
-          route={location.pathname}
-          path={location.pathname + location.search}
-        />
+        <Analytics route={location.pathname} path={location.pathname} />
         <SpeedInsights />
       </body>
     </html>
