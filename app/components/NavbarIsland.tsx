@@ -40,7 +40,7 @@ const NavbarIsland = ({ isScrolled, isHidden }: Props) => {
     >
       <h1
         className={twMerge(
-          "absolute whitespace-nowrap text-7xl cursor-pointer transition-all duration-700",
+          "absolute whitespace-nowrap text-7xl cursor-pointer select-none transition-all duration-700",
           isScrolled
             ? "top-1/2 left-6 -translate-y-1/2 text-xl md:text-3xl"
             : "top-[50vh] left-1/2 -translate-x-1/2 translate-y-[-450%] md:translate-y-[-330%] text-5xl md:text-7xl",
