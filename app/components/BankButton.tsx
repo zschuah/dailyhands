@@ -25,6 +25,8 @@ const BankButton = ({ sign, isOpen, handleToggleVisible }: Props) => {
   });
 
   const handleButtonClick = () => {
+    handleToggleVisible(sign.id);
+
     // Vercel tracking of page views
     const searchParams = new URLSearchParams(location.search);
     searchParams.set("word", sign.name);
@@ -32,8 +34,6 @@ const BankButton = ({ sign, isOpen, handleToggleVisible }: Props) => {
       replace: true,
       preventScrollReset: true,
     });
-
-    handleToggleVisible(sign.id);
   };
 
   return (
