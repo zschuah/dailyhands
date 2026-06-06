@@ -39,7 +39,7 @@ export default function Home() {
           />
         </div>
 
-        <div className="absolute bottom-20 md:bottom-4 flex flex-col items-center animate-bounce">
+        <div className="absolute bottom-20 md:bottom-4 flex flex-col items-center animate-bounce select-none">
           <p>Scroll down to start!</p>
           <PiArrowFatLinesDownFill className="text-3xl" />
         </div>

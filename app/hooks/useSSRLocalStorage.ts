@@ -30,7 +30,10 @@ export function useSSRLocalStorage<T>(
       // Storage access can throw SecurityError in strict privacy modes
       const item = window.localStorage.getItem(key);
       if (item) {
-        setStoredValue(safeJsonParse<T>(item) as T);
+        // Let React finish hydrating the UI before updating
+        setTimeout(() => {
+          setStoredValue(safeJsonParse<T>(item) as T);
+        }, 10);
       }
     } catch (error) {
       console.warn(`Error accessing localStorage key "${key}":`, error);
