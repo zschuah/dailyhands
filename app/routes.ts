@@ -4,7 +4,6 @@ import {
   layout,
   route,
 } from "@react-router/dev/routes";
-import { redirect } from "react-router";
 
 export default [
   route("under-construction", "routes/under-construction.tsx"),
@@ -13,7 +12,7 @@ export default [
   // Protected routes
   layout("layouts/ProtectedRoute.tsx", [
     index("routes/home.tsx"),
-    route("bank", "routes/bank.tsx"),
+    route("bank/:word?", "routes/bank.tsx"),
   ]),
 
   // User functions

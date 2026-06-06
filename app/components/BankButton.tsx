@@ -28,9 +28,7 @@ const BankButton = ({ sign, isOpen, handleToggleVisible }: Props) => {
     handleToggleVisible(sign.id);
 
     // Vercel tracking of page views
-    const searchParams = new URLSearchParams(location.search);
-    searchParams.set("word", sign.name);
-    navigate(`${location.pathname}?${searchParams.toString()}`, {
+    navigate(`/bank/${encodeURIComponent(sign.name)}`, {
       replace: true,
       preventScrollReset: true,
     });
