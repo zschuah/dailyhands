@@ -1,5 +1,6 @@
 import { useClickAway } from "@uidotdev/usehooks";
 import { useState } from "react";
+import { useLocation, useNavigate } from "react-router";
 import { twMerge } from "tailwind-merge";
 import { IS_DEV } from "~/utils/constants";
 import type { SignProps } from "~/utils/types";
@@ -11,6 +12,9 @@ type Props = {
 };
 
 const BankButton = ({ sign, isOpen, handleToggleVisible }: Props) => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
   const [isGifLoading, setIsGifLoading] = useState(true);
   const [isStaticLoading, setIsStaticLoading] = useState(true);
 
@@ -21,6 +25,14 @@ const BankButton = ({ sign, isOpen, handleToggleVisible }: Props) => {
   });
 
   const handleButtonClick = () => {
+    // Vercel tracking of page views
+    const searchParams = new URLSearchParams(location.search);
+    searchParams.set("word", sign.name);
+    navigate(`${location.pathname}?${searchParams.toString()}`, {
+      replace: true,
+      preventScrollReset: true,
+    });
+
     handleToggleVisible(sign.id);
   };
 
