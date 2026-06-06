@@ -61,12 +61,17 @@ export default function UnderConstruction() {
         />
 
         <fetcher.Form method="POST">
-          <input
-            className="input input-ghost"
-            type="text"
-            name="konami"
-            autoComplete="off"
-          />
+          <div className="join">
+            <input
+              className="input input-ghost join-item"
+              type="text"
+              name="konami"
+              autoComplete="off"
+            />
+            <button className="btn btn-ghost join-item text-zinc-200">
+              Submit
+            </button>
+          </div>
         </fetcher.Form>
       </div>
     </div>
