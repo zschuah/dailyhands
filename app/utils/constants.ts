@@ -5,4 +5,4 @@ export const STORAGE_URL =
 export const IS_DEV = import.meta.env.DEV;
 // export const IS_DEV = false;
 
-export const VERSION_NUMBER = "v0.1.0";
+export const VERSION_NUMBER = "v0.1.1";
