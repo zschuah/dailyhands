@@ -48,7 +48,8 @@ const Card = ({
 
         <h3
           className={twMerge(
-            "p-4 text-center text-xl md:text-3xl font-bold text-slate-100 drop-shadow truncate",
+            "p-4 text-center text-xl md:text-3xl font-bold text-slate-100 drop-shadow",
+            "truncate select-none",
             "opacity-0 translate-y-2 transition duration-500",
             // Mobile condition: Reveals whenever isReveal is true
             isReveal && "opacity-100 translate-y-0",

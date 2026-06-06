@@ -39,6 +39,10 @@ const CardTrio = () => {
     // If new card selection, expand card and exit early
     if (selectedId !== cardId) {
       setSelectedId(cardId);
+      window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: "smooth",
+      });
       return;
     }
 
