@@ -1,3 +1,5 @@
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 import {
   isRouteErrorResponse,
   Links,
@@ -8,9 +10,9 @@ import {
 } from "react-router";
 import type { Route } from "./+types/root";
 import "./app.css";
+import { AppProvider } from "./context/AppContext";
 import Drawer from "./layouts/Drawer";
 import { VERSION_NUMBER } from "./utils/constants";
-import { AppProvider } from "./context/AppContext";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -38,6 +40,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
         {children}
         <ScrollRestoration />
         <Scripts />
+
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
