@@ -25,7 +25,7 @@ export const letterH: SignProps[] = [
   {
     id: generateId("Hand"),
     name: "Hand",
-    images: getImages("hand", "png"),
+    images: getImages("hand", "jpg"),
   },
   {
     id: generateId("Hang"),
