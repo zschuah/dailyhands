@@ -73,4 +73,87 @@ export const letterG: SignProps[] = [
     name: "Gold",
     images: getImages("gold", "png"),
   },
+  {
+    id: generateId("Gong Xi Fa Cai"),
+    name: "Gong Xi Fa Cai",
+    images: getImages("gong_xi_fa_cai", "png"),
+  },
+  {
+    id: generateId("Good"),
+    name: "Good",
+    images: getImages("good", "jpg"),
+  },
+  {
+    id: generateId("Goosebumps"),
+    name: "Goosebumps",
+    images: getImages("goosebumps", "jpg"),
+  },
+  {
+    id: generateId("Gorilla (Animal)"),
+    name: "Gorilla (Animal)",
+    images: getImages("gorilla", "png"),
+    tags: ["animal"],
+  },
+  {
+    id: generateId("Grab (Brand)"),
+    name: "Grab (Brand)",
+    images: getImages("grab_brand", "png"),
+    tags: ["brand"],
+  },
+  {
+    id: generateId("Grandfather"),
+    name: "Grandfather",
+    images: getImages("grandfather", "jpg"),
+  },
+  {
+    id: generateId("Grandmother"),
+    name: "Grandmother",
+    images: getImages("grandmother", "jpg"),
+  },
+  {
+    id: generateId("Grapes"),
+    name: "Grapes",
+    images: getImages("grapes", "png"),
+  },
+  {
+    id: generateId("Grass"),
+    name: "Grass",
+    images: getImages("grass", "jpg"),
+  },
+  {
+    id: generateId("Grave"),
+    name: "Grave",
+    images: getImages("grave", "png"),
+  },
+  {
+    id: generateId("Great"),
+    name: "Great",
+    images: getImages("great", "png"),
+  },
+  {
+    id: generateId("Greece (Place)"),
+    name: "Greece",
+    images: getImages("greece", "jpg"),
+    tags: ["place"],
+  },
+  {
+    id: generateId("Green"),
+    name: "Green",
+    images: getImages("green", "jpg"),
+  },
+  {
+    id: generateId("Grey"),
+    name: "Grey",
+    images: getImages("grey", "jpg"),
+  },
+  {
+    id: generateId("Grocer"),
+    name: "Grocer",
+    images: getImages("grocer", "png"),
+  },
+  {
+    id: generateId("Group"),
+    name: "Group",
+    images: getImages("group", "png"),
+  },
 ];
