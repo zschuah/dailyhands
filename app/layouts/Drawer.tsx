@@ -32,7 +32,7 @@ const Drawer = ({ children }: Props) => {
       />
       <div className="drawer-content">{children}</div>
 
-      <div className="drawer-side">
+      <section className="drawer-side">
         <label
           htmlFor="my-drawer-1"
           aria-label="close sidebar"
@@ -57,8 +57,14 @@ const Drawer = ({ children }: Props) => {
           <li>
             <button
               onClick={() => {
-                handleCloseDrawer();
-                setScore(0);
+                const isConfirm = confirm(
+                  "Are you sure you want to reset your score?",
+                );
+
+                if (isConfirm) {
+                  handleCloseDrawer();
+                  setScore(0);
+                }
               }}
             >
               <PiArrowCounterClockwiseBold className="text-2xl" />
@@ -66,7 +72,7 @@ const Drawer = ({ children }: Props) => {
             </button>
           </li>
         </ul>
-      </div>
+      </section>
     </div>
   );
 };

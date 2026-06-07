@@ -57,7 +57,7 @@ export default function App() {
       <Drawer>
         <Outlet />
 
-        <div className="fixed bottom-5 right-10 select-none">
+        <div className="fixed bottom-5 right-5 md:right-10 select-none">
           <p className="text-zinc-500/50 font-mono text-xs md:text-sm">
             {VERSION_NUMBER}
           </p>

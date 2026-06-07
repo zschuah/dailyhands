@@ -90,6 +90,7 @@ export default function Bank() {
           value={CURRENT_SIGNS}
           max={TOTAL_SIGNS}
         ></progress>
+
         <input
           className="input input-primary"
           placeholder="Search for sign"
@@ -97,6 +98,9 @@ export default function Bank() {
           value={inputValue}
           onChange={(prev) => setInputValue(prev.target.value)}
         />
+        <button className="btn btn-secondary" onClick={() => setInputValue("")}>
+          Clear
+        </button>
       </div>
 
       {/* DEV only section */}

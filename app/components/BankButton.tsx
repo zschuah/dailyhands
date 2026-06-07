@@ -42,7 +42,7 @@ const BankButton = ({ sign, isOpen, handleToggleVisible }: Props) => {
       {isOpen && (
         <div
           className={twMerge(
-            "absolute top-0 translate-y-[-105%] w-[150%]",
+            "absolute top-0 translate-y-[-105%] w-[80vw] md:w-[140%]",
             "aspect-video rounded-lg shadow-lg overflow-hidden",
           )}
         >
