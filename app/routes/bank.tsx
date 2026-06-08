@@ -1,5 +1,6 @@
 import { usePrevious, useWindowScroll } from "@uidotdev/usehooks";
 import { useMemo, useState } from "react";
+import { PiArrowFatLinesUpFill } from "react-icons/pi";
 import { useFetcher } from "react-router";
 import { twMerge } from "tailwind-merge";
 import supabase from "~/api/supabase";
@@ -9,7 +10,6 @@ import { IS_DEV } from "~/utils/constants";
 import { createMeta } from "~/utils/meta";
 import { AVAILABLE_TAGS, SIGN_LIST } from "~/utils/signList";
 import type { Route } from "./+types/bank";
-import { PiArrowFatLinesUpFill } from "react-icons/pi";
 
 export function meta({}: Route.MetaArgs) {
   return createMeta({ title: "Bank" });

@@ -3,8 +3,8 @@ import { PiArrowFatLinesDownFill } from "react-icons/pi";
 import { twMerge } from "tailwind-merge";
 import CardTrio from "~/components/CardTrio";
 import NavbarIsland from "~/components/NavbarIsland";
-import type { Route } from "./+types/home";
 import { createMeta } from "~/utils/meta";
+import type { Route } from "./+types/home";
 
 export function meta({}: Route.MetaArgs) {
   return createMeta({ title: "Home" });
