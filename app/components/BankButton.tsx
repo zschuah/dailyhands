@@ -25,10 +25,10 @@ const BankButton = ({ sign, isOpen, handleToggleVisible }: Props) => {
 
   const handleButtonClick = () => {
     // Vercel tracking of page views
-    navigate(`/bank/${encodeURIComponent(sign.name)}`, {
-      replace: true,
-      preventScrollReset: true,
-    });
+    // navigate(`/bank/${encodeURIComponent(sign.name)}`, {
+    //   replace: true,
+    //   preventScrollReset: true,
+    // });
 
     handleToggleVisible(sign.id);
   };
