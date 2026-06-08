@@ -54,6 +54,8 @@ const Drawer = ({ children }: Props) => {
             </Link>
           </li>
 
+          <div className="divider"></div>
+
           <li>
             <button
               onClick={() => {
