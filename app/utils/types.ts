@@ -5,5 +5,6 @@ export type SignProps = {
     imageAnimated: string;
     imageStatic: string;
   };
+  link: string;
   tags?: string[];
 };
