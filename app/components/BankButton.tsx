@@ -1,6 +1,5 @@
 import { useClickAway } from "@uidotdev/usehooks";
 import { useState } from "react";
-import { useNavigate } from "react-router";
 import { twMerge } from "tailwind-merge";
 import { IS_DEV } from "~/utils/constants";
 import type { SignProps } from "~/utils/types";
@@ -12,8 +11,6 @@ type Props = {
 };
 
 const BankButton = ({ sign, isOpen, handleToggleVisible }: Props) => {
-  const navigate = useNavigate();
-
   const [isGifLoading, setIsGifLoading] = useState(true);
   const [isStaticLoading, setIsStaticLoading] = useState(true);
 
