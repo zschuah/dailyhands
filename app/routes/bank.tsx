@@ -170,7 +170,7 @@ export default function Bank() {
           });
         }}
       >
-        <PiArrowFatLinesUpFill className="text-3xl text-white" />
+        <PiArrowFatLinesUpFill className="text-5xl text-white" />
       </button>
     </div>
   );
