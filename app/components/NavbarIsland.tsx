@@ -44,7 +44,7 @@ const NavbarIsland = ({ isScrolled, isHidden }: Props) => {
           "transition-all duration-700",
           isScrolled
             ? "top-1/2 left-6 -translate-y-1/2 text-xl md:text-3xl"
-            : "top-[50vh] left-1/2 -translate-x-1/2 translate-y-[-450%] md:translate-y-[-330%] text-5xl md:text-7xl",
+            : "top-[50vh] left-1/2 -translate-x-1/2 translate-y-[-530%] md:translate-y-[-330%] text-5xl md:text-7xl",
         )}
         onClick={handleClickLogo}
       >
