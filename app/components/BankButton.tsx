@@ -8,9 +8,17 @@ type Props = {
   sign: SignProps;
   isOpen: boolean;
   handleToggleVisible: (id: string) => void;
+  hasClickedGif: boolean;
+  setHasClickedGif: (hasClickedGif: boolean) => void;
 };
 
-const BankButton = ({ sign, isOpen, handleToggleVisible }: Props) => {
+const BankButton = ({
+  sign,
+  isOpen,
+  handleToggleVisible,
+  hasClickedGif,
+  setHasClickedGif,
+}: Props) => {
   const [isGifLoading, setIsGifLoading] = useState(true);
   const [isStaticLoading, setIsStaticLoading] = useState(true);
 
@@ -45,10 +53,24 @@ const BankButton = ({ sign, isOpen, handleToggleVisible }: Props) => {
         >
           {isGifLoading && <div className="skeleton w-full h-full"></div>}
 
+          {!hasClickedGif && (
+            <div
+              className={twMerge(
+                "absolute inset-0 bg-zinc-800/50 grid place-items-center",
+                "pointer-events-none",
+              )}
+            >
+              <p className="text-3xl w-3/5 text-white">Click for more info</p>
+            </div>
+          )}
+
           <a
             href={sign.link}
             target="_blank"
-            onClick={(e) => e.stopPropagation()}
+            onClick={(e) => {
+              e.stopPropagation();
+              setHasClickedGif(true);
+            }}
           >
             <img
               className="h-full w-full object-cover"

@@ -10,6 +10,7 @@ import { IS_DEV } from "~/utils/constants";
 import { createMeta } from "~/utils/meta";
 import { AVAILABLE_TAGS, SIGN_LIST } from "~/utils/signList";
 import type { Route } from "./+types/bank";
+import { useSSRLocalStorage } from "~/hooks/useSSRLocalStorage";
 
 export function meta({}: Route.MetaArgs) {
   return createMeta({ title: "Bank" });
@@ -60,6 +61,10 @@ export default function Bank() {
   const isSuccess = fetcher.data?.isSuccess;
 
   const [visibleImages, setVisibleImages] = useState("");
+  const [hasClickedGif, setHasClickedGif] = useSSRLocalStorage(
+    "hasClickedGif",
+    false,
+  );
 
   const handleToggleVisible = (id: string) => {
     if (visibleImages !== id) {
@@ -149,6 +154,8 @@ export default function Bank() {
                 sign={sign}
                 isOpen={visibleImages === sign.id}
                 handleToggleVisible={() => handleToggleVisible(sign.id)}
+                hasClickedGif={hasClickedGif}
+                setHasClickedGif={setHasClickedGif}
               />
 
               {IS_DEV && <p className="text-center">{sign.id}</p>}
