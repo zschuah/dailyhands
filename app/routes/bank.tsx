@@ -9,6 +9,7 @@ import { IS_DEV } from "~/utils/constants";
 import { createMeta } from "~/utils/meta";
 import { AVAILABLE_TAGS, SIGN_LIST } from "~/utils/signList";
 import type { Route } from "./+types/bank";
+import { PiArrowFatLinesUpFill } from "react-icons/pi";
 
 export function meta({}: Route.MetaArgs) {
   return createMeta({ title: "Bank" });
@@ -155,6 +156,22 @@ export default function Bank() {
           );
         })}
       </section>
+
+      <button
+        className={twMerge(
+          "fixed bottom-20 right-0 bg-zinc-800/50 rounded-l p-2 cursor-pointer",
+          "translate-x-0 transition duration-500",
+          isNavHidden && "translate-x-full",
+        )}
+        onClick={() => {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        }}
+      >
+        <PiArrowFatLinesUpFill className="text-3xl text-white" />
+      </button>
     </div>
   );
 }

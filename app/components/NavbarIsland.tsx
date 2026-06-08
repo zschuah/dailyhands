@@ -33,7 +33,7 @@ const NavbarIsland = ({ isScrolled, isHidden }: Props) => {
     <nav
       className={twMerge(
         "fixed top-5 h-16 w-9/10 max-w-3xl bg-zinc-300 rounded-full z-10",
-        "transition duration-700 select-none",
+        "transition duration-500 select-none",
         isScrolled && "bg-zinc-200 shadow-2xl",
         isHidden && "-translate-y-32",
       )}
