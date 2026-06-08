@@ -17,7 +17,7 @@ const BankButton = ({ sign, isOpen, handleToggleVisible }: Props) => {
   const [isGifLoading, setIsGifLoading] = useState(true);
   const [isStaticLoading, setIsStaticLoading] = useState(true);
 
-  const ref = useClickAway<HTMLButtonElement>(() => {
+  const ref = useClickAway<HTMLDivElement>(() => {
     if (isOpen) {
       handleToggleVisible(sign.id);
     }
@@ -34,7 +34,7 @@ const BankButton = ({ sign, isOpen, handleToggleVisible }: Props) => {
   };
 
   return (
-    <button
+    <div
       ref={ref}
       onClick={handleButtonClick}
       className={twMerge("btn relative", isOpen && "btn-active z-10")}
@@ -48,12 +48,18 @@ const BankButton = ({ sign, isOpen, handleToggleVisible }: Props) => {
         >
           {isGifLoading && <div className="skeleton w-full h-full"></div>}
 
-          <img
-            className="h-full w-full object-cover"
-            src={sign.images.imageAnimated}
-            alt={sign.name}
-            onLoad={() => setIsGifLoading(false)}
-          />
+          <a
+            href={sign.link}
+            target="_blank"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <img
+              className="h-full w-full object-cover"
+              src={sign.images.imageAnimated}
+              alt={sign.name}
+              onLoad={() => setIsGifLoading(false)}
+            />
+          </a>
         </div>
       )}
 
@@ -79,7 +85,7 @@ const BankButton = ({ sign, isOpen, handleToggleVisible }: Props) => {
         <span>{sign.name}</span>
         {sign.tags && <span>*</span>}
       </div>
-    </button>
+    </div>
   );
 };
 
