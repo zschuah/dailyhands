@@ -4,7 +4,9 @@ import Card from "~/components/Card";
 import NavbarIsland from "~/components/NavbarIsland";
 import { useAppContext } from "~/context/AppContext";
 import { getUniqueIntegers } from "~/utils/helpers";
+import { createMeta } from "~/utils/meta";
 import { SIGN_LIST } from "~/utils/signList";
+import type { Route } from "./+types/hard-mode";
 
 const generateNewRound = () => {
   const randomSigns = getUniqueIntegers({
@@ -17,6 +19,10 @@ const generateNewRound = () => {
     answer: randomSigns[0].name,
   };
 };
+
+export function meta({}: Route.MetaArgs) {
+  return createMeta({ title: "Hard Mode" });
+}
 
 export default function Bank() {
   const [currentRound, setCurrentRound] = useState(generateNewRound());
