@@ -321,10 +321,11 @@ export const letterD: SignProps[] = [
     link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Document%20(Noun)",
   },
   {
-    id: generateId("Dog"),
-    name: "Dog",
+    id: generateId("Dog (Animal)"),
+    name: "Dog (Animal)",
     images: getImages("dog", "jpg"),
     link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Dog",
+    tags: ["animal"],
   },
   {
     id: generateId("Dollar"),

@@ -125,10 +125,11 @@ export const letterB: SignProps[] = [
     link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Beach",
   },
   {
-    id: generateId("Bear"),
-    name: "Bear",
+    id: generateId("Bear (Animal)"),
+    name: "Bear (Animal)",
     images: getImages("bear", "jpg"),
     link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Bear",
+    tags: ["animal"],
   },
   {
     id: generateId("Beautiful"),
@@ -268,10 +269,11 @@ export const letterB: SignProps[] = [
     tags: ["numeral"],
   },
   {
-    id: generateId("Bird"),
-    name: "Bird",
+    id: generateId("Bird (Animal)"),
+    name: "Bird (Animal)",
     images: getImages("bird", "jpg"),
     link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Bird",
+    tags: ["animal"],
   },
   {
     id: generateId("Birth"),
@@ -531,10 +533,11 @@ export const letterB: SignProps[] = [
     link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Budget",
   },
   {
-    id: generateId("Bug"),
-    name: "Bug",
+    id: generateId("Bug (Animal)"),
+    name: "Bug (Animal)",
     images: getImages("bug", "jpg"),
     link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Bug",
+    tags: ["animal"],
   },
   {
     id: generateId("Bukit Batok (Place)"),

@@ -149,10 +149,11 @@ export const letterC: SignProps[] = [
     link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Casino",
   },
   {
-    id: generateId("Cat"),
-    name: "Cat",
+    id: generateId("Cat (Animal)"),
+    name: "Cat (Animal)",
     images: getImages("cat", "jpg"),
     link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Cat",
+    tags: ["animal"],
   },
   {
     id: generateId("Catch (Noun)"),
@@ -240,10 +241,11 @@ export const letterC: SignProps[] = [
     link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Chest",
   },
   {
-    id: generateId("Chicken"),
-    name: "Chicken",
+    id: generateId("Chicken (Animal)"),
+    name: "Chicken (Animal)",
     images: getImages("chicken", "png"),
     link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Chicken",
+    tags: ["animal"],
   },
   {
     id: generateId("Chickenpox"),
