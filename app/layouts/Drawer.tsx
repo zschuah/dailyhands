@@ -3,6 +3,7 @@ import {
   PiArrowCounterClockwiseBold,
   PiBankFill,
   PiHandWavingFill,
+  PiSkullFill,
 } from "react-icons/pi";
 import { Link } from "react-router";
 import { useAppContext } from "~/context/AppContext";
@@ -56,7 +57,7 @@ const Drawer = ({ children }: Props) => {
 
           <li>
             <Link to="/hard-mode" onClick={handleCloseDrawer}>
-              <PiBankFill className="text-2xl" />
+              <PiSkullFill className="text-2xl" />
               <span>Hard Mode</span>
             </Link>
           </li>
