@@ -112,7 +112,7 @@ const CardTrio = () => {
           <Card
             key={card.id}
             data={card}
-            answerName={answer.name}
+            isCorrect={card.name === answer.name}
             isReveal={isReveal}
             isSelected={card.id === selectedId}
             handleCardClick={handleCardClick}

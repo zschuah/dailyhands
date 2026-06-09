@@ -87,7 +87,7 @@ export function safeJsonStringify(value: unknown): string {
   }
 }
 
-export const normalizeText = (text: string): string => {
+export const getNormalised = (text: string): string => {
   return (
     text
       // Remove text inside parentheses, e.g., "Floor (Level of building)" -> "Floor "
