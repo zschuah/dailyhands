@@ -19,21 +19,20 @@ const generateNewRound = () => {
 };
 
 const CardTrio = () => {
+  const { setScore } = useAppContext();
+  const [ref, entry] = useIntersectionObserver({ threshold: 0.5 });
+
   const [currentRound, setCurrentRound] = useState(generateNewRound());
+  const [selectedId, setSelectedId] = useState("");
+
   const CARD_LIST = currentRound.signs;
   const answer = currentRound.answer;
 
-  const [ref, entry] = useIntersectionObserver({ threshold: 0.5 });
-  const isIntersecting = entry?.isIntersecting;
-
   const [isReveal, setIsReveal] = useState(false);
-  const [selectedId, setSelectedId] = useState("");
-
-  // Track if we are currently animating between rounds
-  const [isFadingOut, setIsFadingOut] = useState(false);
-
-  const { setScore } = useAppContext();
   const [isScored, setIsScored] = useState(false);
+  // Tracks animation between rounds
+  const [isFadingOut, setIsFadingOut] = useState(false);
+  const isIntersecting = entry?.isIntersecting;
 
   const handleCardClick = (cardId: string) => {
     // If new card selection, expand card and exit early

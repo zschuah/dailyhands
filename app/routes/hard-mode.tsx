@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { twMerge } from "tailwind-merge";
 import Card from "~/components/Card";
 import NavbarIsland from "~/components/NavbarIsland";
@@ -25,18 +25,20 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export default function Bank() {
+  const { setScore } = useAppContext();
   const [currentRound, setCurrentRound] = useState(generateNewRound());
   const [inputValue, setInputValue] = useState("");
 
-  const [isReveal, setIsReveal] = useState(false);
   const isCorrect =
     getNormalised(inputValue) === getNormalised(currentRound.answer);
 
-  // Track if we are currently animating between rounds
+  const [isReveal, setIsReveal] = useState(false);
+  const [isScored, setIsScored] = useState(false);
+  // Tracks animation between rounds
   const [isFadingOut, setIsFadingOut] = useState(false);
 
-  const { setScore } = useAppContext();
-  const [isScored, setIsScored] = useState(false);
+  const inputRef = useRef<HTMLInputElement>(null);
+  const nextBtnRef = useRef<HTMLButtonElement>(null);
 
   const handleSubmit = (e: React.SubmitEvent) => {
     e.preventDefault();
@@ -74,6 +76,16 @@ export default function Bank() {
     }, 500);
   };
 
+  useEffect(() => {
+    if (isScored && nextBtnRef.current) {
+      // Focus Next button after submitting
+      nextBtnRef.current.focus();
+    } else if (!isScored && !isFadingOut && inputRef.current) {
+      // Focus Input field for the new round
+      inputRef.current.focus();
+    }
+  }, [isScored, isFadingOut]);
+
   return (
     <div
       className={twMerge(
@@ -101,6 +113,7 @@ export default function Bank() {
 
         <form className="join" onSubmit={handleSubmit}>
           <input
+            ref={inputRef}
             className={twMerge(
               "input input-primary join-item",
               "disabled:opacity-50",
@@ -109,6 +122,7 @@ export default function Bank() {
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
             disabled={isScored}
+            autoFocus
           />
           <button className="btn btn-primary join-item" disabled={isScored}>
             Submit
@@ -116,10 +130,10 @@ export default function Bank() {
         </form>
 
         <button
+          ref={nextBtnRef}
           onClick={handleNextClick}
           className="btn btn-secondary"
           disabled={!isScored}
-          autoFocus={isScored}
         >
           Next
         </button>
