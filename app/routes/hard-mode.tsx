@@ -107,7 +107,7 @@ export default function Bank() {
 
       <section
         className={twMerge(
-          "flex flex-col items-center gap-4 w-full h-1/2 md:h-3/5",
+          "flex flex-col items-center gap-4 w-full",
           "transition duration-500",
           isFadingOut ? "opacity-0" : "opacity-100",
         )}
@@ -125,7 +125,7 @@ export default function Bank() {
           isReveal={isReveal}
           isSelected
           handleCardClick={() => {}}
-          className="w-9/10 h-full md:h-full transition-none cursor-auto"
+          className="w-9/10 h-60 md:h-96 transition-none cursor-auto"
         />
 
         <form className="join" onSubmit={handleSubmit}>
