@@ -95,11 +95,18 @@ export default function Bank() {
 
       <section
         className={twMerge(
-          "flex flex-col items-center gap-4 w-full h-5/12 md:h-3/5",
+          "flex flex-col items-center gap-4 w-full h-1/2 md:h-3/5",
           "transition duration-500",
           isFadingOut ? "opacity-0" : "opacity-100",
         )}
       >
+        <div className="text-center">
+          <h2 className="text-3xl md:text-5xl text-shadow-lg mb-2">
+            Hard Mode
+          </h2>
+          <p>Type the correct answer</p>
+        </div>
+
         <Card
           data={currentRound.sign}
           isCorrect={isCorrect}

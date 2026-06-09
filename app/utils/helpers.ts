@@ -92,8 +92,10 @@ export const getNormalised = (text: string): string => {
     text
       // Remove text inside parentheses, e.g., "Floor (Level of building)" -> "Floor "
       .replace(/\s*\([^)]*\)/g, "")
-      // Remove punctuation like apostrophes, periods, or commas
-      .replace(/['’.,\/#!$%\^&\*;:{}=\-_`~()]/g, "")
+      // Convert hyphens and underscores to spaces so words stay separated
+      .replace(/[-_]/g, " ")
+      // Remove punctuation (removed - and _ from this list)
+      .replace(/['’.,\/#!$%\^&\*;:{}=`~()]/g, "")
       // Collapse multiple spaces into one and trim edges
       .replace(/\s+/g, " ")
       .trim()
