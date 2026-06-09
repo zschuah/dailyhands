@@ -13,6 +13,7 @@ export default [
   layout("layouts/ProtectedRoute.tsx", [
     index("routes/home.tsx"),
     route("bank", "routes/bank.tsx"),
+    route("hard-mode", "routes/hard-mode.tsx"),
   ]),
 
   // User functions

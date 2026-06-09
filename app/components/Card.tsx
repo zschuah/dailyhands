@@ -7,6 +7,7 @@ type Props = {
   isReveal: boolean;
   isSelected: boolean;
   handleCardClick: (cardId: string) => void;
+  className?: string;
 };
 
 const Card = ({
@@ -15,6 +16,7 @@ const Card = ({
   isReveal,
   isSelected,
   handleCardClick,
+  className,
 }: Props) => {
   const { name, images } = data;
   const { imageAnimated, imageStatic } = images;
@@ -27,6 +29,7 @@ const Card = ({
         "bg-zinc-800 rounded-2xl md:rounded-3xl shadow-lg cursor-pointer",
         "transition-all duration-700",
         isSelected && "h-60 md:w-150",
+        className,
       )}
       onClick={() => handleCardClick(data.id)}
     >

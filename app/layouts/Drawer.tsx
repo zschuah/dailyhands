@@ -54,6 +54,13 @@ const Drawer = ({ children }: Props) => {
             </Link>
           </li>
 
+          <li>
+            <Link to="/hard-mode" onClick={handleCloseDrawer}>
+              <PiBankFill className="text-2xl" />
+              <span>Hard Mode</span>
+            </Link>
+          </li>
+
           <div className="divider"></div>
 
           <li>

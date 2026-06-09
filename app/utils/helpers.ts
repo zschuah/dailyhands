@@ -86,3 +86,18 @@ export function safeJsonStringify(value: unknown): string {
     return "";
   }
 }
+
+export const normalizeText = (text: string): string => {
+  return (
+    text
+      // Remove text inside parentheses, e.g., "Floor (Level of building)" -> "Floor "
+      .replace(/\s*\([^)]*\)/g, "")
+      // Remove punctuation like apostrophes, periods, or commas
+      .replace(/['’.,\/#!$%\^&\*;:{}=\-_`~()]/g, "")
+      // Collapse multiple spaces into one and trim edges
+      .replace(/\s+/g, " ")
+      .trim()
+      // Convert to lower case
+      .toLowerCase()
+  );
+};

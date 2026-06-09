@@ -20,7 +20,8 @@ export default function Home() {
       {/* Welcome Section */}
       <section
         className={twMerge(
-          "min-h-screen grid place-items-center relative bg-zinc-300",
+          "min-h-screen grid place-items-center relative",
+          "bg-zinc-300",
         )}
       >
         <NavbarIsland isScrolled={isScrolled} />
@@ -50,7 +51,8 @@ export default function Home() {
       {/* Game Section */}
       <section
         className={twMerge(
-          "min-h-screen grid place-items-center bg-linear-to-b from-zinc-300 to-orange-300",
+          "min-h-screen grid place-items-center",
+          "bg-linear-to-b from-zinc-300 to-orange-300",
         )}
       >
         <CardTrio />
