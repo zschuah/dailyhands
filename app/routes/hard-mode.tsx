@@ -21,7 +21,10 @@ const generateNewRound = () => {
 };
 
 export function meta({}: Route.MetaArgs) {
-  return createMeta({ title: "Hard Mode" });
+  return createMeta({
+    title: "Hard Mode",
+    description: "You wanted a challenge?",
+  });
 }
 
 export default function Bank() {

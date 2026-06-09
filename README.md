@@ -10,4 +10,5 @@ A platform for accessing and practicing common SgSL signs.
 ## Changelog
 
 - v0.1.0: Setup CardTrio and Bank
-- v0.2.0: Added link to every sign to SgSL Sign Bank site
+- v0.2.0: Added link to every Bank word to SgSL Sign Bank website
+- v0.3.0: Added Hard Mode
