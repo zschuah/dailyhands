@@ -742,7 +742,7 @@ export const letterC: SignProps[] = [
   {
     id: generateId("Cycle (Verb)"),
     name: "Cycle (Verb)",
-    images: getImages("cycle_verb", "png"),
+    images: getImages("bicycle", "jpg"),
     link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Cycle%20(verb)",
   },
 ];
