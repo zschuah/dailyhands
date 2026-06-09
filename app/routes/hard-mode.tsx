@@ -42,6 +42,7 @@ export default function Bank() {
 
   const inputRef = useRef<HTMLInputElement>(null);
   const nextBtnRef = useRef<HTMLButtonElement>(null);
+  const descRef = useRef<HTMLParagraphElement>(null);
 
   const handleSubmit = (e: React.SubmitEvent) => {
     e.preventDefault();
@@ -84,6 +85,14 @@ export default function Bank() {
     } else if (!isScored && !isFadingOut && inputRef.current) {
       // Focus Input field for the new round
       inputRef.current.focus();
+
+      // Pushes Card image into view
+      setTimeout(() => {
+        descRef.current?.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }, 300);
     }
   }, [isScored, isFadingOut]);
 
@@ -107,7 +116,7 @@ export default function Bank() {
           <h2 className="text-3xl md:text-5xl text-shadow-lg mb-2">
             Hard Mode
           </h2>
-          <p>Type the correct answer</p>
+          <p ref={descRef}>Type the correct answer</p>
         </div>
 
         <Card
@@ -131,7 +140,6 @@ export default function Bank() {
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
             disabled={isScored}
-            autoFocus
             autoComplete="off"
           />
           <button className="btn btn-primary join-item" disabled={isScored}>
