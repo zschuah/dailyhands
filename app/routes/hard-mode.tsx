@@ -3,7 +3,7 @@ import { twMerge } from "tailwind-merge";
 import Card from "~/components/Card";
 import NavbarIsland from "~/components/NavbarIsland";
 import { useAppContext } from "~/context/AppContext";
-import { getUniqueIntegers } from "~/utils/helpers";
+import { getNormalised, getUniqueIntegers } from "~/utils/helpers";
 import { createMeta } from "~/utils/meta";
 import { SIGN_LIST } from "~/utils/signList";
 import type { Route } from "./+types/hard-mode";
@@ -29,6 +29,8 @@ export default function Bank() {
   const [inputValue, setInputValue] = useState("");
 
   const [isReveal, setIsReveal] = useState(false);
+  const isCorrect =
+    getNormalised(inputValue) === getNormalised(currentRound.answer);
 
   // Track if we are currently animating between rounds
   const [isFadingOut, setIsFadingOut] = useState(false);
@@ -39,13 +41,21 @@ export default function Bank() {
   const handleSubmit = (e: React.SubmitEvent) => {
     e.preventDefault();
     setIsReveal(true);
-    // setInputValue("");
+
+    // Scoring only if not scored yet
+    if (!isScored) {
+      const points = isCorrect ? 8 : -5;
+
+      setScore((prev) => Math.max(0, prev + points));
+      setIsScored(true);
+    }
   };
 
   const handleNextClick = (e: React.MouseEvent) => {
     // Prevent handleReset from trigerring
     e.stopPropagation();
     setIsFadingOut(true);
+    setIsReveal(false);
 
     const upcomingRound = generateNewRound();
 
@@ -58,9 +68,9 @@ export default function Bank() {
     // Wait for the CSS duration (500ms) to finish
     setTimeout(() => {
       setCurrentRound(upcomingRound);
-
       setIsScored(false);
       setIsFadingOut(false);
+      setInputValue("");
     }, 500);
   };
 
@@ -82,7 +92,7 @@ export default function Bank() {
       >
         <Card
           data={currentRound.sign}
-          answerName={inputValue}
+          isCorrect={isCorrect}
           isReveal={isReveal}
           isSelected
           handleCardClick={() => {}}
@@ -91,18 +101,25 @@ export default function Bank() {
 
         <form className="join" onSubmit={handleSubmit}>
           <input
-            className="input input-primary join-item"
+            className={twMerge(
+              "input input-primary join-item",
+              "disabled:opacity-50",
+            )}
             type="text"
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
+            disabled={isScored}
           />
-          <button className="btn btn-primary join-item">Submit</button>
+          <button className="btn btn-primary join-item" disabled={isScored}>
+            Submit
+          </button>
         </form>
 
         <button
           onClick={handleNextClick}
           className="btn btn-secondary"
           disabled={!isScored}
+          autoFocus={isScored}
         >
           Next
         </button>
