@@ -46,16 +46,14 @@ export default function Bank() {
 
     // Scoring only if not scored yet
     if (!isScored) {
-      const points = isCorrect ? 8 : -5;
+      const points = isCorrect ? 5 : -3;
 
       setScore((prev) => Math.max(0, prev + points));
       setIsScored(true);
     }
   };
 
-  const handleNextClick = (e: React.MouseEvent) => {
-    // Prevent handleReset from trigerring
-    e.stopPropagation();
+  const handleNextClick = () => {
     setIsFadingOut(true);
     setIsReveal(false);
 
@@ -97,7 +95,7 @@ export default function Bank() {
 
       <section
         className={twMerge(
-          "flex flex-col items-center gap-4 w-full h-3/5 outline-4 outline-green-500",
+          "flex flex-col items-center gap-4 w-full h-5/12 md:h-3/5",
           "transition duration-500",
           isFadingOut ? "opacity-0" : "opacity-100",
         )}
@@ -108,7 +106,7 @@ export default function Bank() {
           isReveal={isReveal}
           isSelected
           handleCardClick={() => {}}
-          className="w-9/10 h-full md:h-full"
+          className="w-9/10 h-full md:h-full transition-none cursor-auto"
         />
 
         <form className="join" onSubmit={handleSubmit}>
@@ -119,10 +117,12 @@ export default function Bank() {
               "disabled:opacity-50",
             )}
             type="text"
+            id="user-answer"
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
             disabled={isScored}
             autoFocus
+            autoComplete="off"
           />
           <button className="btn btn-primary join-item" disabled={isScored}>
             Submit

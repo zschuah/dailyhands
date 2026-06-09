@@ -6,11 +6,11 @@ import { twMerge } from "tailwind-merge";
 import supabase from "~/api/supabase";
 import BankButton from "~/components/BankButton";
 import NavbarIsland from "~/components/NavbarIsland";
+import { useSSRLocalStorage } from "~/hooks/useSSRLocalStorage";
 import { IS_DEV } from "~/utils/constants";
 import { createMeta } from "~/utils/meta";
 import { AVAILABLE_TAGS, SIGN_LIST } from "~/utils/signList";
 import type { Route } from "./+types/bank";
-import { useSSRLocalStorage } from "~/hooks/useSSRLocalStorage";
 
 export function meta({}: Route.MetaArgs) {
   return createMeta({ title: "Bank" });
@@ -101,6 +101,7 @@ export default function Bank() {
           className="input input-primary"
           placeholder="Search for sign"
           type="text"
+          id="user-search"
           value={inputValue}
           onChange={(prev) => setInputValue(prev.target.value)}
         />
