@@ -7,6 +7,7 @@ import { getNormalised, getUniqueIntegers } from "~/utils/helpers";
 import { createMeta } from "~/utils/meta";
 import { SIGN_LIST } from "~/utils/signList";
 import type { Route } from "./+types/hard-mode";
+import { preload } from "react-dom";
 
 const generateNewRound = () => {
   const randomSigns = getUniqueIntegers({
@@ -63,11 +64,8 @@ export default function Bank() {
 
     const upcomingRound = generateNewRound();
 
-    // Force the browser to start downloading the new images
-    const imgAnimated = new Image();
-    const imgStatic = new Image();
-    imgAnimated.src = upcomingRound.sign.images.imageAnimated;
-    imgStatic.src = upcomingRound.sign.images.imageStatic;
+    // Force the browser to start downloading the next image
+    preload(upcomingRound.sign.images.imageAnimated, { as: "image" });
 
     // Wait for the CSS duration (500ms) to finish
     setTimeout(() => {
