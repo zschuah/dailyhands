@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { preload } from "react-dom";
 import { twMerge } from "tailwind-merge";
 import Card from "~/components/Card";
 import NavbarIsland from "~/components/NavbarIsland";
@@ -7,7 +8,6 @@ import { getNormalised, getUniqueIntegers } from "~/utils/helpers";
 import { createMeta } from "~/utils/meta";
 import { SIGN_LIST } from "~/utils/signList";
 import type { Route } from "./+types/hard-mode";
-import { preload } from "react-dom";
 
 const generateNewRound = () => {
   const randomSigns = getUniqueIntegers({
