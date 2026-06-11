@@ -26,7 +26,7 @@ export default function Error() {
           The server is down at the moment. Please wait while we fix this.
         </p>
 
-        <img className="w-60" src={catCryImg} alt="😿" />
+        <img className="w-60 h-60" src={catCryImg} alt="😿" />
       </div>
     </div>
   );

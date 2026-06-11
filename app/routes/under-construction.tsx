@@ -55,7 +55,7 @@ export default function UnderConstruction() {
         <h2 className="text-5xl">Sorry!</h2>
         <p>This site is not ready yet.</p>
 
-        <img className="w-60" src={monkeySeeImg} alt="🙈" />
+        <img className="w-60 h-60" src={monkeySeeImg} alt="🙈" />
 
         <fetcher.Form method="POST">
           <div className="join">

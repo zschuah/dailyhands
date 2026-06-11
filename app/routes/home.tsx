@@ -35,7 +35,7 @@ export default function Home() {
             )}
           >
             <p>Welcome! Welcome!</p>
-            <img className="w-60" src={waveImg} alt="👋" />
+            <img className="w-60 h-60" src={waveImg} alt="👋" />
           </div>
         </div>
 
