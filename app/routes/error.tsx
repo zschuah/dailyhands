@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import catCryImg from "~/assets/cat_cry.webp";
 import { safeJsonParse } from "~/utils/helpers";
 import { createMeta } from "~/utils/meta";
 import type { Route } from "./+types/error";
@@ -25,11 +26,7 @@ export default function Error() {
           The server is down at the moment. Please wait while we fix this.
         </p>
 
-        <img
-          className="w-60"
-          src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f63f/512.gif"
-          alt="😿"
-        />
+        <img className="w-60" src={catCryImg} alt="😿" />
       </div>
     </div>
   );

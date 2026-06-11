@@ -1,6 +1,7 @@
 import { useWindowScroll } from "@uidotdev/usehooks";
 import { PiArrowFatLinesDownFill } from "react-icons/pi";
 import { twMerge } from "tailwind-merge";
+import waveImg from "~/assets/wave.webp";
 import CardTrio from "~/components/CardTrio";
 import NavbarIsland from "~/components/NavbarIsland";
 import { createMeta } from "~/utils/meta";
@@ -34,11 +35,7 @@ export default function Home() {
             )}
           >
             <p>Welcome! Welcome!</p>
-            <img
-              className="w-60"
-              src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f44b/512.gif"
-              alt="👋"
-            />
+            <img className="w-60" src={waveImg} alt="👋" />
           </div>
         </div>
 

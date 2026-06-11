@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useFetcher, useNavigate } from "react-router";
 import { twMerge } from "tailwind-merge";
+import monkeySeeImg from "~/assets/monkey_see.webp";
 import { apiRequest } from "~/utils/apiRequest";
 import { safeJsonStringify } from "~/utils/helpers";
 import { createMeta } from "~/utils/meta";
@@ -54,11 +55,7 @@ export default function UnderConstruction() {
         <h2 className="text-5xl">Sorry!</h2>
         <p>This site is not ready yet.</p>
 
-        <img
-          className="w-60"
-          src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f648/512.gif"
-          alt="🙈"
-        />
+        <img className="w-60" src={monkeySeeImg} alt="🙈" />
 
         <fetcher.Form method="POST">
           <div className="join">
