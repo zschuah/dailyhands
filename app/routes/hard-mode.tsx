@@ -43,11 +43,15 @@ export default function Bank() {
 
   const inputRef = useRef<HTMLInputElement>(null);
   const nextBtnRef = useRef<HTMLButtonElement>(null);
-  const descRef = useRef<HTMLParagraphElement>(null);
+
+  // Prevents autofocusing when page loads
+  const hasSubmittedFirstAnswer = useRef(false);
 
   const handleSubmit = (e: React.SubmitEvent) => {
     e.preventDefault();
     setIsReveal(true);
+
+    hasSubmittedFirstAnswer.current = true;
 
     // Scoring only if not scored yet
     if (!isScored) {
@@ -77,20 +81,14 @@ export default function Bank() {
   };
 
   useEffect(() => {
+    if (!hasSubmittedFirstAnswer.current) return;
+
     if (isScored && nextBtnRef.current) {
       // Focus Next button after submitting
       nextBtnRef.current.focus();
     } else if (!isScored && !isFadingOut && inputRef.current) {
       // Focus Input field for the new round
       inputRef.current.focus();
-
-      // Pushes Card image into view
-      setTimeout(() => {
-        descRef.current?.scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-        });
-      }, 300);
     }
   }, [isScored, isFadingOut]);
 
@@ -114,7 +112,7 @@ export default function Bank() {
           <h2 className="text-3xl md:text-5xl text-shadow-lg mb-2">
             Hard Mode
           </h2>
-          <p ref={descRef}>Type the correct answer</p>
+          <p>Type the correct answer</p>
         </div>
 
         <Card
