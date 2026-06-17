@@ -42,7 +42,10 @@ const BankButton = ({
     <div
       ref={ref}
       onClick={handleButtonClick}
-      className={twMerge("btn relative min-h-fit", isOpen && "btn-active z-10")}
+      className={twMerge(
+        "btn relative min-h-fit md:max-w-48",
+        isOpen && "btn-active z-10",
+      )}
     >
       {isOpen && (
         <div
