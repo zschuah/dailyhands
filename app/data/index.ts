@@ -6,3 +6,4 @@ export { letterE } from "./letterE";
 export { letterF } from "./letterF";
 export { letterG } from "./letterG";
 export { letterH } from "./letterH";
+export { letterI } from "./letterI";
