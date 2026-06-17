@@ -211,7 +211,41 @@ export const letterI: SignProps[] = [
   {
     id: generateId("Investment"),
     name: "Investment",
-    images: getImages("investment", "png"),
+    images: getImages("invest", "png"),
     link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Investment",
+  },
+  {
+    id: generateId("Invite"),
+    name: "Invite",
+    images: getImages("invite", "png"),
+    link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Invite",
+  },
+  {
+    id: generateId("ION (Place)"),
+    name: "ION (Place)",
+    images: getImages("ion_place", "png"),
+    link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=ION%20(place)",
+    tags: ["place"],
+  },
+  {
+    id: generateId("Ipoh (Place)"),
+    name: "Ipoh (Place)",
+    images: getImages("ipoh", "png"),
+    link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Ipoh%20(Place)",
+    tags: ["place"],
+  },
+  {
+    id: generateId("Ireland (Place)"),
+    name: "Ireland (Place)",
+    images: getImages("ireland", "jpg"),
+    link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Ireland",
+    tags: ["place"],
+  },
+  {
+    id: generateId("Italy (Place)"),
+    name: "Italy (Place)",
+    images: getImages("italy", "jpg"),
+    link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Italy",
+    tags: ["place"],
   },
 ];
