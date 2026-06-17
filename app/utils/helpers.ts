@@ -32,7 +32,11 @@ export const generateId = (rootWord?: string) => {
   if (!rootWord) return "";
   const ID_LENGTH = 5;
 
-  const firstBlock = rootWord?.substring(0, 3).trim();
+  const firstBlock = rootWord
+    ?.substring(0, 3)
+    // Remove hyphens and underscores
+    .replace(/[-_]/g, " ")
+    .trim();
   const secondBlock = getAlphaFromHash(rootWord, ID_LENGTH - firstBlock.length);
 
   return [firstBlock, secondBlock].join("").toUpperCase();
