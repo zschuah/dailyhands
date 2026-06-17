@@ -20,7 +20,24 @@ export const AVAILABLE_TAGS = Array.from(
   new Set(SIGN_LIST.flatMap((sign) => sign.tags).filter(Boolean)),
 ).sort();
 
-const EXCLUDED_IDS = new Set(["INTGC", "INTLW"]);
+const EXCLUDED_IDS = new Set([
+  "ABLYM", // Able
+  "ACTBL", // Actress
+  "BUSSC", // Business
+  "CLOSQ", // Cloudy
+  "CONBQ", // Condominium
+  "COUXY", // Cough Mixture
+  "CYCXS", // Cycle (Verb)
+  "DEAGY", // Death
+  "ENDZF", // Endurance
+  "EXPTD", // Explosion
+  "FASQU", // Fast (Verb)
+  "FREQS", // Freezing (Adj)
+  "FRORO", // Frozen
+  "IMMWK", // Immediately (Adv)
+  "INTGC", // IWDP
+  "INTLW", // IWD
+]);
 
 export const HARD_MODE_LIST = SIGN_LIST.filter(
   (sign) => !EXCLUDED_IDS.has(sign.id),
