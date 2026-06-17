@@ -184,4 +184,34 @@ export const letterI: SignProps[] = [
     images: getImages("iwd", "png"),
     link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=International%20Week%20of%20the%20Deaf",
   },
+  {
+    id: generateId("Internet"),
+    name: "Internet",
+    images: getImages("internet", "jpg"),
+    link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Internet",
+  },
+  {
+    id: generateId("Interpret"),
+    name: "Interpret",
+    images: getImages("interpret", "jpg"),
+    link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Interpret",
+  },
+  {
+    id: generateId("Interpreter"),
+    name: "Interpreter",
+    images: getImages("interpreter", "jpg"),
+    link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Interpreter",
+  },
+  {
+    id: generateId("Invest"),
+    name: "Invest",
+    images: getImages("invest", "png"),
+    link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Invest",
+  },
+  {
+    id: generateId("Investment"),
+    name: "Investment",
+    images: getImages("investment", "png"),
+    link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Investment",
+  },
 ];

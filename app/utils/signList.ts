@@ -35,6 +35,7 @@ const EXCLUDED_IDS = new Set([
   "FREQS", // Freezing (Adj)
   "FRORO", // Frozen
   "IMMWK", // Immediately (Adv)
+  "INVHX", // Investment
   "INTGC", // IWDP
   "INTLW", // IWD
 ]);

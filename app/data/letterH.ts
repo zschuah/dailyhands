@@ -350,7 +350,7 @@ export const letterH: SignProps[] = [
     id: generateId("Husband"),
     name: "Husband",
     images: getImages("husband", "jpg"),
-    link: "https://blogs.ntu.edu.sg/sgslsignbank/word?frm-word=Husband",
+    link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Husband",
   },
   {
     id: generateId("Hyphen (Symbol)"),
