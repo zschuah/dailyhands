@@ -38,11 +38,15 @@ export default function Bank() {
 
   const [isReveal, setIsReveal] = useState(false);
   const [isScored, setIsScored] = useState(false);
-  // Tracks animation between rounds
   const [isFadingOut, setIsFadingOut] = useState(false);
 
   const inputRef = useRef<HTMLInputElement>(null);
   const nextBtnRef = useRef<HTMLButtonElement>(null);
+
+  // Store the preloaded round here
+  const upcomingRoundRef = useRef<ReturnType<typeof generateNewRound> | null>(
+    null,
+  );
 
   // Prevents autofocusing when page loads
   const hasSubmittedFirstAnswer = useRef(false);
@@ -59,6 +63,11 @@ export default function Bank() {
 
       setScore((prev) => Math.max(0, prev + points));
       setIsScored(true);
+
+      // Generate and preload the next round after submit
+      const upcomingRound = generateNewRound();
+      upcomingRoundRef.current = upcomingRound;
+      preload(upcomingRound.sign.images.imageAnimated, { as: "image" });
     }
   };
 
@@ -66,14 +75,12 @@ export default function Bank() {
     setIsFadingOut(true);
     setIsReveal(false);
 
-    const upcomingRound = generateNewRound();
-
-    // Force the browser to start downloading the next image
-    preload(upcomingRound.sign.images.imageAnimated, { as: "image" });
-
     // Wait for the CSS duration (500ms) to finish
     setTimeout(() => {
-      setCurrentRound(upcomingRound);
+      // Pull the preloaded round from the ref
+      if (upcomingRoundRef.current) {
+        setCurrentRound(upcomingRoundRef.current);
+      }
       setIsScored(false);
       setIsFadingOut(false);
       setInputValue("");
