@@ -49,10 +49,13 @@ export default function Bank() {
   const PERCENT_TEXT = `(${Math.round((CURRENT_SIGNS / TOTAL_SIGNS) * 100)}%)`;
 
   const [inputValue, setInputValue] = useState("");
+
   const filteredSigns = useMemo(() => {
     const normalizedInput = inputValue.trim().toLowerCase();
-    return SIGN_LIST.filter((sign) =>
-      sign.name.toLowerCase().includes(normalizedInput),
+    return SIGN_LIST.filter(
+      (sign) =>
+        sign.name.toLowerCase().includes(normalizedInput) ||
+        sign.id.toLowerCase().startsWith(normalizedInput),
     );
   }, [inputValue]);
 
