@@ -19,3 +19,9 @@ export const AVAILABLE_LETTERS = Array.from(
 export const AVAILABLE_TAGS = Array.from(
   new Set(SIGN_LIST.flatMap((sign) => sign.tags).filter(Boolean)),
 ).sort();
+
+const EXCLUDED_IDS = new Set(["INTGC", "INTLW"]);
+
+export const HARD_MODE_LIST = SIGN_LIST.filter(
+  (sign) => !EXCLUDED_IDS.has(sign.id),
+);

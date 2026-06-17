@@ -6,14 +6,14 @@ import NavbarIsland from "~/components/NavbarIsland";
 import { useAppContext } from "~/context/AppContext";
 import { getNormalised, getUniqueIntegers } from "~/utils/helpers";
 import { createMeta } from "~/utils/meta";
-import { SIGN_LIST } from "~/utils/signList";
+import { HARD_MODE_LIST } from "~/utils/signList";
 import type { Route } from "./+types/hard-mode";
 
 const generateNewRound = () => {
   const randomSigns = getUniqueIntegers({
-    size: SIGN_LIST.length,
+    size: HARD_MODE_LIST.length,
     count: 1,
-  }).map((integer) => SIGN_LIST[integer]);
+  }).map((integer) => HARD_MODE_LIST[integer]);
 
   return {
     sign: randomSigns[0],
