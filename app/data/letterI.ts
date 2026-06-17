@@ -172,4 +172,16 @@ export const letterI: SignProps[] = [
     images: getImages("international", "png"),
     link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=International",
   },
+  {
+    id: generateId("International Week of Deaf People"),
+    name: "International Week of Deaf People",
+    images: getImages("iwdp", "png"),
+    link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=International%20Week%20of%20Deaf%20People",
+  },
+  {
+    id: generateId("International Week of the Deaf"),
+    name: "International Week of the Deaf",
+    images: getImages("iwd", "png"),
+    link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=International%20Week%20of%20the%20Deaf",
+  },
 ];
