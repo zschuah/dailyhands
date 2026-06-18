@@ -8,3 +8,4 @@ export { letterG } from "./letterG";
 export { letterH } from "./letterH";
 export { letterI } from "./letterI";
 export { letterJ } from "./letterJ";
+export { letterK } from "./letterK";
