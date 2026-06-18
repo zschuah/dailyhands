@@ -248,4 +248,16 @@ export const letterI: SignProps[] = [
     link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Italy",
     tags: ["place"],
   },
+  {
+    id: generateId("Itchy"),
+    name: "Itchy",
+    images: getImages("itchy", "png"),
+    link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Itchy",
+  },
+  {
+    id: generateId("Item"),
+    name: "Item",
+    images: getImages("item", "png"),
+    link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Item",
+  },
 ];
