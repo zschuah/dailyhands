@@ -13,7 +13,11 @@ import { AVAILABLE_TAGS, SIGN_LIST } from "~/utils/signList";
 import type { Route } from "./+types/bank";
 
 export function meta({}: Route.MetaArgs) {
-  return createMeta({ title: "Bank" });
+  return createMeta({
+    title: "SgSL Sign Bank",
+    description:
+      "Browse and look up hundreds of words from the Singapore Sign Language. Your quick access guide to finding the right sign.",
+  });
 }
 
 export async function action({ request }: Route.ActionArgs) {

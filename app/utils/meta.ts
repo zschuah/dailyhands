@@ -5,7 +5,7 @@ type Props = {
 
 export function createMeta({
   title,
-  description = "Practice SgSL here!",
+  description = "Build your daily signing habit. Practice Singapore Sign Language (SgSL) with interactive tools designed for local learners.",
 }: Props) {
   const fullTitle = `DailyHands | ${title}`;
 
