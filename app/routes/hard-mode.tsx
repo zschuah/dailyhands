@@ -153,8 +153,8 @@ export default function Bank() {
 
         <div className="space-x-2">
           <div
-            className="tooltip tooltip-bottom"
-            data-tip="Click for more info"
+            className="inline-block md:tooltip md:tooltip-bottom"
+            data-tip={isScored ? "View description and variants" : undefined}
           >
             <button
               className="btn btn-square btn-info"
