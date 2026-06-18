@@ -8,6 +8,7 @@ import { getNormalised, getUniqueIntegers } from "~/utils/helpers";
 import { createMeta } from "~/utils/meta";
 import { HARD_MODE_LIST } from "~/utils/signList";
 import type { Route } from "./+types/hard-mode";
+import { PiInfo } from "react-icons/pi";
 
 const generateNewRound = () => {
   const randomSigns = getUniqueIntegers({
@@ -150,14 +151,29 @@ export default function Bank() {
           </button>
         </form>
 
-        <button
-          ref={nextBtnRef}
-          onClick={handleNextClick}
-          className="btn btn-secondary"
-          disabled={!isScored}
-        >
-          Next
-        </button>
+        <div className="space-x-2">
+          <div
+            className="tooltip tooltip-bottom"
+            data-tip="Click for more info"
+          >
+            <button
+              className="btn btn-square btn-info"
+              onClick={() => window.open(currentRound.sign.link, "_blank")}
+              disabled={!isScored}
+            >
+              <PiInfo className="text-2xl" />
+            </button>
+          </div>
+
+          <button
+            ref={nextBtnRef}
+            onClick={handleNextClick}
+            className="btn btn-secondary"
+            disabled={!isScored}
+          >
+            Next
+          </button>
+        </div>
       </section>
     </div>
   );
