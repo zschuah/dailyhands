@@ -4,8 +4,9 @@ A platform for accessing and practicing common SgSL signs.
 
 ## Features
 
-- CardTrio: Game for selecting the correct SgSL sign from a given word
+- CardTrio: Game for clicking the correct SgSL sign from a given word
 - Bank: Easily lookup an SgSL sign
+- Hard Mode: Game for typing the correct word from a given SgSL sign
 
 ## Changelog
 
