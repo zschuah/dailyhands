@@ -90,7 +90,7 @@ const BankButton = ({
       {isOpen && IS_DEV && (
         <div
           className={twMerge(
-            "absolute bottom-0 translate-y-[105%] w-[120%]",
+            "absolute bottom-0 translate-y-[105%] w-[70vw] md:w-[120%]",
             "aspect-video rounded-lg shadow-lg overflow-hidden",
           )}
         >
