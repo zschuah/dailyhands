@@ -60,10 +60,12 @@ const BankButton = ({
             <div
               className={twMerge(
                 "absolute inset-0 bg-zinc-800/50 grid place-items-center",
-                "pointer-events-none",
+                "pointer-events-none @container",
               )}
             >
-              <p className="text-3xl w-3/5 text-white">Click for more info</p>
+              <p className="text-2xl @2xs:text-3xl w-4/5 text-white">
+                Click for more info
+              </p>
             </div>
           )}
 
