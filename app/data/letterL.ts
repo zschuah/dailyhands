@@ -34,4 +34,35 @@ export const letterL: SignProps[] = [
     images: getImages("landslide", "jpg"),
     link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Landslide",
   },
+  {
+    id: generateId("Language"),
+    name: "Language",
+    images: getImages("language", "jpg"),
+    link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Language",
+  },
+  {
+    id: generateId("Lantern Festival"),
+    name: "Lantern Festival",
+    images: getImages("lantern_festival", "png"),
+    link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Lantern%20Festival",
+  },
+  {
+    id: generateId("Laos (Place)"),
+    name: "Laos (Place)",
+    images: getImages("laos", "jpg"),
+    link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Laos",
+    tags: ["place"],
+  },
+  {
+    id: generateId("Large"),
+    name: "Large",
+    images: getImages("large", "jpg"),
+    link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Large",
+  },
+  {
+    id: generateId("Large Intestine"),
+    name: "Large Intestine",
+    images: getImages("large_intestine", "png"),
+    link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Large%20Intestine",
+  },
 ];
