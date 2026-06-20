@@ -188,6 +188,12 @@ export const letterB: SignProps[] = [
     link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Before",
   },
   {
+    id: generateId("Begin"),
+    name: "Begin",
+    images: getImages("begin", "jpg"),
+    link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Begin",
+  },
+  {
     id: generateId("Behave"),
     name: "Behave",
     images: getImages("behave", "png"),

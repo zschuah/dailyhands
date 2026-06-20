@@ -48,15 +48,16 @@ export default function Bank() {
   const isScrollingUp = prevY > currentY;
   const isNavHidden = currentY > 500 && !isScrollingUp;
 
-  const CURRENT_SIGNS = SIGN_LIST.length;
-  const TOTAL_SIGNS = 1307;
+  const BANK_LIST = SIGN_LIST;
+  const CURRENT_SIGNS = BANK_LIST.length;
+  const TOTAL_SIGNS = 1310;
   const PERCENT_TEXT = `(${Math.round((CURRENT_SIGNS / TOTAL_SIGNS) * 100)}%)`;
 
   const [inputValue, setInputValue] = useState("");
 
   const filteredSigns = useMemo(() => {
     const normalizedInput = inputValue.trim().toLowerCase();
-    return SIGN_LIST.filter(
+    return BANK_LIST.filter(
       (sign) =>
         sign.name.toLowerCase().includes(normalizedInput) ||
         sign.id.toLowerCase().startsWith(normalizedInput),
@@ -82,7 +83,7 @@ export default function Bank() {
   };
 
   const handleUpdateSigns = () => {
-    fetcher.submit(SIGN_LIST, {
+    fetcher.submit(BANK_LIST, {
       method: "POST",
       encType: "application/json",
     });
