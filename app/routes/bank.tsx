@@ -9,7 +9,7 @@ import NavbarIsland from "~/components/NavbarIsland";
 import { useSSRLocalStorage } from "~/hooks/useSSRLocalStorage";
 import { IS_DEV } from "~/utils/constants";
 import { createMeta } from "~/utils/meta";
-import { AVAILABLE_TAGS, SIGN_LIST } from "~/utils/signList";
+import { AVAILABLE_TAGS, RAW_LIST } from "~/utils/signList";
 import type { Route } from "./+types/bank";
 
 export function meta({}: Route.MetaArgs) {
@@ -48,7 +48,7 @@ export default function Bank() {
   const isScrollingUp = prevY > currentY;
   const isNavHidden = currentY > 500 && !isScrollingUp;
 
-  const BANK_LIST = SIGN_LIST;
+  const BANK_LIST = RAW_LIST;
   const CURRENT_SIGNS = BANK_LIST.length;
   const TOTAL_SIGNS = 1310;
   const PERCENT_TEXT = `(${Math.round((CURRENT_SIGNS / TOTAL_SIGNS) * 100)}%)`;
