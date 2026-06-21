@@ -68,7 +68,7 @@ export const letterL: SignProps[] = [
   {
     id: generateId("Last"),
     name: "Last",
-    images: getImages("large_intestine", "png"),
+    images: getImages("not_found", "png"),
     link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Last",
   },
   {

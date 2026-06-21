@@ -8,7 +8,10 @@ import { createMeta } from "~/utils/meta";
 import type { Route } from "./+types/home";
 
 export function meta({}: Route.MetaArgs) {
-  return createMeta({ title: "Singapore Sign Language (SgSL) Practice" });
+  return createMeta({
+    title: "Singapore Sign Language (SgSL) Practice",
+    isHomepage: true,
+  });
 }
 
 export default function Home() {

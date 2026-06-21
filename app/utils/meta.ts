@@ -1,13 +1,17 @@
 type Props = {
   title: string;
   description?: string;
+  isHomepage?: boolean;
 };
 
 export function createMeta({
   title,
   description = "Build your daily signing habit. Practice Singapore Sign Language (SgSL) with interactive tools designed for local learners.",
+  isHomepage = false,
 }: Props) {
-  const fullTitle = `DailyHands | ${title}`;
+  const fullTitle = isHomepage
+    ? `DailyHands | ${title}`
+    : `${title} | DailyHands`;
 
   return [
     { title: fullTitle },
