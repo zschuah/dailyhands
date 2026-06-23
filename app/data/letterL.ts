@@ -292,4 +292,58 @@ export const letterL: SignProps[] = [
     images: getImages("lord", "png"),
     link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Lord%20(religion)",
   },
+  {
+    id: generateId("Lose (Verb)"),
+    name: "Lose (Verb)",
+    images: getImages("lose", "jpg"),
+    link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Lose%20(Verb)",
+  },
+  {
+    id: generateId("Loss (Noun)"),
+    name: "Loss (Noun)",
+    images: getImages("lose", "jpg"),
+    link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Loss%20(Noun)",
+  },
+  {
+    id: generateId("Lost"),
+    name: "Lost",
+    images: getImages("lose", "jpg"),
+    link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Lost",
+  },
+  {
+    id: generateId("Loud"),
+    name: "Loud",
+    images: getImages("loud", "jpg"),
+    link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Loud",
+  },
+  {
+    id: generateId("Love"),
+    name: "Love",
+    images: getImages("love", "jpg"),
+    link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Love",
+  },
+  {
+    id: generateId("Low"),
+    name: "Low",
+    images: getImages("low", "jpg"),
+    link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Low",
+  },
+  {
+    id: generateId("Lucky"),
+    name: "Lucky",
+    images: getImages("lucky", "png"),
+    link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Lucky",
+  },
+  {
+    id: generateId("Lunch"),
+    name: "Lunch",
+    images: getImages("lunch", "png"),
+    link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Lunch",
+  },
+  {
+    id: generateId("Lungs"),
+    name: "Lungs",
+    images: getImages("lungs", "png"),
+    link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Lungs",
+  },
 ];

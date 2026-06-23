@@ -35,6 +35,8 @@ const EXCLUDED_IDS = new Set([
   "LIGNT", // Light (Colour) - Clear (Adj)
   "LONOZ", // Long ago - Ancient
   "LONCI", // Long time ago - Ancient
+  "LOSKW", // Loss (Noun) - Lose (Verb)
+  "LOSQW", // Lost - Lose (Verb)
 ]);
 
 export const SIGN_LIST = RAW_LIST.filter((sign) => !PROBLEM_IDS.has(sign.id));
