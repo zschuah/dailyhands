@@ -13,28 +13,28 @@ const PROBLEM_IDS = new Set([
 ]);
 
 const EXCLUDED_IDS = new Set([
-  "ABLYM", // Able
-  "ACTBL", // Actress
-  "BUSSC", // Business
-  "CLOSQ", // Cloudy
-  "CONBQ", // Condominium
-  "COUXY", // Cough Mixture
-  "CYCXS", // Cycle (Verb)
-  "DEAGY", // Death
-  "ENDZF", // Endurance
-  "EXPTD", // Explosion
-  "FASQU", // Fast (Verb)
-  "FEEXA", // Feet
-  "FREQS", // Freezing (Adj)
-  "FRORO", // Frozen
-  "IMMWK", // Immediately (Adv)
-  "INVHX", // Investment
+  "ABLYM", // Able - Can
+  "ACTBL", // Actress - Actor
+  "BUSSC", // Business - Busy
+  "CLOSQ", // Cloudy - Cloud
+  "CONBQ", // Condominium - Condo
+  "COUXY", // Cough Mixture - Cough Syrup
+  "CYCXS", // Cycle (Verb) - Bicycle
+  "DEAGY", // Death - Die
+  "ENDZF", // Endurance - Endure
+  "EXPTD", // Explosion - Explode
+  "FASQU", // Fast (Verb) - Fasting
+  "FEEXA", // Feet - Foot
+  "FREQS", // Freezing (Adj) - Freeze
+  "FRORO", // Frozen - Freeze
+  "IMMWK", // Immediately (Adv) - Immediate
+  "INVHX", // Investment - Invest
   "INTGC", // IWDP
   "INTLW", // IWD
-  "LAUHK", // Laughter
-  "LIGNT", // Light (Colour)
-  "LONOZ", // Long ago
-  "LONCI", // Long time ago
+  "LAUHK", // Laughter - Laugh
+  "LIGNT", // Light (Colour) - Clear (Adj)
+  "LONOZ", // Long ago - Ancient
+  "LONCI", // Long time ago - Ancient
 ]);
 
 export const SIGN_LIST = RAW_LIST.filter((sign) => !PROBLEM_IDS.has(sign.id));
