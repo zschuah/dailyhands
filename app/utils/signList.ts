@@ -24,6 +24,8 @@ const EXCLUDED_IDS = new Set([
   "ENDZF", // Endurance
   "EXPTD", // Explosion
   "FASQU", // Fast (Verb)
+  "FEEXA", // Feet
+  "FOOON", // Foot (Unit)
   "FREQS", // Freezing (Adj)
   "FRORO", // Frozen
   "IMMWK", // Immediately (Adv)

@@ -50,7 +50,7 @@ export default function Bank() {
 
   const BANK_LIST = RAW_LIST;
   const CURRENT_SIGNS = BANK_LIST.length;
-  const TOTAL_SIGNS = 1310;
+  const TOTAL_SIGNS = 1327;
   const PERCENT_TEXT = `(${Math.round((CURRENT_SIGNS / TOTAL_SIGNS) * 100)}%)`;
 
   const [inputValue, setInputValue] = useState("");

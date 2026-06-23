@@ -506,6 +506,18 @@ export const letterC: SignProps[] = [
     link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Colour",
   },
   {
+    id: generateId("Comb (Noun)"),
+    name: "Comb (Noun)",
+    images: getImages("comb", "jpg"),
+    link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Comb%20(Noun)",
+  },
+  {
+    id: generateId("Comb (Verb)"),
+    name: "Comb (Verb)",
+    images: getImages("comb", "jpg"),
+    link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Comb%20(Verb)",
+  },
+  {
     id: generateId("Come"),
     name: "Come",
     images: getImages("come", "png"),

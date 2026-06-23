@@ -139,4 +139,10 @@ export const letterL: SignProps[] = [
     images: getImages("lecturer", "png"),
     link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Lecturer",
   },
+  {
+    id: generateId("Leg"),
+    name: "Leg",
+    images: getImages("leg", "jpg"),
+    link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Leg",
+  },
 ];

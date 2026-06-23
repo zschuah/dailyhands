@@ -3,6 +3,12 @@ import type { SignProps } from "~/utils/types";
 
 export const letterF: SignProps[] = [
   {
+    id: generateId("Face (Noun)"),
+    name: "Face (Noun)",
+    images: getImages("face", "jpg"),
+    link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Face%20(noun)",
+  },
+  {
     id: generateId("Facebook (Brand)"),
     name: "Facebook (Brand)",
     images: getImages("facebook", "png"),
@@ -113,8 +119,8 @@ export const letterF: SignProps[] = [
     link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Fee",
   },
   {
-    id: generateId("Feed"),
-    name: "Feed",
+    id: generateId("Feed (Verb)"),
+    name: "Feed (Verb)",
     images: getImages("feed", "png"),
     link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Feed%20(Verb)",
   },
@@ -123,6 +129,12 @@ export const letterF: SignProps[] = [
     name: "Feel",
     images: getImages("feel", "jpg"),
     link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Feel",
+  },
+  {
+    id: generateId("Feet"),
+    name: "Feet",
+    images: getImages("foot", "jpg"),
+    link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Foot%20(Body%20part)",
   },
   {
     id: generateId("Fever"),
@@ -336,7 +348,19 @@ export const letterF: SignProps[] = [
     id: generateId("Foot"),
     name: "Foot",
     images: getImages("foot", "jpg"),
-    link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Foot",
+    link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Foot%20(Body%20part)",
+  },
+  {
+    id: generateId("Foot (Unit)"),
+    name: "Foot (Unit)",
+    images: getImages("foot", "jpg"),
+    link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Foot%20(Body%20part)",
+  },
+  {
+    id: generateId("For"),
+    name: "For",
+    images: getImages("for", "jpg"),
+    link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=For",
   },
   {
     id: generateId("Forest"),

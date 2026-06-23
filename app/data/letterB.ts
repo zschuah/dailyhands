@@ -144,6 +144,12 @@ export const letterB: SignProps[] = [
     link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Because",
   },
   {
+    id: generateId("Become"),
+    name: "Become",
+    images: getImages("become", "jpg"),
+    link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Become",
+  },
+  {
     id: generateId("Bed"),
     name: "Bed",
     images: getImages("bed", "png"),

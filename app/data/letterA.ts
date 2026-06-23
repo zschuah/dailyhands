@@ -104,6 +104,18 @@ export const letterA: SignProps[] = [
     link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Age%20(noun)",
   },
   {
+    id: generateId("Ago"),
+    name: "Ago",
+    images: getImages("ago", "jpg"),
+    link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Ago",
+  },
+  {
+    id: generateId("Ahead"),
+    name: "Ahead",
+    images: getImages("ahead", "jpg"),
+    link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Ahead",
+  },
+  {
     id: generateId("Air"),
     name: "Air",
     images: getImages("air", "png"),
@@ -352,5 +364,11 @@ export const letterA: SignProps[] = [
     name: "Awake",
     images: getImages("awake", "jpg"),
     link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Awake",
+  },
+  {
+    id: generateId("Away"),
+    name: "Away",
+    images: getImages("away", "jpg"),
+    link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Away",
   },
 ];

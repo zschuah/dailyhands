@@ -199,6 +199,12 @@ export const letterD: SignProps[] = [
     link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Diet",
   },
   {
+    id: generateId("Different"),
+    name: "Different",
+    images: getImages("different", "jpg"),
+    link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Different",
+  },
+  {
     id: generateId("Digital Camera"),
     name: "Digital Camera",
     images: getImages("digital_camera", "png"),
