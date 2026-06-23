@@ -25,7 +25,6 @@ const EXCLUDED_IDS = new Set([
   "EXPTD", // Explosion
   "FASQU", // Fast (Verb)
   "FEEXA", // Feet
-  "FOOON", // Foot (Unit)
   "FREQS", // Freezing (Adj)
   "FRORO", // Frozen
   "IMMWK", // Immediately (Adv)
@@ -33,6 +32,9 @@ const EXCLUDED_IDS = new Set([
   "INTGC", // IWDP
   "INTLW", // IWD
   "LAUHK", // Laughter
+  "LIGNT", // Light (Colour)
+  "LONOZ", // Long ago
+  "LONCI", // Long time ago
 ]);
 
 export const SIGN_LIST = RAW_LIST.filter((sign) => !PROBLEM_IDS.has(sign.id));
