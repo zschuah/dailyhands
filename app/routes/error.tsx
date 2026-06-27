@@ -18,7 +18,7 @@ export default function Error() {
   }, []);
 
   return (
-    <div className="bg-zinc-300 min-h-screen grid place-items-center">
+    <div className="bg-zinc-300 min-h-dvh grid place-items-center">
       <div className="text-center flex flex-col items-center bg-zinc-200 p-8 rounded-3xl">
         <h2 className="text-5xl">Error</h2>
 

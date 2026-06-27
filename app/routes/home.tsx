@@ -24,25 +24,23 @@ export default function Home() {
       {/* Welcome Section */}
       <section
         className={twMerge(
-          "min-h-screen grid place-items-center relative",
+          "min-h-dvh grid place-items-center relative",
           "bg-zinc-300",
         )}
       >
         <NavbarIsland isScrolled={isScrolled} />
 
-        <div className="-mt-20 md:mt-0">
-          <div
-            className={twMerge(
-              "text-center flex flex-col items-center bg-zinc-200 p-8",
-              "rounded-3xl animate-[fadeIn_0.5s_ease-in]",
-            )}
-          >
-            <p>Welcome! Welcome!</p>
-            <img className="w-60 h-60" src={waveImg} alt="👋" />
-          </div>
+        <div
+          className={twMerge(
+            "text-center flex flex-col items-center bg-zinc-200 p-8",
+            "rounded-3xl animate-[fadeIn_0.5s_ease-in]",
+          )}
+        >
+          <p>Welcome! Welcome!</p>
+          <img className="w-60 h-60" src={waveImg} alt="👋" />
         </div>
 
-        <div className="absolute bottom-20 md:bottom-4 flex flex-col items-center animate-bounce select-none">
+        <div className="absolute bottom-4 flex flex-col items-center animate-bounce select-none">
           <p>Scroll down to start!</p>
           <PiArrowFatLinesDownFill className="text-3xl" />
         </div>
@@ -51,7 +49,7 @@ export default function Home() {
       {/* Game Section */}
       <section
         className={twMerge(
-          "min-h-screen grid place-items-center",
+          "min-h-dvh grid place-items-center",
           "bg-linear-to-b from-zinc-300 to-orange-300",
         )}
       >

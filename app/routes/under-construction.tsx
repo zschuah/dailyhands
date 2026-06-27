@@ -45,7 +45,7 @@ export default function UnderConstruction() {
   }, [isSuccess]);
 
   return (
-    <div className="bg-zinc-300 min-h-screen grid place-items-center">
+    <div className="bg-zinc-300 min-h-dvh grid place-items-center">
       <div
         className={twMerge(
           "text-center flex flex-col items-center bg-zinc-200 p-8 rounded-3xl",

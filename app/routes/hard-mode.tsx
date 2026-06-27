@@ -103,7 +103,7 @@ export default function Bank() {
   return (
     <div
       className={twMerge(
-        "min-h-screen grid place-items-center",
+        "min-h-dvh grid place-items-center",
         "bg-linear-to-b from-zinc-300 to-orange-500",
       )}
     >
