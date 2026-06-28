@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from "react";
 import { twMerge } from "tailwind-merge";
 import type { SignProps } from "~/utils/types";
 
@@ -21,6 +22,20 @@ const Card = ({
   const { name, images } = data;
   const { imageAnimated, imageStatic } = images;
 
+  const [isLoading, setIsLoading] = useState(true);
+
+  const currentSrc = isSelected ? imageAnimated : imageStatic;
+  const currentSrcRef = useRef<HTMLImageElement>(null);
+
+  useEffect(() => {
+    // If the image is already preloaded, .complete will be true instantly
+    if (currentSrcRef.current?.complete) {
+      setIsLoading(false);
+    } else {
+      setIsLoading(true);
+    }
+  }, [currentSrc]);
+
   return (
     <div
       className={twMerge(
@@ -33,12 +48,36 @@ const Card = ({
       )}
       onClick={() => handleCardClick(data.id)}
     >
+      {/* FALLBACK: Show static and spinner */}
+      {isLoading && (
+        <>
+          <img
+            className="absolute w-full h-full object-cover"
+            src={imageStatic}
+            alt={name}
+          />
+
+          <div className="absolute inset-0 bg-zinc-800/50 grid place-items-center">
+            <span className="loading loading-spinner loading-xl text-secondary"></span>
+          </div>
+        </>
+      )}
+
+      {/* MAIN IMAGE: Either show static or animated */}
       <img
-        className="w-full h-full object-cover"
-        src={isSelected ? imageAnimated : imageStatic}
+        ref={currentSrcRef}
+        // Resets the element lifecycle on src change
+        key={currentSrc}
+        className={twMerge(
+          "w-full h-full object-cover absolute",
+          isLoading ? "opacity-0" : "opacity-100",
+        )}
+        src={currentSrc}
         alt={name}
+        onLoad={() => setIsLoading(false)}
       />
 
+      {/* TEXT BACKGROUND GLOW */}
       <div className="absolute bottom-0 left-0 right-0 min-h-10">
         <div
           className={twMerge(
