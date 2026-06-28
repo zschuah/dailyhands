@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { preload } from "react-dom";
+import { PiInfo } from "react-icons/pi";
 import { twMerge } from "tailwind-merge";
 import Card from "~/components/Card";
 import NavbarIsland from "~/components/NavbarIsland";
@@ -8,7 +9,6 @@ import { getNormalised, getUniqueIntegers } from "~/utils/helpers";
 import { createMeta } from "~/utils/meta";
 import { HARD_MODE_LIST } from "~/utils/signList";
 import type { Route } from "./+types/hard-mode";
-import { PiInfo } from "react-icons/pi";
 
 const generateNewRound = () => {
   const randomSigns = getUniqueIntegers({
@@ -49,14 +49,9 @@ export default function Bank() {
     null,
   );
 
-  // Prevents autofocusing when page loads
-  const hasSubmittedFirstAnswer = useRef(false);
-
   const handleSubmit = (e: React.SubmitEvent) => {
     e.preventDefault();
     setIsReveal(true);
-
-    hasSubmittedFirstAnswer.current = true;
 
     // Scoring only if not scored yet
     if (!isScored) {
@@ -89,7 +84,9 @@ export default function Bank() {
   };
 
   useEffect(() => {
-    if (!hasSubmittedFirstAnswer.current) return;
+    // Only focus on Desktop
+    const isDesktop = window.matchMedia("(min-width: 768px)").matches;
+    if (!isDesktop) return;
 
     if (isScored && nextBtnRef.current) {
       // Focus Next button after submitting
