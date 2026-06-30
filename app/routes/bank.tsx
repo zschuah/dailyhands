@@ -175,9 +175,9 @@ export default function Bank() {
 
       <button
         className={twMerge(
-          "fixed bottom-20 right-0 bg-zinc-800/50 rounded-l p-2 cursor-pointer",
-          "translate-x-0 transition duration-500",
-          isNavHidden && "translate-x-full",
+          "fixed bottom-20 right-5 bg-zinc-800/50 rounded-full p-4 cursor-pointer",
+          "scale-100 transition duration-500",
+          isNavHidden && "scale-0",
         )}
         onClick={() => {
           window.scrollTo({
@@ -186,7 +186,7 @@ export default function Bank() {
           });
         }}
       >
-        <PiArrowFatLinesUpFill className="text-5xl text-white" />
+        <PiArrowFatLinesUpFill className="text-3xl text-white" />
       </button>
     </div>
   );
