@@ -128,6 +128,12 @@ export const letterL: SignProps[] = [
     link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Learn",
   },
   {
+    id: generateId("Least"),
+    name: "Least",
+    images: getImages("least", "jpg"),
+    link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Least",
+  },
+  {
     id: generateId("Leave (Verb)"),
     name: "Leave (Verb)",
     images: getImages("leave", "png"),
@@ -321,6 +327,12 @@ export const letterL: SignProps[] = [
     name: "Love",
     images: getImages("love", "jpg"),
     link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Love",
+  },
+  {
+    id: generateId("Lovely"),
+    name: "Lovely",
+    images: getImages("lovely", "jpg"),
+    link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Lovely",
   },
   {
     id: generateId("Low"),
