@@ -12,7 +12,12 @@ type AppContextType = {
   setScore: Dispatch<SetStateAction<number>>;
 };
 
-const AppContext = createContext<AppContextType>(null!);
+const NULL_CONTEXT: AppContextType = {
+  score: 0,
+  setScore: () => {},
+};
+
+const AppContext = createContext<AppContextType>(NULL_CONTEXT);
 
 export const AppProvider = ({ children }: { children: React.ReactNode }) => {
   const [score, setScore] = useSSRLocalStorage("score", 0);

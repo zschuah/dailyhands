@@ -127,6 +127,7 @@ export default function Bank() {
           isSelected
           handleCardClick={() => {}}
           className="w-9/10 h-60 md:h-96 transition-none cursor-auto"
+          variant="spinner"
         />
 
         <form className="join" onSubmit={handleSubmit}>
