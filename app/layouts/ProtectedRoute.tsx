@@ -1,6 +1,6 @@
 import { Outlet, redirect } from "react-router";
 import { apiRequest } from "~/utils/apiRequest";
-import { STORAGE_URL } from "~/utils/constants";
+import { STORAGE_URL, SUPABASE_URL } from "~/utils/constants";
 import { safeJsonParse, safeJsonStringify } from "~/utils/helpers";
 import type { Route } from "./+types/ProtectedRoute";
 
@@ -22,12 +22,18 @@ export async function clientLoader({}: Route.ClientLoaderArgs) {
     }),
   ]);
 
+  // This does nothing other than to keep SUPABASE free tier alive (7 days)
+  apiRequest({
+    url: `${SUPABASE_URL}/storage/v1/object/public/sign-images/aa_supabase.jpg`,
+    method: "GET",
+  }).catch((err) => console.error(err));
+
   // Checks for Konami code
   if (!authResult.data?.isKonamiValid || authResult.error) {
     return redirect("/under-construction");
   }
 
-  // Checks for rate limit in Supabase
+  // Checks for bandwidth limit in ImageKit (20 GB)
   if (canaryResult.error) {
     const errorMessage = safeJsonStringify(canaryResult.error);
     localStorage.setItem("last_error_debug", errorMessage);
