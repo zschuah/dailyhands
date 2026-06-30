@@ -157,7 +157,7 @@ export const letterG: SignProps[] = [
   },
   {
     id: generateId("Greece (Place)"),
-    name: "Greece",
+    name: "Greece (Place)",
     images: getImages("greece", "jpg"),
     link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Greece",
     tags: ["place"],
@@ -185,5 +185,11 @@ export const letterG: SignProps[] = [
     name: "Group",
     images: getImages("group", "png"),
     link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Group",
+  },
+  {
+    id: generateId("Guess"),
+    name: "Guess",
+    images: getImages("guess", "jpg"),
+    link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Guess",
   },
 ];
