@@ -76,8 +76,9 @@ const Card = ({
           )}
 
           <img
-            ref={currentSrcRef}
+            // Resets the element lifecycle on src change
             key={currentSrc}
+            ref={currentSrcRef}
             className={twMerge(
               "absolute w-full h-full object-cover",
               isLoading ? "opacity-0" : "opacity-100",
