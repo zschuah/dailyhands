@@ -12,6 +12,7 @@ const PROBLEM_IDS = new Set([
   "LASSK", // Last
 ]);
 
+// These are excluded from Hard Mode
 const EXCLUDED_IDS = new Set([
   "ABLYM", // Able - Can
   "ACTBL", // Actress - Actor
@@ -37,6 +38,8 @@ const EXCLUDED_IDS = new Set([
   "LONCI", // Long time ago - Ancient
   "LOSKW", // Loss (Noun) - Lose (Verb)
   "LOSQW", // Lost - Lose (Verb)
+  "MALGY", // Malay - Malaysia
+  "MARKQ", // Married - Marry
 ]);
 
 export const SIGN_LIST = RAW_LIST.filter((sign) => !PROBLEM_IDS.has(sign.id));
