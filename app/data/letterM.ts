@@ -166,4 +166,37 @@ export const letterM: SignProps[] = [
     images: getImages("mask", "png"),
     link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Mask",
   },
+  {
+    id: generateId("Mat"),
+    name: "Mat",
+    images: getImages("mat", "jpg"),
+    link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Mat",
+  },
+  {
+    id: generateId("May (Month)"),
+    name: "May (Month)",
+    images: getImages("may_month", "png"),
+    link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=May%20(Month)",
+    tags: ["month"],
+  },
+  {
+    id: generateId("Maybe"),
+    name: "Maybe",
+    images: getImages("maybe", "jpg"),
+    link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Maybe",
+  },
+  {
+    id: generateId("Marina Bay Sands (Place)"),
+    name: "Marina Bay Sands (Place)",
+    images: getImages("marina_bay_sands", "png"),
+    link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=MBS%20(Place)",
+    tags: ["place"],
+  },
+  {
+    id: generateId("Mcdonald's (Brand)"),
+    name: "Mcdonald's (Brand)",
+    images: getImages("mcdonalds", "png"),
+    link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Mcdonald%27s%20(Brand)",
+    tags: ["brand"],
+  },
 ];
