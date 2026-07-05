@@ -158,6 +158,12 @@ export const letterL: SignProps[] = [
     link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Lemon",
   },
   {
+    id: generateId("Letter"),
+    name: "Letter",
+    images: getImages("letter", "jpg"),
+    link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Letter",
+  },
+  {
     id: generateId("Library"),
     name: "Library",
     images: getImages("library", "png"),

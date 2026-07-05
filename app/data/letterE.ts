@@ -229,6 +229,12 @@ export const letterE: SignProps[] = [
     link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Every",
   },
   {
+    id: generateId("Exam"),
+    name: "Exam",
+    images: getImages("exam", "jpg"),
+    link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Exam",
+  },
+  {
     id: generateId("Exchange (Noun)"),
     name: "Exchange (Noun)",
     images: getImages("exchange", "png"),

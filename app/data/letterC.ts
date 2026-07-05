@@ -500,6 +500,12 @@ export const letterC: SignProps[] = [
     link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Cold",
   },
   {
+    id: generateId("College"),
+    name: "College",
+    images: getImages("college", "jpg"),
+    link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=College",
+  },
+  {
     id: generateId("Colour"),
     name: "Colour",
     images: getImages("colour", "jpg"),
@@ -691,6 +697,12 @@ export const letterC: SignProps[] = [
     name: "Cramp",
     images: getImages("cramp", "png"),
     link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Cramp",
+  },
+  {
+    id: generateId("Crayon"),
+    name: "Crayon",
+    images: getImages("crayon", "jpg"),
+    link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Crayon",
   },
   {
     id: generateId("Crazy"),
