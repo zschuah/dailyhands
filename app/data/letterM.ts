@@ -199,4 +199,46 @@ export const letterM: SignProps[] = [
     link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Mcdonald%27s%20(Brand)",
     tags: ["brand"],
   },
+  {
+    id: generateId("Mean (Verb)"),
+    name: "Mean (Verb)",
+    images: getImages("mean_verb", "png"),
+    link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Mean%20(Verb)",
+  },
+  {
+    id: generateId("Meaning (Noun)"),
+    name: "Meaning (Noun)",
+    images: getImages("mean_verb", "png"),
+    link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Meaning%20(Noun)",
+  },
+  {
+    id: generateId("Meat"),
+    name: "Meat",
+    images: getImages("meat", "png"),
+    link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Meat",
+  },
+  {
+    id: generateId("Medical Certificate"),
+    name: "Medical Certificate",
+    images: getImages("medical_certificate", "png"),
+    link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Medical%20Certificate",
+  },
+  {
+    id: generateId("Medicine"),
+    name: "Medicine",
+    images: getImages("medicine", "png"),
+    link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Medicine",
+  },
+  {
+    id: generateId("Meet"),
+    name: "Meet",
+    images: getImages("meet", "jpg"),
+    link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Meet",
+  },
+  {
+    id: generateId("Meeting (Noun)"),
+    name: "Meeting (Noun)",
+    images: getImages("meeting", "png"),
+    link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Meeting%20(Noun)",
+  },
 ];

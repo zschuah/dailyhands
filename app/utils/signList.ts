@@ -14,38 +14,40 @@ const PROBLEM_IDS = new Set([
 
 // These are excluded from Hard Mode
 const EXCLUDED_IDS = new Set([
-  "ABLYM", // Able - Can
-  "ACTBL", // Actress - Actor
-  "BUSSC", // Business - Busy
-  "CLOSQ", // Cloudy - Cloud
-  "CONBQ", // Condominium - Condo
-  "COUXY", // Cough Mixture - Cough Syrup
-  "CYCXS", // Cycle (Verb) - Bicycle
-  "DEAGY", // Death - Die
-  "ENDZF", // Endurance - Endure
-  "EXPTD", // Explosion - Explode
-  "FASQU", // Fast (Verb) - Fasting
-  "FEEXA", // Feet - Foot
-  "FREQS", // Freezing (Adj) - Freeze
-  "FRORO", // Frozen - Freeze
-  "IMMWK", // Immediately (Adv) - Immediate
-  "INVHX", // Investment - Invest
+  "ABLYM", // Able            Can
+  "ACTBL", // Actress         Actor
+  "BUSSC", // Business        Busy
+  "CLOSQ", // Cloudy          Cloud
+  "CONBQ", // Condominium     Condo
+  "COUXY", // Cough Mixture   Cough Syrup
+  "CYCXS", // Cycle (Verb)    Bicycle
+  "DEAGY", // Death           Die
+  "ENDZF", // Endurance       Endure
+  "EXPTD", // Explosion       Explode
+  "FASQU", // Fast (Verb)     Fasting
+  "FEEXA", // Feet            Foot
+  "FREQS", // Freezing        Freeze
+  "FRORO", // Frozen          Freeze
+  "IMMWK", // Immediately     Immediate
+  "INVHX", // Investment      Invest
   "INTGC", // IWDP
   "INTLW", // IWD
-  "LAUHK", // Laughter - Laugh
-  "LIGNT", // Light (Colour) - Clear (Adj)
-  "LONOZ", // Long ago - Ancient
-  "LONCI", // Long time ago - Ancient
-  "LOSKW", // Loss (Noun) - Lose (Verb)
-  "LOSQW", // Lost - Lose (Verb)
-  "MALGY", // Malay - Malaysia
-  "MARKQ", // Married - Marry
+  "LAUHK", // Laughter        Laugh
+  "LIGNT", // Light (Colour)  Clear (Adj)
+  "LONOZ", // Long ago        Ancient
+  "LONCI", // Long time ago   Ancient
+  "LOSKW", // Loss (Noun)     Lose (Verb)
+  "LOSQW", // Lost            Lose (Verb)
+  "MALGY", // Malay           Malaysia
+  "MARKQ", // Married         Marry
+  "MEAPM", // Meaning (Noun)  Mean (Verb)
 ]);
 
 export const SIGN_LIST = RAW_LIST.filter((sign) => !PROBLEM_IDS.has(sign.id));
 
 export const HARD_MODE_LIST = SIGN_LIST.filter(
   (sign) => !EXCLUDED_IDS.has(sign.id),
+  // (sign) => sign.id === "MCDWU",
 );
 
 export const AVAILABLE_LETTERS = Array.from(
