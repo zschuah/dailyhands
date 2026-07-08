@@ -150,7 +150,7 @@ export default function Bank() {
       <section
         className={twMerge(
           "grid grid-cols-1 md:grid-cols-6",
-          "gap-2 min-h-[50vh] auto-rows-min md:min-w-4/5",
+          "gap-2 min-h-[50vh] auto-rows-min min-w-3/5 md:max-w-7xl",
         )}
       >
         {/* Replicate extra slot from SgSL site */}
