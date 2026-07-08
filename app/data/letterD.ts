@@ -288,7 +288,6 @@ export const letterD: SignProps[] = [
     name: "Divide (Math)",
     images: getImages("divide", "png"),
     link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Divide%20(Mathematics)",
-    tags: ["math"],
   },
   {
     id: generateId("Divorced"),

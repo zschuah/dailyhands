@@ -51,7 +51,6 @@ export const letterA: SignProps[] = [
     name: "Add (Math)",
     images: getImages("add", "png"),
     link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Add%20(Mathematics)",
-    tags: ["math"],
   },
   {
     id: generateId("Administrator (Job)"),

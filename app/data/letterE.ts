@@ -175,7 +175,6 @@ export const letterE: SignProps[] = [
     name: "Equal (Math)",
     images: getImages("equal", "png"),
     link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Equal%20sign%20(Mathematics)",
-    tags: ["math"],
   },
   {
     id: generateId("Escape"),
