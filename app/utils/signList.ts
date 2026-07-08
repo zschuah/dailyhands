@@ -32,15 +32,16 @@ const EXCLUDED_IDS = new Set([
   "INVHX", // Investment      Invest
   "INTGC", // IWDP
   "INTLW", // IWD
-  "LAUHK", // Laughter        Laugh
-  "LIGNT", // Light (Colour)  Clear (Adj)
-  "LONOZ", // Long ago        Ancient
-  "LONCI", // Long time ago   Ancient
-  "LOSKW", // Loss (Noun)     Lose (Verb)
-  "LOSQW", // Lost            Lose (Verb)
-  "MALGY", // Malay           Malaysia
-  "MARKQ", // Married         Marry
-  "MEAPM", // Meaning (Noun)  Mean (Verb)
+  "LANMK", // Lantern Festival    Mid-Autumn Festival
+  "LAUHK", // Laughter            Laugh
+  "LIGNT", // Light (Colour)      Clear (Adj)
+  "LONOZ", // Long ago            Ancient
+  "LONCI", // Long time ago       Ancient
+  "LOSKW", // Loss (Noun)         Lose (Verb)
+  "LOSQW", // Lost                Lose (Verb)
+  "MALGY", // Malay               Malaysia
+  "MARKQ", // Married             Marry
+  "MEAPM", // Meaning (Noun)      Mean (Verb)
 ]);
 
 export const SIGN_LIST = RAW_LIST.filter((sign) => !PROBLEM_IDS.has(sign.id));
