@@ -18,6 +18,7 @@ const EXCLUDED_IDS = new Set([
   "ACTBL", // Actress         Actor
   "ATFDR", // At sign         Asia
   "BUSSC", // Business        Busy
+  "CINTP", // Cinema          Movie
   "CLOSQ", // Cloudy          Cloud
   "CONBQ", // Condominium     Condo
   "COUXY", // Cough Mixture   Cough Syrup
@@ -43,6 +44,7 @@ const EXCLUDED_IDS = new Set([
   "MALGY", // Malay               Malaysia
   "MARKQ", // Married             Marry
   "MEAPM", // Meaning (Noun)      Mean (Verb)
+  "MOTDC", // Motorbike           Motorcycle
 ]);
 
 export const SIGN_LIST = RAW_LIST.filter((sign) => !PROBLEM_IDS.has(sign.id));
