@@ -478,7 +478,6 @@ export const letterF: SignProps[] = [
     name: "Full Stop (Symbol)",
     images: getImages("full_stop", "png"),
     link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Full%20stop%20(Symbol)",
-    tags: ["symbol"],
   },
   {
     id: generateId("Fund"),

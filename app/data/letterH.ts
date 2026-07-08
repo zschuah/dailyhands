@@ -86,7 +86,6 @@ export const letterH: SignProps[] = [
     name: "Hashtag (Symbol)",
     images: getImages("hashtag", "png"),
     link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Hashtag%20(symbol)",
-    tags: ["symbol"],
   },
   {
     id: generateId("Hat"),
@@ -357,6 +356,5 @@ export const letterH: SignProps[] = [
     name: "Hyphen (Symbol)",
     images: getImages("hyphen", "png"),
     link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Hyphen%20(Symbol)",
-    tags: ["symbol"],
   },
 ];

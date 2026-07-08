@@ -16,6 +16,7 @@ const PROBLEM_IDS = new Set([
 const EXCLUDED_IDS = new Set([
   "ABLYM", // Able            Can
   "ACTBL", // Actress         Actor
+  "ATFDR", // At sign         Asia
   "BUSSC", // Business        Busy
   "CLOSQ", // Cloudy          Cloud
   "CONBQ", // Condominium     Condo

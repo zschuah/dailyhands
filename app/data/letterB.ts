@@ -455,7 +455,6 @@ export const letterB: SignProps[] = [
     name: "Bracket (Symbol)",
     images: getImages("bracket", "png"),
     link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=Bracket%20(Symbol)",
-    tags: ["symbol"],
   },
   {
     id: generateId("Braddell (Place)"),

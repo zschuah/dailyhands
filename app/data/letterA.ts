@@ -323,7 +323,6 @@ export const letterA: SignProps[] = [
     name: "At sign (Symbol)",
     images: getImages("at_sign", "png"),
     link: "https://blogs.ntu.edu.sg/sgslsignbank/word/?frm-word=At%20sign%20(symbol)",
-    tags: ["symbol"],
   },
   {
     id: generateId("August (Month)"),
