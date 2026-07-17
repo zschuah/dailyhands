@@ -3,6 +3,7 @@ import { apiRequest } from "~/utils/apiRequest";
 import { STORAGE_URL, SUPABASE_URL } from "~/utils/constants";
 import { safeJsonParse, safeJsonStringify } from "~/utils/helpers";
 import type { Route } from "./+types/ProtectedRoute";
+import { RAW_LIST } from "~/utils/signList";
 
 export async function clientLoader({}: Route.ClientLoaderArgs) {
   const konamiString = localStorage.getItem("konami");
@@ -22,11 +23,18 @@ export async function clientLoader({}: Route.ClientLoaderArgs) {
     }),
   ]);
 
-  // This does nothing other than to keep SUPABASE free tier alive (7 days)
+  // ===== Keep SUPABASE free tier alive (7 days) =====
+  const SUPABASE_IMG_NAME = RAW_LIST[
+    Math.floor(Math.random() * 500)
+  ].images.imageStatic
+    .split("/")
+    .pop();
+
   apiRequest({
-    url: `${SUPABASE_URL}/storage/v1/object/public/sign-images/aa_supabase.jpg`,
+    url: `${SUPABASE_URL}/storage/v1/object/public/sign-images/${SUPABASE_IMG_NAME}`,
     method: "GET",
   }).catch((err) => console.error(err));
+  // ===== Keep SUPABASE free tier alive (7 days) =====
 
   // Checks for Konami code
   if (!authResult.data?.isKonamiValid || authResult.error) {
